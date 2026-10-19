@@ -22,12 +22,18 @@ function at(words: WordTiming[], phrase: string): number {
 
 function captions(words: WordTiming[], light: boolean): string {
   const groups: WordTiming[][] = [];
-  for (let i = 0; i < words.length; i += 3) groups.push(words.slice(i, i + 3));
-  return groups.map((group, index) => {
-    const start = group[0].startMs / 1000;
-    const end = group[group.length - 1].endMs / 1000;
+  let index = 0;
+  while (index < words.length) {
+    const size = Math.min(7, words.length - index);
+    groups.push(words.slice(index, index + size));
+    index += size;
+  }
+  return groups.map((group, i) => {
+    const start = Math.max(0, group[0].startMs / 1000 - 0.05);
+    const next = groups[i + 1];
+    const end = next ? next[0].startMs / 1000 + 0.18 : group[group.length - 1].endMs / 1000 + 0.35;
     const text = group.map((word) => word.text).join(" ");
-    return `<div class="cap clip ${light ? "light" : ""}" data-start="${start.toFixed(3)}" data-duration="${Math.max(0.25, end - start).toFixed(3)}" data-track-index="3"><p>${text}</p></div>`;
+    return `<div class="cap clip ${light ? "light" : ""}" data-start="${start.toFixed(3)}" data-duration="${Math.max(0.4, end - start).toFixed(3)}" data-track-index="3"><p id="cap-${i}">${text}</p></div>`;
   }).join("\n");
 }
 

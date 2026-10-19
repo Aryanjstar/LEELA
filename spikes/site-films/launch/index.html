@@ -26,33 +26,25 @@
   .ev { height: 110px; margin: 12px 0; border-radius: 18px; background: #2A2118; color: #F4F4F4; display: flex; align-items: center; padding: 0 28px; font-size: 42px; font-weight: 800; opacity: 0; }
 </style></head>
 <body>
-<div id="root" data-composition-id="main" data-start="0" data-duration="17.168" data-width="1080" data-height="1920">
-  <section class="clip" id="world" data-start="0" data-duration="17.168" data-track-index="1"><p class="idea" id="idea">An idea.</p><div class="door" id="d1" style="top:700px">Explainer</div><div class="door" id="d2" style="top:860px">Code lab</div><div class="door" id="d3" style="top:1020px">Story</div></section>
-  <div class="cap clip " data-start="0.000" data-duration="0.917" data-track-index="3"><p>An idea sits</p></div>
-<div class="cap clip " data-start="0.964" data-duration="0.545" data-track-index="3"><p>in your head</p></div>
-<div class="cap clip " data-start="1.567" data-duration="1.185" data-track-index="3"><p>and goes nowhere.</p></div>
-<div class="cap clip " data-start="3.193" data-duration="1.184" data-track-index="3"><p>Leela opens three</p></div>
-<div class="cap clip " data-start="4.435" data-duration="1.533" data-track-index="3"><p>doors. An explainer,</p></div>
-<div class="cap clip " data-start="6.014" data-duration="0.882" data-track-index="3"><p>a code lab,</p></div>
-<div class="cap clip " data-start="7.047" data-duration="1.022" data-track-index="3"><p>and a story.</p></div>
-<div class="cap clip " data-start="8.452" data-duration="0.743" data-track-index="3"><p>The model writes</p></div>
-<div class="cap clip " data-start="9.253" data-duration="0.604" data-track-index="3"><p>a plan of</p></div>
-<div class="cap clip " data-start="9.973" data-duration="1.614" data-track-index="3"><p>named scenes. You</p></div>
-<div class="cap clip " data-start="11.668" data-duration="0.743" data-track-index="3"><p>read that plan</p></div>
-<div class="cap clip " data-start="12.481" data-duration="0.789" data-track-index="3"><p>and you approve</p></div>
-<div class="cap clip " data-start="13.328" data-duration="1.440" data-track-index="3"><p>it. Then trusted</p></div>
-<div class="cap clip " data-start="14.861" data-duration="1.045" data-track-index="3"><p>code renders the</p></div>
-<div class="cap clip " data-start="15.987" data-duration="0.731" data-track-index="3"><p>film.</p></div>
-  <audio id="vo" src="assets/vo.mp3" data-start="0" data-duration="17.168" data-track-index="4" data-volume="1"></audio>
+<div id="root" data-composition-id="main" data-start="0" data-duration="16.983" data-width="1080" data-height="1920">
+  <section class="clip" id="world" data-start="0" data-duration="16.983" data-track-index="1"><p class="idea" id="idea">An idea.</p><div class="door" id="d1" style="top:700px">Explainer</div><div class="door" id="d2" style="top:860px">Code lab</div><div class="door" id="d3" style="top:1020px">Story</div></section>
+  <div class="cap clip " data-start="0.000" data-duration="1.852" data-track-index="3"><p id="cap-0">An idea sits in your head and</p></div>
+<div class="cap clip " data-start="1.622" data-duration="3.678" data-track-index="3"><p id="cap-1">goes nowhere. Leela opens three doors. An</p></div>
+<div class="cap clip " data-start="5.070" data-duration="3.469" data-track-index="3"><p id="cap-2">explainer, a code lab, and a story.</p></div>
+<div class="cap clip " data-start="8.309" data-duration="2.239" data-track-index="3"><p id="cap-3">The model writes a plan of named</p></div>
+<div class="cap clip " data-start="10.318" data-duration="2.645" data-track-index="3"><p id="cap-4">scenes. You read that plan and you</p></div>
+<div class="cap clip " data-start="12.733" data-duration="3.213" data-track-index="3"><p id="cap-5">approve it. Then trusted code renders the</p></div>
+<div class="cap clip " data-start="15.716" data-duration="1.167" data-track-index="3"><p id="cap-6">film.</p></div>
+  <audio id="vo" src="assets/vo.mp3" data-start="0" data-duration="16.983" data-track-index="4" data-volume="1"></audio>
 </div>
 <script>
 const tl = gsap.timeline({ paused: true });
 
         tl.fromTo("#idea", { scale: 1.18, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.45, ease: "power4.out" }, 0.209);
-        tl.fromTo("#d1", { x: -60, opacity: 0 }, { x: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, 5.283);
-        tl.fromTo("#d2", { x: 60, opacity: 0 }, { x: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, 6.177);
-        tl.fromTo("#d3", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, 7.407);
-        tl.to("#idea", { opacity: 0.35, duration: 0.3 }, 9.334);
+        tl.fromTo("#d1", { x: -60, opacity: 0 }, { x: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, 5.120);
+        tl.fromTo("#d2", { x: 60, opacity: 0 }, { x: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, 6.072);
+        tl.fromTo("#d3", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, 7.291);
+        tl.to("#idea", { opacity: 0.35, duration: 0.3 }, 9.300);
       
 window.__timelines["main"] = tl;
 </script></body></html>

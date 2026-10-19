@@ -26,44 +26,34 @@
   .ev { height: 110px; margin: 12px 0; border-radius: 18px; background: #2A2118; color: #3DE3F5; display: flex; align-items: center; padding: 0 28px; font-size: 42px; font-weight: 800; opacity: 0; }
 </style></head>
 <body>
-<div id="root" data-composition-id="main" data-start="0" data-duration="21.487" data-width="1080" data-height="1920">
-  <section class="clip" id="world" data-start="0" data-duration="21.487" data-track-index="1"><p class="kicker" id="k">FIND 21</p><div class="ptr" id="ptr"></div><div class="cells"><div class="cell" id="c0">4</div><div class="cell" id="c1">9</div><div class="cell" id="c2">15</div><div class="cell" id="c3">21</div><div class="cell" id="c4">28</div><div class="cell" id="c5">33</div></div></section>
-  <div class="cap clip " data-start="0.000" data-duration="0.697" data-track-index="3"><p>You have a</p></div>
-<div class="cap clip " data-start="0.813" data-duration="1.312" data-track-index="3"><p>sorted list, and</p></div>
-<div class="cap clip " data-start="2.183" data-duration="0.383" data-track-index="3"><p>you need the</p></div>
-<div class="cap clip " data-start="2.635" data-duration="1.312" data-track-index="3"><p>number twenty one.</p></div>
-<div class="cap clip " data-start="4.331" data-duration="1.114" data-track-index="3"><p>Reading every box</p></div>
-<div class="cap clip " data-start="5.503" data-duration="1.312" data-track-index="3"><p>would take forever,</p></div>
-<div class="cap clip " data-start="6.989" data-duration="0.557" data-track-index="3"><p>so you check</p></div>
-<div class="cap clip " data-start="7.616" data-duration="1.126" data-track-index="3"><p>the middle instead.</p></div>
-<div class="cap clip " data-start="9.183" data-duration="1.034" data-track-index="3"><p>Fifteen is too</p></div>
-<div class="cap clip " data-start="10.333" data-duration="1.149" data-track-index="3"><p>low, so twenty</p></div>
-<div class="cap clip " data-start="11.552" data-duration="0.569" data-track-index="3"><p>one sits to</p></div>
-<div class="cap clip " data-start="12.190" data-duration="1.370" data-track-index="3"><p>the right. Twenty</p></div>
-<div class="cap clip " data-start="13.642" data-duration="0.824" data-track-index="3"><p>eight is too</p></div>
-<div class="cap clip " data-start="14.547" data-duration="0.941" data-track-index="3"><p>high, so you</p></div>
-<div class="cap clip " data-start="15.604" data-duration="1.590" data-track-index="3"><p>look left. There</p></div>
-<div class="cap clip " data-start="17.264" data-duration="1.254" data-track-index="3"><p>it is. Twenty</p></div>
-<div class="cap clip " data-start="18.611" data-duration="0.987" data-track-index="3"><p>one, found in</p></div>
-<div class="cap clip " data-start="19.714" data-duration="1.323" data-track-index="3"><p>three checks.</p></div>
-  <audio id="vo" src="assets/vo.mp3" data-start="0" data-duration="21.487" data-track-index="4" data-volume="1"></audio>
+<div id="root" data-composition-id="main" data-start="0" data-duration="21.580" data-width="1080" data-height="1920">
+  <section class="clip" id="world" data-start="0" data-duration="21.580" data-track-index="1"><p class="kicker" id="k">FIND 21</p><div class="ptr" id="ptr"></div><div class="cells"><div class="cell" id="c0">4</div><div class="cell" id="c1">9</div><div class="cell" id="c2">15</div><div class="cell" id="c3">21</div><div class="cell" id="c4">28</div><div class="cell" id="c5">33</div></div></section>
+  <div class="cap clip " data-start="0.000" data-duration="2.130" data-track-index="3"><p id="cap-0">You have a sorted list, and you</p></div>
+<div class="cap clip " data-start="1.900" data-duration="3.052" data-track-index="3"><p id="cap-1">need the number twenty one. Reading every</p></div>
+<div class="cap clip " data-start="4.722" data-duration="2.447" data-track-index="3"><p id="cap-2">box would take forever, so you check</p></div>
+<div class="cap clip " data-start="6.939" data-duration="3.469" data-track-index="3"><p id="cap-3">the middle instead. Fifteen is too low,</p></div>
+<div class="cap clip " data-start="10.178" data-duration="2.657" data-track-index="3"><p id="cap-4">so twenty one sits to the right.</p></div>
+<div class="cap clip " data-start="12.605" data-duration="2.761" data-track-index="3"><p id="cap-5">Twenty eight is too high, so you</p></div>
+<div class="cap clip " data-start="15.136" data-duration="4.224" data-track-index="3"><p id="cap-6">look left. There it is. Twenty one,</p></div>
+<div class="cap clip " data-start="19.130" data-duration="2.350" data-track-index="3"><p id="cap-7">found in three checks.</p></div>
+  <audio id="vo" src="assets/vo.mp3" data-start="0" data-duration="21.580" data-track-index="4" data-volume="1"></audio>
 </div>
 <script>
 const tl = gsap.timeline({ paused: true });
 
         tl.fromTo("#k", { y: 16, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "power3.out" }, 0.15);
-        tl.fromTo("#c0", { y: 36, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "power3.out" }, 0.813);
-tl.fromTo("#c1", { y: 36, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "power3.out" }, 0.873);
-tl.fromTo("#c2", { y: 36, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "power3.out" }, 0.933);
-tl.fromTo("#c3", { y: 36, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "power3.out" }, 0.993);
-tl.fromTo("#c4", { y: 36, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "power3.out" }, 1.053);
-tl.fromTo("#c5", { y: 36, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "power3.out" }, 1.113);
-        tl.fromTo("#ptr", { opacity: 0, x: 312 }, { opacity: 1, x: 312, duration: 0.25, ease: "power2.out" }, 7.732);
-        tl.to("#c2", { backgroundColor: "#3DE3F5", color: "#0B1020", duration: 0.2 }, 9.183);
-        tl.to("#ptr", { x: 624, duration: 0.45, ease: "power2.inOut" }, 12.341);
-        tl.to("#c4", { backgroundColor: "#FF5FA2", color: "#0B1020", duration: 0.2 }, 13.201);
-        tl.to("#ptr", { x: 468, duration: 0.45, ease: "power3.out" }, 15.604);
-        tl.to("#c3", { backgroundColor: "#B8F35B", color: "#0B1020", scale: 1.12, duration: 0.35, ease: "back.out(1.4)" }, 16.916);
+        tl.fromTo("#c0", { y: 36, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "power3.out" }, 0.592);
+tl.fromTo("#c1", { y: 36, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "power3.out" }, 0.652);
+tl.fromTo("#c2", { y: 36, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "power3.out" }, 0.712);
+tl.fromTo("#c3", { y: 36, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "power3.out" }, 0.772);
+tl.fromTo("#c4", { y: 36, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "power3.out" }, 0.832);
+tl.fromTo("#c5", { y: 36, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "power3.out" }, 0.892);
+        tl.fromTo("#ptr", { opacity: 0, x: 312 }, { opacity: 1, x: 312, duration: 0.25, ease: "power2.out" }, 7.129);
+        tl.to("#c2", { backgroundColor: "#3DE3F5", color: "#0B1020", duration: 0.2 }, 8.557);
+        tl.to("#ptr", { x: 624, duration: 0.45, ease: "power2.inOut" }, 11.691);
+        tl.to("#c4", { backgroundColor: "#FF5FA2", color: "#0B1020", duration: 0.2 }, 12.655);
+        tl.to("#ptr", { x: 468, duration: 0.45, ease: "power3.out" }, 15.186);
+        tl.to("#c3", { backgroundColor: "#B8F35B", color: "#0B1020", scale: 1.12, duration: 0.35, ease: "back.out(1.4)" }, 16.521);
       
 window.__timelines["main"] = tl;
 </script></body></html>

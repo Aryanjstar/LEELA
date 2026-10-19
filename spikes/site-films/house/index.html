@@ -26,33 +26,26 @@
   .ev { height: 110px; margin: 12px 0; border-radius: 18px; background: #2A2118; color: #E8C872; display: flex; align-items: center; padding: 0 28px; font-size: 42px; font-weight: 800; opacity: 0; }
 </style></head>
 <body>
-<div id="root" data-composition-id="main" data-start="0" data-duration="15.822" data-width="1080" data-height="1920">
-  <section class="clip" id="world" data-start="0" data-duration="15.822" data-track-index="1"><div class="chat" id="b1" style="left:80px;top:300px"></div><div class="chat" id="b2" style="left:700px;top:360px"></div><div class="chat" id="b3" style="left:200px;top:1280px"></div><div class="board"><div class="ev" id="e1">Mehendi</div><div class="ev" id="e2">Baraat</div><div class="ev" id="e3">Wedding</div></div></section>
-  <div class="cap clip " data-start="0.000" data-duration="1.045" data-track-index="3"><p>A wedding scattered</p></div>
-<div class="cap clip " data-start="1.068" data-duration="1.138" data-track-index="3"><p>across ten family</p></div>
-<div class="cap clip " data-start="2.276" data-duration="0.952" data-track-index="3"><p>chats is hard</p></div>
-<div class="cap clip " data-start="3.274" data-duration="1.707" data-track-index="3"><p>to hold. Mehendi,</p></div>
-<div class="cap clip " data-start="5.016" data-duration="1.114" data-track-index="3"><p>the baraat, and</p></div>
-<div class="cap clip " data-start="6.177" data-duration="0.719" data-track-index="3"><p>the wedding day</p></div>
-<div class="cap clip " data-start="7.012" data-duration="0.871" data-track-index="3"><p>belong on one</p></div>
-<div class="cap clip " data-start="7.941" data-duration="1.626" data-track-index="3"><p>board. A guest</p></div>
-<div class="cap clip " data-start="9.694" data-duration="0.848" data-track-index="3"><p>never makes an</p></div>
-<div class="cap clip " data-start="10.588" data-duration="1.695" data-track-index="3"><p>account. They open</p></div>
-<div class="cap clip " data-start="12.365" data-duration="0.940" data-track-index="3"><p>one link, and</p></div>
-<div class="cap clip " data-start="13.351" data-duration="0.697" data-track-index="3"><p>the whole family</p></div>
-<div class="cap clip " data-start="14.118" data-duration="1.254" data-track-index="3"><p>is already there.</p></div>
-  <audio id="vo" src="assets/vo.mp3" data-start="0" data-duration="15.822" data-track-index="4" data-volume="1"></audio>
+<div id="root" data-composition-id="main" data-start="0" data-duration="16.007" data-width="1080" data-height="1920">
+  <section class="clip" id="world" data-start="0" data-duration="16.007" data-track-index="1"><div class="chat" id="b1" style="left:80px;top:300px"></div><div class="chat" id="b2" style="left:700px;top:360px"></div><div class="chat" id="b3" style="left:200px;top:1280px"></div><div class="board"><div class="ev" id="e1">Mehendi</div><div class="ev" id="e2">Baraat</div><div class="ev" id="e3">Wedding</div></div></section>
+  <div class="cap clip " data-start="0.000" data-duration="2.897" data-track-index="3"><p id="cap-0">A wedding scattered across ten family chats</p></div>
+<div class="cap clip " data-start="2.667" data-duration="3.701" data-track-index="3"><p id="cap-1">is hard to hold. Mehendi, the baraat,</p></div>
+<div class="cap clip " data-start="6.138" data-duration="2.053" data-track-index="3"><p id="cap-2">and the wedding day belong on one</p></div>
+<div class="cap clip " data-start="7.961" data-duration="3.806" data-track-index="3"><p id="cap-3">board. A guest never makes an account.</p></div>
+<div class="cap clip " data-start="11.537" data-duration="2.250" data-track-index="3"><p id="cap-4">They open one link, and the whole</p></div>
+<div class="cap clip " data-start="13.557" data-duration="2.350" data-track-index="3"><p id="cap-5">family is already there.</p></div>
+  <audio id="vo" src="assets/vo.mp3" data-start="0" data-duration="16.007" data-track-index="4" data-volume="1"></audio>
 </div>
 <script>
 const tl = gsap.timeline({ paused: true });
 
-        tl.fromTo("#b1", { x: -30, opacity: 0 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, 2.276);
-        tl.fromTo("#b2", { y: -20, opacity: 0 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 2.396);
-        tl.fromTo("#b3", { y: 20, opacity: 0 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 2.516);
-        tl.to("#b1, #b2, #b3", { opacity: 0.2, duration: 0.3 }, 7.651);
-        tl.fromTo("#e1", { x: -40, opacity: 0 }, { x: 0, opacity: 1, duration: 0.35, ease: "power3.out" }, 4.307);
-        tl.fromTo("#e2", { x: 40, opacity: 0 }, { x: 0, opacity: 1, duration: 0.35, ease: "power3.out" }, 5.166);
-        tl.fromTo("#e3", { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "power3.out" }, 6.304);
+        tl.fromTo("#b1", { x: -30, opacity: 0 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, 2.183);
+        tl.fromTo("#b2", { y: -20, opacity: 0 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 2.303);
+        tl.fromTo("#b3", { y: 20, opacity: 0 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 2.423);
+        tl.to("#b1, #b2, #b3", { opacity: 0.2, duration: 0.3 }, 7.721);
+        tl.fromTo("#e1", { x: -40, opacity: 0 }, { x: 0, opacity: 1, duration: 0.35, ease: "power3.out" }, 4.470);
+        tl.fromTo("#e2", { x: 40, opacity: 0 }, { x: 0, opacity: 1, duration: 0.35, ease: "power3.out" }, 5.375);
+        tl.fromTo("#e3", { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "power3.out" }, 6.502);
       
 window.__timelines["main"] = tl;
 </script></body></html>

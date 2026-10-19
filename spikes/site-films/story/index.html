@@ -26,30 +26,24 @@
   .ev { height: 110px; margin: 12px 0; border-radius: 18px; background: #2A2118; color: #E2A23A; display: flex; align-items: center; padding: 0 28px; font-size: 42px; font-weight: 800; opacity: 0; }
 </style></head>
 <body>
-<div id="root" data-composition-id="main" data-start="0" data-duration="10.667" data-width="1080" data-height="1920">
-  <section class="clip" id="world" data-start="0" data-duration="10.667" data-track-index="1"><div class="ground" id="ground"></div><div class="lattu" id="toy"></div><div class="moon" id="moon"></div></section>
-  <div class="cap clip " data-start="0.000" data-duration="0.395" data-track-index="3"><p>There was a</p></div>
-<div class="cap clip " data-start="0.453" data-duration="0.720" data-track-index="3"><p>lattu that should</p></div>
-<div class="cap clip " data-start="1.196" data-duration="1.045" data-track-index="3"><p>have fallen. A</p></div>
-<div class="cap clip " data-start="2.310" data-duration="0.639" data-track-index="3"><p>child gave it</p></div>
-<div class="cap clip " data-start="2.995" data-duration="0.534" data-track-index="3"><p>a string and</p></div>
-<div class="cap clip " data-start="3.576" data-duration="0.766" data-track-index="3"><p>a spin, and</p></div>
-<div class="cap clip " data-start="4.400" data-duration="0.523" data-track-index="3"><p>it walked the</p></div>
-<div class="cap clip " data-start="4.969" data-duration="1.405" data-track-index="3"><p>whole courtyard. The</p></div>
-<div class="cap clip " data-start="6.432" data-duration="0.522" data-track-index="3"><p>moon does the</p></div>
-<div class="cap clip " data-start="7.012" data-duration="0.732" data-track-index="3"><p>same thing up</p></div>
-<div class="cap clip " data-start="7.790" data-duration="0.767" data-track-index="3"><p>in the sky.</p></div>
-<div class="cap clip " data-start="8.835" data-duration="1.382" data-track-index="3"><p>It never lands.</p></div>
-  <audio id="vo" src="assets/vo.mp3" data-start="0" data-duration="10.667" data-track-index="4" data-volume="1"></audio>
+<div id="root" data-composition-id="main" data-start="0" data-duration="12.106" data-width="1080" data-height="1920">
+  <section class="clip" id="world" data-start="0" data-duration="12.106" data-track-index="1"><div class="ground" id="ground"></div><div class="lattu" id="toy"></div><div class="moon" id="moon"></div></section>
+  <div class="cap clip " data-start="0.000" data-duration="1.921" data-track-index="3"><p id="cap-0">There was a lattu that should have</p></div>
+<div class="cap clip " data-start="1.691" data-duration="2.552" data-track-index="3"><p id="cap-1">fallen. A child gave it a string</p></div>
+<div class="cap clip " data-start="4.013" data-duration="2.111" data-track-index="3"><p id="cap-2">and a spin, and it walked the</p></div>
+<div class="cap clip " data-start="5.894" data-duration="2.866" data-track-index="3"><p id="cap-3">whole courtyard. The moon does the same</p></div>
+<div class="cap clip " data-start="8.530" data-duration="2.424" data-track-index="3"><p id="cap-4">thing up in the sky. It never</p></div>
+<div class="cap clip " data-start="10.724" data-duration="1.282" data-track-index="3"><p id="cap-5">lands.</p></div>
+  <audio id="vo" src="assets/vo.mp3" data-start="0" data-duration="12.106" data-track-index="4" data-volume="1"></audio>
 </div>
 <script>
 const tl = gsap.timeline({ paused: true });
 
         tl.fromTo("#ground", { scaleX: 0 }, { scaleX: 1, duration: 0.45, ease: "power2.out" }, 0.1);
-        tl.fromTo("#toy", { x: -40, opacity: 0, rotation: 20 }, { x: -40, opacity: 1, rotation: 20, duration: 0.45, ease: "power3.out" }, 0.453);
-        tl.to("#toy", { rotation: 360, duration: 1.1, ease: "power1.inOut" }, 3.646);
-        tl.to("#toy", { x: 280, rotation: 20, duration: 1.4, ease: "power2.inOut" }, 4.516);
-        tl.fromTo("#moon", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: "power3.out" }, 6.432);
+        tl.fromTo("#toy", { x: -40, opacity: 0, rotation: 20 }, { x: -40, opacity: 1, rotation: 20, duration: 0.45, ease: "power3.out" }, 0.522);
+        tl.to("#toy", { rotation: 360, duration: 1.1, ease: "power1.inOut" }, 4.400);
+        tl.to("#toy", { x: 280, rotation: 20, duration: 1.4, ease: "power2.inOut" }, 5.399);
+        tl.fromTo("#moon", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: "power3.out" }, 7.605);
       
 window.__timelines["main"] = tl;
 </script></body></html>

@@ -26,34 +26,26 @@
   .ev { height: 110px; margin: 12px 0; border-radius: 18px; background: #2A2118; color: #0E7C72; display: flex; align-items: center; padding: 0 28px; font-size: 42px; font-weight: 800; opacity: 0; }
 </style></head>
 <body>
-<div id="root" data-composition-id="main" data-start="0" data-duration="16.240" data-width="1080" data-height="1920">
-  <section class="clip" id="world" data-start="0" data-duration="16.240" data-track-index="1"><div class="ground" id="ground"></div><div class="lattu" id="top"></div></section>
-  <div class="cap clip light" data-start="0.000" data-duration="0.998" data-track-index="3"><p>A spinning top</p></div>
-<div class="cap clip light" data-start="1.068" data-duration="0.650" data-track-index="3"><p>should fall the</p></div>
-<div class="cap clip light" data-start="1.800" data-duration="0.650" data-track-index="3"><p>moment you let</p></div>
-<div class="cap clip light" data-start="2.508" data-duration="1.021" data-track-index="3"><p>go. What you</p></div>
-<div class="cap clip light" data-start="3.611" data-duration="0.812" data-track-index="3"><p>do is give</p></div>
-<div class="cap clip light" data-start="4.458" data-duration="0.987" data-track-index="3"><p>it a spin.</p></div>
-<div class="cap clip light" data-start="5.770" data-duration="0.999" data-track-index="3"><p>While it turns,</p></div>
-<div class="cap clip light" data-start="6.827" data-duration="0.940" data-track-index="3"><p>that spin pulls</p></div>
-<div class="cap clip light" data-start="7.825" data-duration="0.964" data-track-index="3"><p>the top upright</p></div>
-<div class="cap clip light" data-start="8.870" data-duration="0.697" data-track-index="3"><p>every time it</p></div>
-<div class="cap clip light" data-start="9.625" data-duration="1.404" data-track-index="3"><p>tips. Take the</p></div>
-<div class="cap clip light" data-start="11.076" data-duration="0.871" data-track-index="3"><p>spin away and</p></div>
-<div class="cap clip light" data-start="12.016" data-duration="0.720" data-track-index="3"><p>it falls at</p></div>
-<div class="cap clip light" data-start="12.829" data-duration="1.602" data-track-index="3"><p>once. That is</p></div>
-<div class="cap clip light" data-start="14.489" data-duration="1.301" data-track-index="3"><p>the whole trick.</p></div>
-  <audio id="vo" src="assets/vo.mp3" data-start="0" data-duration="16.240" data-track-index="4" data-volume="1"></audio>
+<div id="root" data-composition-id="main" data-start="0" data-duration="15.589" data-width="1080" data-height="1920">
+  <section class="clip" id="world" data-start="0" data-duration="15.589" data-track-index="1"><div class="ground" id="ground"></div><div class="lattu" id="top"></div></section>
+  <div class="cap clip light" data-start="0.000" data-duration="2.212" data-track-index="3"><p id="cap-0">A spinning top should fall the moment</p></div>
+<div class="cap clip light" data-start="1.982" data-duration="2.389" data-track-index="3"><p id="cap-1">you let go. What you do is</p></div>
+<div class="cap clip light" data-start="4.141" data-duration="2.599" data-track-index="3"><p id="cap-2">give it a spin. While it turns,</p></div>
+<div class="cap clip light" data-start="6.510" data-duration="2.447" data-track-index="3"><p id="cap-3">that spin pulls the top upright every</p></div>
+<div class="cap clip light" data-start="8.727" data-duration="3.075" data-track-index="3"><p id="cap-4">time it tips. Take the spin away</p></div>
+<div class="cap clip light" data-start="11.572" data-duration="2.586" data-track-index="3"><p id="cap-5">and it falls at once. That is</p></div>
+<div class="cap clip light" data-start="13.928" data-duration="1.561" data-track-index="3"><p id="cap-6">the whole trick.</p></div>
+  <audio id="vo" src="assets/vo.mp3" data-start="0" data-duration="15.589" data-track-index="4" data-volume="1"></audio>
 </div>
 <script>
 const tl = gsap.timeline({ paused: true });
 
         tl.fromTo("#ground", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power2.out" }, 0.1);
-        tl.fromTo("#top", { y: -80, opacity: 0, rotation: 22 }, { y: 0, opacity: 1, rotation: 22, duration: 0.55, ease: "power3.out" }, 0.221);
-        tl.to("#top", { rotation: 400, duration: 1.6, ease: "power1.inOut" }, 4.226);
-        tl.to("#top", { rotation: 0, duration: 0.7, ease: "power3.out" }, 8.243);
-        tl.to("#top", { rotation: 68, y: 30, duration: 0.45, ease: "power2.in" }, 12.156);
-        tl.to("#top", { rotation: 0, y: 0, duration: 0.5, ease: "back.out(1.4)" }, 14.640);
+        tl.fromTo("#top", { y: -80, opacity: 0, rotation: 22 }, { y: 0, opacity: 1, rotation: 22, duration: 0.55, ease: "power3.out" }, 0.174);
+        tl.to("#top", { rotation: 400, duration: 1.6, ease: "power1.inOut" }, 4.191);
+        tl.to("#top", { rotation: 0, duration: 0.7, ease: "power3.out" }, 7.883);
+        tl.to("#top", { rotation: 68, y: 30, duration: 0.45, ease: "power2.in" }, 11.970);
+        tl.to("#top", { rotation: 0, y: 0, duration: 0.5, ease: "back.out(1.4)" }, 14.118);
       
 window.__timelines["main"] = tl;
 </script></body></html>

@@ -16,4 +16,14 @@ Always: the voice says the words that are on screen. State the problem, what we 
 
 Never: copyrighted characters, a silent film on the site, pill captions, pink and purple chrome on the website, two voices playing at once.
 
-Tools, when an edit needs them: FFmpeg to cut and measure, ElevenLabs through the voice adapter for speech and word times, HyperFrames to draw and render. A style correction gets added here.
+Tools, when an edit needs them: FFmpeg to cut and measure, ElevenLabs through the voice adapter for speech and word times, HyperFrames to draw and render. Combine the motion skills for that film. No two films share a palette or a move. A style correction gets added here.
+
+## Edit checks
+
+Before a film is shown:
+
+- The voice is one continuous read. It does not stop every two words.
+- Captions sit in one lower-third place and hand off. They are not a new card for every phrase.
+- The picture keeps moving while the sentence continues. Elements arrive, travel, and leave.
+- Length, frame rate, and an audio stream are checked with ffprobe. No black frame as the whole film. No frozen title card as the whole film.
+- Loudness target when a mix exists: about -14 LUFS. These showcase films are voice only.
