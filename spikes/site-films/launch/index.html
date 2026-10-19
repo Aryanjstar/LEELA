@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8" /><title>Any idea</title>
+<script src="assets/gsap.min.js"></script>
+<style>
+  @font-face { font-family: Display; src: url("assets/fonts/display.woff2") format("woff2"); font-weight: 800; }
+  @font-face { font-family: Mono; src: url("assets/fonts/mono.woff2") format("woff2"); font-weight: 500; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #0A0A0A; }
+  #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #0A0A0A; color: #F4F4F4; font-family: Display, sans-serif; }
+  .clip { position: absolute; inset: 0; }
+  .world { position: absolute; inset: 0; }
+  .cap { left: 80px; right: 80px; bottom: 180px; }
+  .cap p { margin: 0; font-size: 48px; line-height: 1.15; font-weight: 800; color: #fff; text-shadow: 0 2px 18px rgba(0,0,0,.7); }
+  .cap.light p { color: #1b1530; text-shadow: none; }
+  .kicker { position: absolute; left: 80px; top: 220px; margin: 0; letter-spacing: 0.16em; font-size: 28px; color: #F4F4F4; font-family: Mono, monospace; }
+  .cells { position: absolute; left: 70px; top: 720px; display: flex; gap: 14px; }
+  .cell { width: 140px; height: 150px; border-radius: 28px; background: #16213F; display: grid; place-items: center; font-family: Mono, monospace; font-size: 44px; opacity: 0; }
+  .ptr { position: absolute; top: 640px; left: 70px; width: 0; height: 0; border-left: 16px solid transparent; border-right: 16px solid transparent; border-top: 22px solid #F4F4F4; opacity: 0; }
+  .lattu { position: absolute; left: 400px; top: 520px; width: 280px; height: 340px; background: #F4F4F4; clip-path: polygon(50% 0, 100% 82%, 0 82%); transform-origin: 50% 80%; }
+  .ground { position: absolute; left: 120px; right: 120px; top: 980px; height: 4px; background: #F4F4F4; transform-origin: 0 50%; }
+  .moon { position: absolute; right: 160px; top: 280px; width: 160px; height: 160px; border-radius: 50%; background: #F3E6C8; opacity: 0; }
+  .idea { position: absolute; left: 80px; top: 420px; margin: 0; font-size: 140px; line-height: .9; font-weight: 800; letter-spacing: -0.05em; }
+  .door { position: absolute; left: 80px; width: 920px; height: 140px; border-radius: 24px; border: 2px solid rgba(244,244,244,.35); display: flex; align-items: center; padding: 0 36px; font-size: 56px; font-weight: 800; opacity: 0; }
+  .chat { position: absolute; width: 280px; height: 90px; border-radius: 20px; background: #2A2118; opacity: 0; }
+  .board { position: absolute; left: 100px; top: 480px; width: 880px; }
+  .ev { height: 110px; margin: 12px 0; border-radius: 18px; background: #2A2118; color: #F4F4F4; display: flex; align-items: center; padding: 0 28px; font-size: 42px; font-weight: 800; opacity: 0; }
+</style></head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="17.168" data-width="1080" data-height="1920">
+  <section class="clip" id="world" data-start="0" data-duration="17.168" data-track-index="1"><p class="idea" id="idea">An idea.</p><div class="door" id="d1" style="top:700px">Explainer</div><div class="door" id="d2" style="top:860px">Code lab</div><div class="door" id="d3" style="top:1020px">Story</div></section>
+  <div class="cap clip " data-start="0.000" data-duration="0.917" data-track-index="3"><p>An idea sits</p></div>
+<div class="cap clip " data-start="0.964" data-duration="0.545" data-track-index="3"><p>in your head</p></div>
+<div class="cap clip " data-start="1.567" data-duration="1.185" data-track-index="3"><p>and goes nowhere.</p></div>
+<div class="cap clip " data-start="3.193" data-duration="1.184" data-track-index="3"><p>Leela opens three</p></div>
+<div class="cap clip " data-start="4.435" data-duration="1.533" data-track-index="3"><p>doors. An explainer,</p></div>
+<div class="cap clip " data-start="6.014" data-duration="0.882" data-track-index="3"><p>a code lab,</p></div>
+<div class="cap clip " data-start="7.047" data-duration="1.022" data-track-index="3"><p>and a story.</p></div>
+<div class="cap clip " data-start="8.452" data-duration="0.743" data-track-index="3"><p>The model writes</p></div>
+<div class="cap clip " data-start="9.253" data-duration="0.604" data-track-index="3"><p>a plan of</p></div>
+<div class="cap clip " data-start="9.973" data-duration="1.614" data-track-index="3"><p>named scenes. You</p></div>
+<div class="cap clip " data-start="11.668" data-duration="0.743" data-track-index="3"><p>read that plan</p></div>
+<div class="cap clip " data-start="12.481" data-duration="0.789" data-track-index="3"><p>and you approve</p></div>
+<div class="cap clip " data-start="13.328" data-duration="1.440" data-track-index="3"><p>it. Then trusted</p></div>
+<div class="cap clip " data-start="14.861" data-duration="1.045" data-track-index="3"><p>code renders the</p></div>
+<div class="cap clip " data-start="15.987" data-duration="0.731" data-track-index="3"><p>film.</p></div>
+  <audio id="vo" src="assets/vo.mp3" data-start="0" data-duration="17.168" data-track-index="4" data-volume="1"></audio>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+
+        tl.fromTo("#idea", { scale: 1.18, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.45, ease: "power4.out" }, 0.209);
+        tl.fromTo("#d1", { x: -60, opacity: 0 }, { x: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, 5.283);
+        tl.fromTo("#d2", { x: 60, opacity: 0 }, { x: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, 6.177);
+        tl.fromTo("#d3", { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, 7.407);
+        tl.to("#idea", { opacity: 0.35, duration: 0.3 }, 9.334);
+      
+window.__timelines["main"] = tl;
+</script></body></html>

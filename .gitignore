@@ -1,0 +1,42 @@
+node_modules/
+.next/
+out/
+build/
+dist/
+coverage/
+test-results/
+playwright-report/
+.vercel/
+.turbo/
+*.tsbuildinfo
+next-env.d.ts
+
+.DS_Store
+*.log
+npm-debug.log*
+
+.env
+.env.local
+.env.*.local
+
+# Local storage, render workspaces, Python venvs, model caches
+.data/
+.venv/
+spikes/**/out/
+*.mp4
+*.wav
+*.mp3
+!library/**/*.mp3
+!library/**/*.wav
+!library/**/*.mp4
+!public/films/*.mp4
+
+# Private working log and other people's reference notes. Not published.
+docs/journey/
+docs/reference/
+spikes/**/.hyperframes/
+
+# Editor MCP config may hold keys
+.cursor/mcp.json
+.vercel
+.env*

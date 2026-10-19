@@ -1,0 +1,44 @@
+{
+  "name": "ai_video_gen",
+  "version": "1.0.0",
+  "description": "**Any idea, at play.** An AI video studio that turns an idea, your notes, or a piece of code into a finished short video: narration, word-timed captions, motion, scenery, characters, and music.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "tsx --test test/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "check-providers": "tsx scripts/check-providers.ts",
+    "make-video": "tsx scripts/make-video.ts",
+    "create-owner": "tsx scripts/create-owner.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fontsource/bricolage-grotesque": "^5.3.0",
+    "@fontsource/caveat": "^5.3.0",
+    "@fontsource/jetbrains-mono": "^5.3.0",
+    "@fontsource/kalam": "^5.3.0",
+    "@higgsfield/client": "^0.2.6",
+    "bcryptjs": "^3.0.3",
+    "gsap": "^3.15.0",
+    "mongoose": "^8.24.5",
+    "next": "^16.4.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}

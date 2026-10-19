@@ -1,0 +1,20 @@
+import mongoose from "mongoose";
+import { Video } from "../../../../../server/db";
+import { apiError } from "../../../../../server/http";
+import { authed } from "../../../../../server/guard";
+
+export async function GET(_request: Request, ctx: { params: Promise<{ id: string }> }) {
+  const auth = await authed();
+  if ("error" in auth && auth.error) return auth.error;
+  const { id } = await ctx.params;
+  if (!mongoose.isValidObjectId(id)) return apiError(404, "NOT_FOUND", "NOT_FOUND", "That video is not here.");
+  const video = await Video.findOne({ _id: id, ownerId: auth.user!._id, state: "ready" });
+  if (!video?.previewHtml) return apiError(404, "NOT_FOUND", "NOT_FOUND", "That video is not here.");
+  return new Response(video.previewHtml, {
+    headers: {
+      "content-type": "text/html; charset=utf-8",
+      "content-security-policy": "default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; media-src data:; frame-ancestors 'self'",
+      "x-content-type-options": "nosniff",
+    },
+  });
+}

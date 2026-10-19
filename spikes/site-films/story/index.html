@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8" /><title>Ek lattu</title>
+<script src="assets/gsap.min.js"></script>
+<style>
+  @font-face { font-family: Display; src: url("assets/fonts/display.woff2") format("woff2"); font-weight: 800; }
+  @font-face { font-family: Mono; src: url("assets/fonts/mono.woff2") format("woff2"); font-weight: 500; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #1B2438; }
+  #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: #1B2438; color: #F6F1E7; font-family: Display, sans-serif; }
+  .clip { position: absolute; inset: 0; }
+  .world { position: absolute; inset: 0; }
+  .cap { left: 80px; right: 80px; bottom: 180px; }
+  .cap p { margin: 0; font-size: 48px; line-height: 1.15; font-weight: 800; color: #fff; text-shadow: 0 2px 18px rgba(0,0,0,.7); }
+  .cap.light p { color: #1b1530; text-shadow: none; }
+  .kicker { position: absolute; left: 80px; top: 220px; margin: 0; letter-spacing: 0.16em; font-size: 28px; color: #E2A23A; font-family: Mono, monospace; }
+  .cells { position: absolute; left: 70px; top: 720px; display: flex; gap: 14px; }
+  .cell { width: 140px; height: 150px; border-radius: 28px; background: #16213F; display: grid; place-items: center; font-family: Mono, monospace; font-size: 44px; opacity: 0; }
+  .ptr { position: absolute; top: 640px; left: 70px; width: 0; height: 0; border-left: 16px solid transparent; border-right: 16px solid transparent; border-top: 22px solid #E2A23A; opacity: 0; }
+  .lattu { position: absolute; left: 400px; top: 520px; width: 280px; height: 340px; background: #E2A23A; clip-path: polygon(50% 0, 100% 82%, 0 82%); transform-origin: 50% 80%; }
+  .ground { position: absolute; left: 120px; right: 120px; top: 980px; height: 4px; background: #F6F1E7; transform-origin: 0 50%; }
+  .moon { position: absolute; right: 160px; top: 280px; width: 160px; height: 160px; border-radius: 50%; background: #F3E6C8; opacity: 0; }
+  .idea { position: absolute; left: 80px; top: 420px; margin: 0; font-size: 140px; line-height: .9; font-weight: 800; letter-spacing: -0.05em; }
+  .door { position: absolute; left: 80px; width: 920px; height: 140px; border-radius: 24px; border: 2px solid rgba(244,244,244,.35); display: flex; align-items: center; padding: 0 36px; font-size: 56px; font-weight: 800; opacity: 0; }
+  .chat { position: absolute; width: 280px; height: 90px; border-radius: 20px; background: #2A2118; opacity: 0; }
+  .board { position: absolute; left: 100px; top: 480px; width: 880px; }
+  .ev { height: 110px; margin: 12px 0; border-radius: 18px; background: #2A2118; color: #E2A23A; display: flex; align-items: center; padding: 0 28px; font-size: 42px; font-weight: 800; opacity: 0; }
+</style></head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="10.667" data-width="1080" data-height="1920">
+  <section class="clip" id="world" data-start="0" data-duration="10.667" data-track-index="1"><div class="ground" id="ground"></div><div class="lattu" id="toy"></div><div class="moon" id="moon"></div></section>
+  <div class="cap clip " data-start="0.000" data-duration="0.395" data-track-index="3"><p>There was a</p></div>
+<div class="cap clip " data-start="0.453" data-duration="0.720" data-track-index="3"><p>lattu that should</p></div>
+<div class="cap clip " data-start="1.196" data-duration="1.045" data-track-index="3"><p>have fallen. A</p></div>
+<div class="cap clip " data-start="2.310" data-duration="0.639" data-track-index="3"><p>child gave it</p></div>
+<div class="cap clip " data-start="2.995" data-duration="0.534" data-track-index="3"><p>a string and</p></div>
+<div class="cap clip " data-start="3.576" data-duration="0.766" data-track-index="3"><p>a spin, and</p></div>
+<div class="cap clip " data-start="4.400" data-duration="0.523" data-track-index="3"><p>it walked the</p></div>
+<div class="cap clip " data-start="4.969" data-duration="1.405" data-track-index="3"><p>whole courtyard. The</p></div>
+<div class="cap clip " data-start="6.432" data-duration="0.522" data-track-index="3"><p>moon does the</p></div>
+<div class="cap clip " data-start="7.012" data-duration="0.732" data-track-index="3"><p>same thing up</p></div>
+<div class="cap clip " data-start="7.790" data-duration="0.767" data-track-index="3"><p>in the sky.</p></div>
+<div class="cap clip " data-start="8.835" data-duration="1.382" data-track-index="3"><p>It never lands.</p></div>
+  <audio id="vo" src="assets/vo.mp3" data-start="0" data-duration="10.667" data-track-index="4" data-volume="1"></audio>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+
+        tl.fromTo("#ground", { scaleX: 0 }, { scaleX: 1, duration: 0.45, ease: "power2.out" }, 0.1);
+        tl.fromTo("#toy", { x: -40, opacity: 0, rotation: 20 }, { x: -40, opacity: 1, rotation: 20, duration: 0.45, ease: "power3.out" }, 0.453);
+        tl.to("#toy", { rotation: 360, duration: 1.1, ease: "power1.inOut" }, 3.646);
+        tl.to("#toy", { x: 280, rotation: 20, duration: 1.4, ease: "power2.inOut" }, 4.516);
+        tl.fromTo("#moon", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: "power3.out" }, 6.432);
+      
+window.__timelines["main"] = tl;
+</script></body></html>
