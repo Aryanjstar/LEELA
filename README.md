@@ -2,7 +2,7 @@
 
 **Any idea, at play.** A studio that turns a topic, notes, or a piece of code into a short film: a plan of named scenes, a voice with word timing, and a picture rendered by code.
 
-The name is Leela (लीला). This repository is Lila.
+The product is Leela (लीला). This repository is LEELA.
 
 ## What is on the site
 
