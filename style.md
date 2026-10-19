@@ -1,6 +1,6 @@
 # My video style
 
-Read this before every edit or new film.
+Read this before every edit or new film. Then open `.cursor/skills/leela-video-styles/SKILL.md` and pick one style. No two films share a style.
 
 Colours: each film has its own palette. The website is black, white, and gray. A code film may be night and cyan. A science film may be warm paper. A story may be night and gold. Do not reuse one palette for two films.
 
