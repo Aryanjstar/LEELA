@@ -288,3 +288,7 @@ Run the same browser journey against production (`E2E_BASE_URL=… npm run e2e`)
 - [ ] First deploy planned
 - [ ] Browser journey (`tests/e2e`) covering every role, run locally and against production
 - [ ] Every external provider's key checked from the server before the slice that needs it
+
+## SceneSpindle follow-up — 2026-11-02
+
+For this product, the version-2 source-of-truth docs and IMPLEMENTATION_PLAN.md supersede historical naming/layer instructions in this playbook. Apply BRIEFING_WORKFLOW.md before new creative planning. Keep the external toolbox on demand, and do not install session-start bootstraps. Implementation is paused; commits/pushes/deployment require the user's separate instruction. These rules also supersede the generic auto-commit/auto-push language above.

@@ -1,0 +1,1560 @@
+{
+ "sounds": 40,
+ "files": 120,
+ "sample_rate": 48000,
+ "peak_dbfs": -1,
+ "made_with": "pure code synthesis (numpy/scipy), no samples",
+ "index": [
+  {
+   "file": "transitions/whoosh_short_v1.wav",
+   "name": "transitions/whoosh_short",
+   "variant": 1,
+   "seconds": 0.301,
+   "tags": [
+    "whoosh",
+    "fast",
+    "cut"
+   ],
+   "best_use": "quick cut or element flying in",
+   "harsh_2_5k": 0.15
+  },
+  {
+   "file": "transitions/whoosh_short_v2.wav",
+   "name": "transitions/whoosh_short",
+   "variant": 2,
+   "seconds": 0.32,
+   "tags": [
+    "whoosh",
+    "fast",
+    "cut"
+   ],
+   "best_use": "quick cut or element flying in",
+   "harsh_2_5k": 0.19
+  },
+  {
+   "file": "transitions/whoosh_short_v3.wav",
+   "name": "transitions/whoosh_short",
+   "variant": 3,
+   "seconds": 0.339,
+   "tags": [
+    "whoosh",
+    "fast",
+    "cut"
+   ],
+   "best_use": "quick cut or element flying in",
+   "harsh_2_5k": 0.18
+  },
+  {
+   "file": "transitions/whoosh_long_v1.wav",
+   "name": "transitions/whoosh_long",
+   "variant": 1,
+   "seconds": 0.846,
+   "tags": [
+    "whoosh",
+    "slow",
+    "scene"
+   ],
+   "best_use": "scene change, big camera move",
+   "harsh_2_5k": 0.07
+  },
+  {
+   "file": "transitions/whoosh_long_v2.wav",
+   "name": "transitions/whoosh_long",
+   "variant": 2,
+   "seconds": 0.9,
+   "tags": [
+    "whoosh",
+    "slow",
+    "scene"
+   ],
+   "best_use": "scene change, big camera move",
+   "harsh_2_5k": 0.09
+  },
+  {
+   "file": "transitions/whoosh_long_v3.wav",
+   "name": "transitions/whoosh_long",
+   "variant": 3,
+   "seconds": 0.954,
+   "tags": [
+    "whoosh",
+    "slow",
+    "scene"
+   ],
+   "best_use": "scene change, big camera move",
+   "harsh_2_5k": 0.1
+  },
+  {
+   "file": "transitions/swoosh_v1.wav",
+   "name": "transitions/swoosh",
+   "variant": 1,
+   "seconds": 0.395,
+   "tags": [
+    "whoosh",
+    "airy",
+    "swipe"
+   ],
+   "best_use": "swipe, card sliding past",
+   "harsh_2_5k": 0.24
+  },
+  {
+   "file": "transitions/swoosh_v2.wav",
+   "name": "transitions/swoosh",
+   "variant": 2,
+   "seconds": 0.42,
+   "tags": [
+    "whoosh",
+    "airy",
+    "swipe"
+   ],
+   "best_use": "swipe, card sliding past",
+   "harsh_2_5k": 0.27
+  },
+  {
+   "file": "transitions/swoosh_v3.wav",
+   "name": "transitions/swoosh",
+   "variant": 3,
+   "seconds": 0.445,
+   "tags": [
+    "whoosh",
+    "airy",
+    "swipe"
+   ],
+   "best_use": "swipe, card sliding past",
+   "harsh_2_5k": 0.3
+  },
+  {
+   "file": "transitions/riser_v1.wav",
+   "name": "transitions/riser",
+   "variant": 1,
+   "seconds": 1.504,
+   "tags": [
+    "build",
+    "tension",
+    "up"
+   ],
+   "best_use": "build before a reveal (place so it ends on the hit)",
+   "harsh_2_5k": 0.25
+  },
+  {
+   "file": "transitions/riser_v2.wav",
+   "name": "transitions/riser",
+   "variant": 2,
+   "seconds": 1.6,
+   "tags": [
+    "build",
+    "tension",
+    "up"
+   ],
+   "best_use": "build before a reveal (place so it ends on the hit)",
+   "harsh_2_5k": 0.24
+  },
+  {
+   "file": "transitions/riser_v3.wav",
+   "name": "transitions/riser",
+   "variant": 3,
+   "seconds": 1.696,
+   "tags": [
+    "build",
+    "tension",
+    "up"
+   ],
+   "best_use": "build before a reveal (place so it ends on the hit)",
+   "harsh_2_5k": 0.23
+  },
+  {
+   "file": "transitions/reverse_riser_v1.wav",
+   "name": "transitions/reverse_riser",
+   "variant": 1,
+   "seconds": 0.752,
+   "tags": [
+    "build",
+    "suck",
+    "reverse"
+   ],
+   "best_use": "sucks into a cut; place so the end lands on the cut",
+   "harsh_2_5k": 0.01
+  },
+  {
+   "file": "transitions/reverse_riser_v2.wav",
+   "name": "transitions/reverse_riser",
+   "variant": 2,
+   "seconds": 0.8,
+   "tags": [
+    "build",
+    "suck",
+    "reverse"
+   ],
+   "best_use": "sucks into a cut; place so the end lands on the cut",
+   "harsh_2_5k": 0.01
+  },
+  {
+   "file": "transitions/reverse_riser_v3.wav",
+   "name": "transitions/reverse_riser",
+   "variant": 3,
+   "seconds": 0.848,
+   "tags": [
+    "build",
+    "suck",
+    "reverse"
+   ],
+   "best_use": "sucks into a cut; place so the end lands on the cut",
+   "harsh_2_5k": 0.0
+  },
+  {
+   "file": "transitions/downlifter_v1.wav",
+   "name": "transitions/downlifter",
+   "variant": 1,
+   "seconds": 1.034,
+   "tags": [
+    "fall",
+    "release",
+    "down"
+   ],
+   "best_use": "after a drop, settling into a new scene",
+   "harsh_2_5k": 0.11
+  },
+  {
+   "file": "transitions/downlifter_v2.wav",
+   "name": "transitions/downlifter",
+   "variant": 2,
+   "seconds": 1.1,
+   "tags": [
+    "fall",
+    "release",
+    "down"
+   ],
+   "best_use": "after a drop, settling into a new scene",
+   "harsh_2_5k": 0.12
+  },
+  {
+   "file": "transitions/downlifter_v3.wav",
+   "name": "transitions/downlifter",
+   "variant": 3,
+   "seconds": 1.166,
+   "tags": [
+    "fall",
+    "release",
+    "down"
+   ],
+   "best_use": "after a drop, settling into a new scene",
+   "harsh_2_5k": 0.12
+  },
+  {
+   "file": "impacts/hit_v1.wav",
+   "name": "impacts/hit",
+   "variant": 1,
+   "seconds": 0.45,
+   "tags": [
+    "impact",
+    "punchy",
+    "beat"
+   ],
+   "best_use": "text or object landing hard",
+   "harsh_2_5k": 0.0
+  },
+  {
+   "file": "impacts/hit_v2.wav",
+   "name": "impacts/hit",
+   "variant": 2,
+   "seconds": 0.45,
+   "tags": [
+    "impact",
+    "punchy",
+    "beat"
+   ],
+   "best_use": "text or object landing hard",
+   "harsh_2_5k": 0.0
+  },
+  {
+   "file": "impacts/hit_v3.wav",
+   "name": "impacts/hit",
+   "variant": 3,
+   "seconds": 0.45,
+   "tags": [
+    "impact",
+    "punchy",
+    "beat"
+   ],
+   "best_use": "text or object landing hard",
+   "harsh_2_5k": 0.0
+  },
+  {
+   "file": "impacts/boom_v1.wav",
+   "name": "impacts/boom",
+   "variant": 1,
+   "seconds": 1.6,
+   "tags": [
+    "impact",
+    "big",
+    "cinematic"
+   ],
+   "best_use": "title slam, big reveal",
+   "harsh_2_5k": 0.0
+  },
+  {
+   "file": "impacts/boom_v2.wav",
+   "name": "impacts/boom",
+   "variant": 2,
+   "seconds": 1.6,
+   "tags": [
+    "impact",
+    "big",
+    "cinematic"
+   ],
+   "best_use": "title slam, big reveal",
+   "harsh_2_5k": 0.0
+  },
+  {
+   "file": "impacts/boom_v3.wav",
+   "name": "impacts/boom",
+   "variant": 3,
+   "seconds": 1.6,
+   "tags": [
+    "impact",
+    "big",
+    "cinematic"
+   ],
+   "best_use": "title slam, big reveal",
+   "harsh_2_5k": 0.0
+  },
+  {
+   "file": "impacts/sub_drop_v1.wav",
+   "name": "impacts/sub_drop",
+   "variant": 1,
+   "seconds": 1.4,
+   "tags": [
+    "sub",
+    "drop",
+    "bass"
+   ],
+   "best_use": "the drop under a reveal",
+   "harsh_2_5k": 0.0
+  },
+  {
+   "file": "impacts/sub_drop_v2.wav",
+   "name": "impacts/sub_drop",
+   "variant": 2,
+   "seconds": 1.4,
+   "tags": [
+    "sub",
+    "drop",
+    "bass"
+   ],
+   "best_use": "the drop under a reveal",
+   "harsh_2_5k": 0.0
+  },
+  {
+   "file": "impacts/sub_drop_v3.wav",
+   "name": "impacts/sub_drop",
+   "variant": 3,
+   "seconds": 1.4,
+   "tags": [
+    "sub",
+    "drop",
+    "bass"
+   ],
+   "best_use": "the drop under a reveal",
+   "harsh_2_5k": 0.0
+  },
+  {
+   "file": "impacts/punch_v1.wav",
+   "name": "impacts/punch",
+   "variant": 1,
+   "seconds": 0.3,
+   "tags": [
+    "impact",
+    "body",
+    "fight"
+   ],
+   "best_use": "fight hit (Look C), knock",
+   "harsh_2_5k": 0.01
+  },
+  {
+   "file": "impacts/punch_v2.wav",
+   "name": "impacts/punch",
+   "variant": 2,
+   "seconds": 0.3,
+   "tags": [
+    "impact",
+    "body",
+    "fight"
+   ],
+   "best_use": "fight hit (Look C), knock",
+   "harsh_2_5k": 0.01
+  },
+  {
+   "file": "impacts/punch_v3.wav",
+   "name": "impacts/punch",
+   "variant": 3,
+   "seconds": 0.3,
+   "tags": [
+    "impact",
+    "body",
+    "fight"
+   ],
+   "best_use": "fight hit (Look C), knock",
+   "harsh_2_5k": 0.01
+  },
+  {
+   "file": "impacts/ko_bell_v1.wav",
+   "name": "impacts/ko_bell",
+   "variant": 1,
+   "seconds": 2.2,
+   "tags": [
+    "bell",
+    "fight",
+    "ko"
+   ],
+   "best_use": "knockout, round end (Look C)",
+   "harsh_2_5k": 0.3
+  },
+  {
+   "file": "impacts/ko_bell_v2.wav",
+   "name": "impacts/ko_bell",
+   "variant": 2,
+   "seconds": 2.2,
+   "tags": [
+    "bell",
+    "fight",
+    "ko"
+   ],
+   "best_use": "knockout, round end (Look C)",
+   "harsh_2_5k": 0.3
+  },
+  {
+   "file": "impacts/ko_bell_v3.wav",
+   "name": "impacts/ko_bell",
+   "variant": 3,
+   "seconds": 2.2,
+   "tags": [
+    "bell",
+    "fight",
+    "ko"
+   ],
+   "best_use": "knockout, round end (Look C)",
+   "harsh_2_5k": 0.3
+  },
+  {
+   "file": "ui/click_v1.wav",
+   "name": "ui/click",
+   "variant": 1,
+   "seconds": 0.05,
+   "tags": [
+    "ui",
+    "click",
+    "tiny"
+   ],
+   "best_use": "button press, toggle",
+   "harsh_2_5k": 0.07
+  },
+  {
+   "file": "ui/click_v2.wav",
+   "name": "ui/click",
+   "variant": 2,
+   "seconds": 0.05,
+   "tags": [
+    "ui",
+    "click",
+    "tiny"
+   ],
+   "best_use": "button press, toggle",
+   "harsh_2_5k": 0.06
+  },
+  {
+   "file": "ui/click_v3.wav",
+   "name": "ui/click",
+   "variant": 3,
+   "seconds": 0.05,
+   "tags": [
+    "ui",
+    "click",
+    "tiny"
+   ],
+   "best_use": "button press, toggle",
+   "harsh_2_5k": 0.07
+  },
+  {
+   "file": "ui/pop_v1.wav",
+   "name": "ui/pop",
+   "variant": 1,
+   "seconds": 0.12,
+   "tags": [
+    "ui",
+    "pop",
+    "appear"
+   ],
+   "best_use": "element popping in (cards, bubbles, pills)",
+   "harsh_2_5k": 0.0
+  },
+  {
+   "file": "ui/pop_v2.wav",
+   "name": "ui/pop",
+   "variant": 2,
+   "seconds": 0.12,
+   "tags": [
+    "ui",
+    "pop",
+    "appear"
+   ],
+   "best_use": "element popping in (cards, bubbles, pills)",
+   "harsh_2_5k": 0.0
+  },
+  {
+   "file": "ui/pop_v3.wav",
+   "name": "ui/pop",
+   "variant": 3,
+   "seconds": 0.12,
+   "tags": [
+    "ui",
+    "pop",
+    "appear"
+   ],
+   "best_use": "element popping in (cards, bubbles, pills)",
+   "harsh_2_5k": 0.0
+  },
+  {
+   "file": "ui/blip_v1.wav",
+   "name": "ui/blip",
+   "variant": 1,
+   "seconds": 0.09,
+   "tags": [
+    "ui",
+    "blip",
+    "soft"
+   ],
+   "best_use": "small indicator, list item",
+   "harsh_2_5k": 0.01
+  },
+  {
+   "file": "ui/blip_v2.wav",
+   "name": "ui/blip",
+   "variant": 2,
+   "seconds": 0.09,
+   "tags": [
+    "ui",
+    "blip",
+    "soft"
+   ],
+   "best_use": "small indicator, list item",
+   "harsh_2_5k": 0.01
+  },
+  {
+   "file": "ui/blip_v3.wav",
+   "name": "ui/blip",
+   "variant": 3,
+   "seconds": 0.09,
+   "tags": [
+    "ui",
+    "blip",
+    "soft"
+   ],
+   "best_use": "small indicator, list item",
+   "harsh_2_5k": 0.01
+  },
+  {
+   "file": "ui/toggle_v1.wav",
+   "name": "ui/toggle",
+   "variant": 1,
+   "seconds": 0.12,
+   "tags": [
+    "ui",
+    "switch"
+   ],
+   "best_use": "switch flipping on",
+   "harsh_2_5k": 0.01
+  },
+  {
+   "file": "ui/toggle_v2.wav",
+   "name": "ui/toggle",
+   "variant": 2,
+   "seconds": 0.12,
+   "tags": [
+    "ui",
+    "switch"
+   ],
+   "best_use": "switch flipping on",
+   "harsh_2_5k": 0.01
+  },
+  {
+   "file": "ui/toggle_v3.wav",
+   "name": "ui/toggle",
+   "variant": 3,
+   "seconds": 0.12,
+   "tags": [
+    "ui",
+    "switch"
+   ],
+   "best_use": "switch flipping on",
+   "harsh_2_5k": 0.01
+  },
+  {
+   "file": "ui/notification_v1.wav",
+   "name": "ui/notification",
+   "variant": 1,
+   "seconds": 0.61,
+   "tags": [
+    "ui",
+    "alert",
+    "friendly"
+   ],
+   "best_use": "message arriving, lead alert",
+   "harsh_2_5k": 0.03
+  },
+  {
+   "file": "ui/notification_v2.wav",
+   "name": "ui/notification",
+   "variant": 2,
+   "seconds": 0.61,
+   "tags": [
+    "ui",
+    "alert",
+    "friendly"
+   ],
+   "best_use": "message arriving, lead alert",
+   "harsh_2_5k": 0.03
+  },
+  {
+   "file": "ui/notification_v3.wav",
+   "name": "ui/notification",
+   "variant": 3,
+   "seconds": 0.61,
+   "tags": [
+    "ui",
+    "alert",
+    "friendly"
+   ],
+   "best_use": "message arriving, lead alert",
+   "harsh_2_5k": 0.03
+  },
+  {
+   "file": "ui/error_v1.wav",
+   "name": "ui/error",
+   "variant": 1,
+   "seconds": 0.32,
+   "tags": [
+    "ui",
+    "wrong",
+    "buzz"
+   ],
+   "best_use": "rejected, wrong answer, swipe-away",
+   "harsh_2_5k": 0.01
+  },
+  {
+   "file": "ui/error_v2.wav",
+   "name": "ui/error",
+   "variant": 2,
+   "seconds": 0.32,
+   "tags": [
+    "ui",
+    "wrong",
+    "buzz"
+   ],
+   "best_use": "rejected, wrong answer, swipe-away",
+   "harsh_2_5k": 0.01
+  },
+  {
+   "file": "ui/error_v3.wav",
+   "name": "ui/error",
+   "variant": 3,
+   "seconds": 0.32,
+   "tags": [
+    "ui",
+    "wrong",
+    "buzz"
+   ],
+   "best_use": "rejected, wrong answer, swipe-away",
+   "harsh_2_5k": 0.01
+  },
+  {
+   "file": "ui/success_v1.wav",
+   "name": "ui/success",
+   "variant": 1,
+   "seconds": 0.89,
+   "tags": [
+    "ui",
+    "ding",
+    "win"
+   ],
+   "best_use": "check mark, task done, approved",
+   "harsh_2_5k": 0.04
+  },
+  {
+   "file": "ui/success_v2.wav",
+   "name": "ui/success",
+   "variant": 2,
+   "seconds": 0.89,
+   "tags": [
+    "ui",
+    "ding",
+    "win"
+   ],
+   "best_use": "check mark, task done, approved",
+   "harsh_2_5k": 0.05
+  },
+  {
+   "file": "ui/success_v3.wav",
+   "name": "ui/success",
+   "variant": 3,
+   "seconds": 0.89,
+   "tags": [
+    "ui",
+    "ding",
+    "win"
+   ],
+   "best_use": "check mark, task done, approved",
+   "harsh_2_5k": 0.05
+  },
+  {
+   "file": "ui/key_v1.wav",
+   "name": "ui/key",
+   "variant": 1,
+   "seconds": 0.045,
+   "tags": [
+    "typing",
+    "keyboard"
+   ],
+   "best_use": "single key press (sprinkle randomly while typing)",
+   "harsh_2_5k": 0.13
+  },
+  {
+   "file": "ui/key_v2.wav",
+   "name": "ui/key",
+   "variant": 2,
+   "seconds": 0.045,
+   "tags": [
+    "typing",
+    "keyboard"
+   ],
+   "best_use": "single key press (sprinkle randomly while typing)",
+   "harsh_2_5k": 0.14
+  },
+  {
+   "file": "ui/key_v3.wav",
+   "name": "ui/key",
+   "variant": 3,
+   "seconds": 0.045,
+   "tags": [
+    "typing",
+    "keyboard"
+   ],
+   "best_use": "single key press (sprinkle randomly while typing)",
+   "harsh_2_5k": 0.12
+  },
+  {
+   "file": "ui/spacebar_v1.wav",
+   "name": "ui/spacebar",
+   "variant": 1,
+   "seconds": 0.09,
+   "tags": [
+    "typing",
+    "keyboard",
+    "thock"
+   ],
+   "best_use": "spacebar / enter while typing",
+   "harsh_2_5k": 0.01
+  },
+  {
+   "file": "ui/spacebar_v2.wav",
+   "name": "ui/spacebar",
+   "variant": 2,
+   "seconds": 0.09,
+   "tags": [
+    "typing",
+    "keyboard",
+    "thock"
+   ],
+   "best_use": "spacebar / enter while typing",
+   "harsh_2_5k": 0.01
+  },
+  {
+   "file": "ui/spacebar_v3.wav",
+   "name": "ui/spacebar",
+   "variant": 3,
+   "seconds": 0.09,
+   "tags": [
+    "typing",
+    "keyboard",
+    "thock"
+   ],
+   "best_use": "spacebar / enter while typing",
+   "harsh_2_5k": 0.0
+  },
+  {
+   "file": "ui/cursor_tick_v1.wav",
+   "name": "ui/cursor_tick",
+   "variant": 1,
+   "seconds": 0.04,
+   "tags": [
+    "ui",
+    "cursor",
+    "tick"
+   ],
+   "best_use": "cursor moving between items",
+   "harsh_2_5k": 0.06
+  },
+  {
+   "file": "ui/cursor_tick_v2.wav",
+   "name": "ui/cursor_tick",
+   "variant": 2,
+   "seconds": 0.04,
+   "tags": [
+    "ui",
+    "cursor",
+    "tick"
+   ],
+   "best_use": "cursor moving between items",
+   "harsh_2_5k": 0.06
+  },
+  {
+   "file": "ui/cursor_tick_v3.wav",
+   "name": "ui/cursor_tick",
+   "variant": 3,
+   "seconds": 0.04,
+   "tags": [
+    "ui",
+    "cursor",
+    "tick"
+   ],
+   "best_use": "cursor moving between items",
+   "harsh_2_5k": 0.03
+  },
+  {
+   "file": "ui/hover_v1.wav",
+   "name": "ui/hover",
+   "variant": 1,
+   "seconds": 0.1,
+   "tags": [
+    "ui",
+    "soft",
+    "up"
+   ],
+   "best_use": "gentle hover / highlight",
+   "harsh_2_5k": 0.0
+  },
+  {
+   "file": "ui/hover_v2.wav",
+   "name": "ui/hover",
+   "variant": 2,
+   "seconds": 0.1,
+   "tags": [
+    "ui",
+    "soft",
+    "up"
+   ],
+   "best_use": "gentle hover / highlight",
+   "harsh_2_5k": 0.0
+  },
+  {
+   "file": "ui/hover_v3.wav",
+   "name": "ui/hover",
+   "variant": 3,
+   "seconds": 0.1,
+   "tags": [
+    "ui",
+    "soft",
+    "up"
+   ],
+   "best_use": "gentle hover / highlight",
+   "harsh_2_5k": 0.0
+  },
+  {
+   "file": "motion/bubble_v1.wav",
+   "name": "motion/bubble",
+   "variant": 1,
+   "seconds": 0.1,
+   "tags": [
+    "pop",
+    "bubble",
+    "cute"
+   ],
+   "best_use": "speech bubbles, light pops",
+   "harsh_2_5k": 0.0
+  },
+  {
+   "file": "motion/bubble_v2.wav",
+   "name": "motion/bubble",
+   "variant": 2,
+   "seconds": 0.1,
+   "tags": [
+    "pop",
+    "bubble",
+    "cute"
+   ],
+   "best_use": "speech bubbles, light pops",
+   "harsh_2_5k": 0.0
+  },
+  {
+   "file": "motion/bubble_v3.wav",
+   "name": "motion/bubble",
+   "variant": 3,
+   "seconds": 0.1,
+   "tags": [
+    "pop",
+    "bubble",
+    "cute"
+   ],
+   "best_use": "speech bubbles, light pops",
+   "harsh_2_5k": 0.0
+  },
+  {
+   "file": "motion/boing_v1.wav",
+   "name": "motion/boing",
+   "variant": 1,
+   "seconds": 0.55,
+   "tags": [
+    "spring",
+    "bounce",
+    "cartoon"
+   ],
+   "best_use": "springy overshoot, character hop",
+   "harsh_2_5k": 0.0
+  },
+  {
+   "file": "motion/boing_v2.wav",
+   "name": "motion/boing",
+   "variant": 2,
+   "seconds": 0.55,
+   "tags": [
+    "spring",
+    "bounce",
+    "cartoon"
+   ],
+   "best_use": "springy overshoot, character hop",
+   "harsh_2_5k": 0.0
+  },
+  {
+   "file": "motion/boing_v3.wav",
+   "name": "motion/boing",
+   "variant": 3,
+   "seconds": 0.55,
+   "tags": [
+    "spring",
+    "bounce",
+    "cartoon"
+   ],
+   "best_use": "springy overshoot, character hop",
+   "harsh_2_5k": 0.0
+  },
+  {
+   "file": "motion/glitch_v1.wav",
+   "name": "motion/glitch",
+   "variant": 1,
+   "seconds": 0.346,
+   "tags": [
+    "glitch",
+    "digital",
+    "error"
+   ],
+   "best_use": "glitch transition, corrupted text",
+   "harsh_2_5k": 0.23
+  },
+  {
+   "file": "motion/glitch_v2.wav",
+   "name": "motion/glitch",
+   "variant": 2,
+   "seconds": 0.38,
+   "tags": [
+    "glitch",
+    "digital",
+    "error"
+   ],
+   "best_use": "glitch transition, corrupted text",
+   "harsh_2_5k": 0.28
+  },
+  {
+   "file": "motion/glitch_v3.wav",
+   "name": "motion/glitch",
+   "variant": 3,
+   "seconds": 0.38,
+   "tags": [
+    "glitch",
+    "digital",
+    "error"
+   ],
+   "best_use": "glitch transition, corrupted text",
+   "harsh_2_5k": 0.2
+  },
+  {
+   "file": "motion/stutter_v1.wav",
+   "name": "motion/stutter",
+   "variant": 1,
+   "seconds": 0.31,
+   "tags": [
+    "stutter",
+    "digital",
+    "repeat"
+   ],
+   "best_use": "digital stutter on a word or frame repeat",
+   "harsh_2_5k": 0.06
+  },
+  {
+   "file": "motion/stutter_v2.wav",
+   "name": "motion/stutter",
+   "variant": 2,
+   "seconds": 0.31,
+   "tags": [
+    "stutter",
+    "digital",
+    "repeat"
+   ],
+   "best_use": "digital stutter on a word or frame repeat",
+   "harsh_2_5k": 0.06
+  },
+  {
+   "file": "motion/stutter_v3.wav",
+   "name": "motion/stutter",
+   "variant": 3,
+   "seconds": 0.31,
+   "tags": [
+    "stutter",
+    "digital",
+    "repeat"
+   ],
+   "best_use": "digital stutter on a word or frame repeat",
+   "harsh_2_5k": 0.06
+  },
+  {
+   "file": "motion/scanner_v1.wav",
+   "name": "motion/scanner",
+   "variant": 1,
+   "seconds": 0.9,
+   "tags": [
+    "scan",
+    "sweep",
+    "tech"
+   ],
+   "best_use": "scanning line, analysis sweep",
+   "harsh_2_5k": 0.19
+  },
+  {
+   "file": "motion/scanner_v2.wav",
+   "name": "motion/scanner",
+   "variant": 2,
+   "seconds": 0.9,
+   "tags": [
+    "scan",
+    "sweep",
+    "tech"
+   ],
+   "best_use": "scanning line, analysis sweep",
+   "harsh_2_5k": 0.19
+  },
+  {
+   "file": "motion/scanner_v3.wav",
+   "name": "motion/scanner",
+   "variant": 3,
+   "seconds": 0.9,
+   "tags": [
+    "scan",
+    "sweep",
+    "tech"
+   ],
+   "best_use": "scanning line, analysis sweep",
+   "harsh_2_5k": 0.2
+  },
+  {
+   "file": "motion/sparkle_v1.wav",
+   "name": "motion/sparkle",
+   "variant": 1,
+   "seconds": 0.616,
+   "tags": [
+    "sparkle",
+    "shimmer",
+    "magic"
+   ],
+   "best_use": "shiny reveal, coin glint",
+   "harsh_2_5k": 0.0
+  },
+  {
+   "file": "motion/sparkle_v2.wav",
+   "name": "motion/sparkle",
+   "variant": 2,
+   "seconds": 0.697,
+   "tags": [
+    "sparkle",
+    "shimmer",
+    "magic"
+   ],
+   "best_use": "shiny reveal, coin glint",
+   "harsh_2_5k": 0.0
+  },
+  {
+   "file": "motion/sparkle_v3.wav",
+   "name": "motion/sparkle",
+   "variant": 3,
+   "seconds": 0.662,
+   "tags": [
+    "sparkle",
+    "shimmer",
+    "magic"
+   ],
+   "best_use": "shiny reveal, coin glint",
+   "harsh_2_5k": 0.0
+  },
+  {
+   "file": "motion/chime_v1.wav",
+   "name": "motion/chime",
+   "variant": 1,
+   "seconds": 1.41,
+   "tags": [
+    "chime",
+    "magic",
+    "soft"
+   ],
+   "best_use": "gentle magic moment, idea appears",
+   "harsh_2_5k": 0.03
+  },
+  {
+   "file": "motion/chime_v2.wav",
+   "name": "motion/chime",
+   "variant": 2,
+   "seconds": 1.41,
+   "tags": [
+    "chime",
+    "magic",
+    "soft"
+   ],
+   "best_use": "gentle magic moment, idea appears",
+   "harsh_2_5k": 0.03
+  },
+  {
+   "file": "motion/chime_v3.wav",
+   "name": "motion/chime",
+   "variant": 3,
+   "seconds": 1.41,
+   "tags": [
+    "chime",
+    "magic",
+    "soft"
+   ],
+   "best_use": "gentle magic moment, idea appears",
+   "harsh_2_5k": 0.03
+  },
+  {
+   "file": "motion/pluck_v1.wav",
+   "name": "motion/pluck",
+   "variant": 1,
+   "seconds": 0.5,
+   "tags": [
+    "pluck",
+    "soft",
+    "musical"
+   ],
+   "best_use": "soft musical accent on a label",
+   "harsh_2_5k": 0.01
+  },
+  {
+   "file": "motion/pluck_v2.wav",
+   "name": "motion/pluck",
+   "variant": 2,
+   "seconds": 0.5,
+   "tags": [
+    "pluck",
+    "soft",
+    "musical"
+   ],
+   "best_use": "soft musical accent on a label",
+   "harsh_2_5k": 0.01
+  },
+  {
+   "file": "motion/pluck_v3.wav",
+   "name": "motion/pluck",
+   "variant": 3,
+   "seconds": 0.5,
+   "tags": [
+    "pluck",
+    "soft",
+    "musical"
+   ],
+   "best_use": "soft musical accent on a label",
+   "harsh_2_5k": 0.02
+  },
+  {
+   "file": "game/health_drain_v1.wav",
+   "name": "game/health_drain",
+   "variant": 1,
+   "seconds": 0.8,
+   "tags": [
+    "8bit",
+    "health",
+    "drain"
+   ],
+   "best_use": "health bar emptying",
+   "harsh_2_5k": 0.05
+  },
+  {
+   "file": "game/health_drain_v2.wav",
+   "name": "game/health_drain",
+   "variant": 2,
+   "seconds": 0.8,
+   "tags": [
+    "8bit",
+    "health",
+    "drain"
+   ],
+   "best_use": "health bar emptying",
+   "harsh_2_5k": 0.05
+  },
+  {
+   "file": "game/health_drain_v3.wav",
+   "name": "game/health_drain",
+   "variant": 3,
+   "seconds": 0.8,
+   "tags": [
+    "8bit",
+    "health",
+    "drain"
+   ],
+   "best_use": "health bar emptying",
+   "harsh_2_5k": 0.06
+  },
+  {
+   "file": "game/coin_v1.wav",
+   "name": "game/coin",
+   "variant": 1,
+   "seconds": 0.37,
+   "tags": [
+    "8bit",
+    "coin",
+    "reward"
+   ],
+   "best_use": "coin, point gained",
+   "harsh_2_5k": 0.1
+  },
+  {
+   "file": "game/coin_v2.wav",
+   "name": "game/coin",
+   "variant": 2,
+   "seconds": 0.37,
+   "tags": [
+    "8bit",
+    "coin",
+    "reward"
+   ],
+   "best_use": "coin, point gained",
+   "harsh_2_5k": 0.1
+  },
+  {
+   "file": "game/coin_v3.wav",
+   "name": "game/coin",
+   "variant": 3,
+   "seconds": 0.37,
+   "tags": [
+    "8bit",
+    "coin",
+    "reward"
+   ],
+   "best_use": "coin, point gained",
+   "harsh_2_5k": 0.09
+  },
+  {
+   "file": "game/level_up_v1.wav",
+   "name": "game/level_up",
+   "variant": 1,
+   "seconds": 0.39,
+   "tags": [
+    "8bit",
+    "level",
+    "win"
+   ],
+   "best_use": "level up, unlock",
+   "harsh_2_5k": 0.08
+  },
+  {
+   "file": "game/level_up_v2.wav",
+   "name": "game/level_up",
+   "variant": 2,
+   "seconds": 0.39,
+   "tags": [
+    "8bit",
+    "level",
+    "win"
+   ],
+   "best_use": "level up, unlock",
+   "harsh_2_5k": 0.08
+  },
+  {
+   "file": "game/level_up_v3.wav",
+   "name": "game/level_up",
+   "variant": 3,
+   "seconds": 0.39,
+   "tags": [
+    "8bit",
+    "level",
+    "win"
+   ],
+   "best_use": "level up, unlock",
+   "harsh_2_5k": 0.1
+  },
+  {
+   "file": "game/jump_v1.wav",
+   "name": "game/jump",
+   "variant": 1,
+   "seconds": 0.22,
+   "tags": [
+    "8bit",
+    "jump"
+   ],
+   "best_use": "8-bit jump, character hop",
+   "harsh_2_5k": 0.05
+  },
+  {
+   "file": "game/jump_v2.wav",
+   "name": "game/jump",
+   "variant": 2,
+   "seconds": 0.22,
+   "tags": [
+    "8bit",
+    "jump"
+   ],
+   "best_use": "8-bit jump, character hop",
+   "harsh_2_5k": 0.05
+  },
+  {
+   "file": "game/jump_v3.wav",
+   "name": "game/jump",
+   "variant": 3,
+   "seconds": 0.22,
+   "tags": [
+    "8bit",
+    "jump"
+   ],
+   "best_use": "8-bit jump, character hop",
+   "harsh_2_5k": 0.05
+  },
+  {
+   "file": "game/hit_flash_v1.wav",
+   "name": "game/hit_flash",
+   "variant": 1,
+   "seconds": 0.18,
+   "tags": [
+    "8bit",
+    "hit",
+    "damage"
+   ],
+   "best_use": "damage flash in a fight",
+   "harsh_2_5k": 0.25
+  },
+  {
+   "file": "game/hit_flash_v2.wav",
+   "name": "game/hit_flash",
+   "variant": 2,
+   "seconds": 0.18,
+   "tags": [
+    "8bit",
+    "hit",
+    "damage"
+   ],
+   "best_use": "damage flash in a fight",
+   "harsh_2_5k": 0.3
+  },
+  {
+   "file": "game/hit_flash_v3.wav",
+   "name": "game/hit_flash",
+   "variant": 3,
+   "seconds": 0.18,
+   "tags": [
+    "8bit",
+    "hit",
+    "damage"
+   ],
+   "best_use": "damage flash in a fight",
+   "harsh_2_5k": 0.24
+  },
+  {
+   "file": "text/text_slam_v1.wav",
+   "name": "text/text_slam",
+   "variant": 1,
+   "seconds": 0.5,
+   "tags": [
+    "text",
+    "slam",
+    "title"
+   ],
+   "best_use": "big headline slamming in",
+   "harsh_2_5k": 0.01
+  },
+  {
+   "file": "text/text_slam_v2.wav",
+   "name": "text/text_slam",
+   "variant": 2,
+   "seconds": 0.5,
+   "tags": [
+    "text",
+    "slam",
+    "title"
+   ],
+   "best_use": "big headline slamming in",
+   "harsh_2_5k": 0.01
+  },
+  {
+   "file": "text/text_slam_v3.wav",
+   "name": "text/text_slam",
+   "variant": 3,
+   "seconds": 0.5,
+   "tags": [
+    "text",
+    "slam",
+    "title"
+   ],
+   "best_use": "big headline slamming in",
+   "harsh_2_5k": 0.02
+  },
+  {
+   "file": "text/word_pop_v1.wav",
+   "name": "text/word_pop",
+   "variant": 1,
+   "seconds": 0.035,
+   "tags": [
+    "text",
+    "pop",
+    "caption"
+   ],
+   "best_use": "caption word popping in (keep it quiet under voice)",
+   "harsh_2_5k": 0.0
+  },
+  {
+   "file": "text/word_pop_v2.wav",
+   "name": "text/word_pop",
+   "variant": 2,
+   "seconds": 0.035,
+   "tags": [
+    "text",
+    "pop",
+    "caption"
+   ],
+   "best_use": "caption word popping in (keep it quiet under voice)",
+   "harsh_2_5k": 0.0
+  },
+  {
+   "file": "text/word_pop_v3.wav",
+   "name": "text/word_pop",
+   "variant": 3,
+   "seconds": 0.035,
+   "tags": [
+    "text",
+    "pop",
+    "caption"
+   ],
+   "best_use": "caption word popping in (keep it quiet under voice)",
+   "harsh_2_5k": 0.0
+  },
+  {
+   "file": "text/card_flip_v1.wav",
+   "name": "text/card_flip",
+   "variant": 1,
+   "seconds": 0.16,
+   "tags": [
+    "paper",
+    "flip",
+    "card"
+   ],
+   "best_use": "card or page flipping over",
+   "harsh_2_5k": 0.29
+  },
+  {
+   "file": "text/card_flip_v2.wav",
+   "name": "text/card_flip",
+   "variant": 2,
+   "seconds": 0.16,
+   "tags": [
+    "paper",
+    "flip",
+    "card"
+   ],
+   "best_use": "card or page flipping over",
+   "harsh_2_5k": 0.27
+  },
+  {
+   "file": "text/card_flip_v3.wav",
+   "name": "text/card_flip",
+   "variant": 3,
+   "seconds": 0.16,
+   "tags": [
+    "paper",
+    "flip",
+    "card"
+   ],
+   "best_use": "card or page flipping over",
+   "harsh_2_5k": 0.35
+  },
+  {
+   "file": "text/paper_rip_v1.wav",
+   "name": "text/paper_rip",
+   "variant": 1,
+   "seconds": 0.55,
+   "tags": [
+    "paper",
+    "rip",
+    "tear"
+   ],
+   "best_use": "tearing (the roast bio rip)",
+   "harsh_2_5k": 0.35
+  },
+  {
+   "file": "text/paper_rip_v2.wav",
+   "name": "text/paper_rip",
+   "variant": 2,
+   "seconds": 0.55,
+   "tags": [
+    "paper",
+    "rip",
+    "tear"
+   ],
+   "best_use": "tearing (the roast bio rip)",
+   "harsh_2_5k": 0.34
+  },
+  {
+   "file": "text/paper_rip_v3.wav",
+   "name": "text/paper_rip",
+   "variant": 3,
+   "seconds": 0.55,
+   "tags": [
+    "paper",
+    "rip",
+    "tear"
+   ],
+   "best_use": "tearing (the roast bio rip)",
+   "harsh_2_5k": 0.34
+  },
+  {
+   "file": "text/stamp_v1.wav",
+   "name": "text/stamp",
+   "variant": 1,
+   "seconds": 0.131,
+   "tags": [
+    "stamp",
+    "approve",
+    "thud"
+   ],
+   "best_use": "APPROVED / REJECTED stamp",
+   "harsh_2_5k": 0.01
+  },
+  {
+   "file": "text/stamp_v2.wav",
+   "name": "text/stamp",
+   "variant": 2,
+   "seconds": 0.128,
+   "tags": [
+    "stamp",
+    "approve",
+    "thud"
+   ],
+   "best_use": "APPROVED / REJECTED stamp",
+   "harsh_2_5k": 0.01
+  },
+  {
+   "file": "text/stamp_v3.wav",
+   "name": "text/stamp",
+   "variant": 3,
+   "seconds": 0.127,
+   "tags": [
+    "stamp",
+    "approve",
+    "thud"
+   ],
+   "best_use": "APPROVED / REJECTED stamp",
+   "harsh_2_5k": 0.01
+  }
+ ]
+}

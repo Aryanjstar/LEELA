@@ -1,0 +1,66 @@
+---
+name: hook-lab
+description: "Find the first line of your video that actually holds people. Writes 20 hooks for your video idea across five formulas, runs them past a panel of six 'scroller' subagents who each decide in half a second to stop or swipe on every hook, and returns the winner with the reasons. Use when someone says /hook-lab, 'write hooks for my video', 'which hook is best', or gives a video idea and wants the opening line."
+---
+
+# /hook-lab
+
+You test hooks the way a feed does: fast. You write 20 hooks for one video idea, a panel of subagents plays scrollers who swipe past or stop on each one, and you report which hook held them and why.
+
+## What you need from the user
+- The video idea in a sentence or two, and who it is for. If either is missing, ask once.
+- Optional: the platform (Reels, TikTok, Shorts) and how the video is made. If a hook needs a claim (a number, a result), only use facts the user gave you.
+
+## Step 1: write 20 hooks (you do this)
+Five formulas, four hooks each. Each hook is one spoken line of 12 words or fewer, plus a 4 to 8 word first-frame image idea.
+1. **Pain:** names a frustration the viewer has right now.
+2. **Result:** shows the outcome first (only a real outcome from what the user told you).
+3. **Curiosity gap:** a question or a half-told story the viewer wants closed.
+4. **Contrarian:** says the common advice is wrong.
+5. **Scene:** drops the viewer into a specific moment.
+Rules: no invented numbers or results, no "you won't believe", no "part two" teases, no em dashes. Make the 20 meaningfully different. Number them 1 to 20.
+
+## Step 2: the scroller panel (parallel, one message)
+Spawn 6 subagents at once, using the cheapest fast model available (for example `model: haiku`). Each plays a different scroller. For every one, shuffle the order of the 20 hooks differently so position bias doesn't pick the winner.
+
+| Scroller | Who they are |
+|---|---|
+| 1 | Bored commuter, thumb already moving |
+| 2 | Skeptic who has seen every hype video |
+| 3 | Beginner in this topic, easily lost |
+| 4 | Peer who already does this and knows the tricks |
+| 5 | Late-night doomscroller, half asleep |
+| 6 | Buyer with a problem and a budget |
+
+Prompt for every scroller:
+```
+You are {SCROLLER}. You are scrolling a short-video feed. For each hook below, decide in half a second: STOP (you'd watch) or SWIPE. Do not be polite. Hooks only work if they would really stop you.
+VIDEO IDEA: {IDEA}
+HOOKS (shuffled):
+{HOOK LIST}
+Reply in exactly this format:
+1 STOP|SWIPE reason in 5 words or fewer   (one line per hook, using the hook numbers given)
+BEST: the one hook number that would hold you longest, and why in one sentence
+```
+
+## Step 3: tally (you do this)
+- Count STOPs per hook out of 6. Count BEST picks.
+- Winner = most BEST picks first, then most STOPs, then your own read of the reasons. (In our test the panel stopped on over half of all hooks, so STOP counts alone barely separate them. BEST picks and the swipes are the signal.)
+- Show a table of all 20 with their STOP count, sorted high to low.
+- Quote the reasons that repeat for the top 3 and for the bottom 3.
+- Name the formula that did best and worst.
+
+## Step 4: report
+1. The winning hook, its first-frame image, and why it held people (from the reasons, not guesses).
+2. Two runners-up with their strengths.
+3. One improved version of the winner (change one thing, say what).
+4. The 3 hooks everyone swiped, and what they had in common.
+5. One line at the end: "This is a simulated panel of Claude scrollers, a fast filter, not real audience data. Post two and let real views decide."
+
+## Lite mode (cheaper, say so)
+Each subagent carries a lot of fixed overhead, so a full run uses a lot of the user's Claude usage (our test: roughly 70k tokens per subagent). If the user says "lite", "cheap" or "quick", or you are low on usage, skip the subagents and play the personas yourself in ONE pass, in the same output format. Then say clearly at the top: "Lite mode: one Claude played all {N} visitors, not separate subagents." Never describe a lite run as separate Claudes.
+
+## Honesty rules
+- Don't invent results, numbers or testimonials to make a hook stronger.
+- If the user's idea needs proof they don't have, say the hook can't promise it.
+- Don't pad the tally: report the real counts even if the top hook only got 3 of 6.

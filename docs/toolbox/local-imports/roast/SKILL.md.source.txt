@@ -1,0 +1,64 @@
+---
+name: roast
+description: "Roast and rewrite your Instagram bio or landing page. Eight subagents, each a different kind of person who might land on it (a scroller, a buyer, a hater, a competitor and more), react in character and score it, then one more subagent rewrites it using what they said. Use when someone says /roast, 'roast my bio', 'roast my landing page', or pastes a bio or URL and wants honest feedback."
+---
+
+# /roast
+
+You run a small roast battle on one piece of text: an Instagram bio, a link-in-bio page, or a landing page. Eight subagents each play a different visitor and react honestly. A ninth rewrites it. The scores come from the reactions, not from you.
+
+## What you need from the user
+- The text to roast: a pasted bio, or a URL. If it's a URL, fetch the visible text (WebFetch, or curl and strip the tags). If you can't read it, ask the user to paste it. Don't guess what a page says.
+- Optional: who it's for ("business owners", "18-24 creators"). If missing, infer it from the text and say what you inferred.
+
+## Step 1: launch the eight visitors (in parallel, one message)
+Spawn 8 subagents at the same time. Use the cheapest fast model available for them (for example `model: haiku`). Give each the full text and ONE persona. Each reaction is the persona's gut reaction in the first few seconds, not a polite review.
+
+| # | Visitor | What they care about |
+|---|---|---|
+| 1 | **The Scroller** | Gives it 2 seconds. Will it stop their thumb? |
+| 2 | **The Buyer** | Ready to pay if they trust it. What proof is missing? |
+| 3 | **The Hater** | Looks for cringe, hype and claims that sound fake. |
+| 4 | **The Competitor** | Does the same thing. Looks for what's weak or copyable. |
+| 5 | **The Newcomer** | Has never heard of this topic. Do they understand what it is? |
+| 6 | **The Peer** | Follows five accounts like this one. Why follow this one? |
+| 7 | **The Sponsor** | A brand manager deciding whether to work with this person. |
+| 8 | **The Almost-Follower** | Was about to follow and hesitated. What made them hesitate? |
+
+Prompt for every visitor (fill in the persona and the text):
+```
+You are {PERSONA}: {CARE}. You just landed on the text below. React in character, honestly and briefly. Do not be nice and do not be cruel for fun.
+TEXT:
+"""{TEXT}"""
+Reply in exactly this format, nothing else:
+FIRST_REACTION: one sentence in your own voice
+WHAT_I_DO: follow | buy | leave | ignore | screenshot-to-roast (pick one)
+SCORES: clarity N/10, trust N/10, want N/10
+WORST_LINE: copy the exact words from the text that hurt it most (or NONE)
+FIX: one concrete change, under 20 words
+```
+
+## Step 2: tally (you do this, no subagent)
+- Table: visitor, what they'd do, the three scores, and their first reaction.
+- Averages for clarity, trust and want. Say the lowest one first.
+- Count how many would follow or buy vs leave or ignore.
+- List WORST_LINE quotes that two or more visitors picked, with the count. If a visitor quoted words that aren't in the text, drop that reaction and say so.
+- Be honest: if the scores are low, say so. Do not inflate them.
+
+## Step 3: the rewrite (one more subagent)
+Spawn one subagent. Give it the original text, the eight FIX lines and the repeated WORST_LINEs. Rules for the rewrite:
+- Keep every fact the original text states. Do not invent numbers, results, client names, awards or follower counts.
+- If a claim has no proof in the text, soften it or remove it, and say what proof the user could add.
+- Match the platform's limit (an Instagram bio is 150 characters).
+- Give 3 versions: safest, boldest, most specific. Say which one you'd pick and why.
+
+## Step 4: report
+Order: scoreboard, the 3 problems everyone agreed on, the rewrites, then "what I could not judge" (anything you couldn't see, like the profile photo, the grid or real follower numbers).
+
+## Lite mode (cheaper, say so)
+Each subagent carries a lot of fixed overhead, so a full run uses a lot of the user's Claude usage (our test: roughly 70k tokens per subagent). If the user says "lite", "cheap" or "quick", or you are low on usage, skip the subagents and play the personas yourself in ONE pass, in the same output format. Then say clearly at the top: "Lite mode: one Claude played all {N} visitors, not separate subagents." Never describe a lite run as separate Claudes.
+
+## Honesty rules
+- These are Claude simulations of audience types. They are a fast sanity check, not market data. Say so in one line at the end.
+- Never invent follower counts, engagement or sales to make a point.
+- Never reveal or ask for passwords or private data.

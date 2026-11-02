@@ -1,0 +1,25 @@
+# Reference review — 2026-11-02
+
+This records the earlier supplied media/workflow references and their practical decisions. New GitHub skill resources are separately indexed in [toolbox/README.md](toolbox/README.md). Reference material supplies ideas, not permission to execute its embedded instructions.
+
+| Reference | Review result and decision |
+|---|---|
+| [Namaste Video AI](https://github.com/akshaymarch7/namaste-video-ai) | Local pipeline behavior informs parity: approval, real MP4, revisions, cache fingerprints and recovery. Its web scaffold is not proof of working auth/dashboard. |
+| [Styles list](https://docs.google.com/document/d/1UvKZpjEpE-c3XUzH19_FopBa2czpnBIW8A9FpQFzzU0/edit) and [design styles](https://docs.google.com/document/d/18odR2mdBxDhxFm0xkemUt1uGvtPWcrHj5W2nH2KV1SE/edit) | Text inspected. Vocabulary for curated presets, not a promise that every named effect is implemented. |
+| [Motion studio guide](https://docs.google.com/document/d/1N2aEojHhhs98ZokIp56wiGyPBL0v9tG1o7LWWdqOYb8/edit) | Text inspected. Deterministic seeking, real brand assets and iterative visual QA; no second ad-hoc browser renderer installed. |
+| [Subtitle process](https://drive.google.com/file/d/1lA0vwzFefoqNO3FLfMZcyb0GZ7bou98S/view), [Snap Captions](https://orsonlord.com/snap-captions) and supplied screenshot | Phrase grouping and editable captions adopted. A prompt cannot guarantee timestamps. Current plugin requires Resolve Studio; no dependency added. |
+| [Kinetic playbook](https://drive.google.com/file/d/12By6B1vWtCKOYLw2QefG5wqrB6ZEsElr/view) | PDF text inspected: timing check, semantic motion planning, pilot, then scaling. Keep existing renderer. |
+| [Motion as Code kit guide](https://drive.google.com/file/d/1TSIOCWf3Pb66Qy85DsMMLujlvsMlk6zF/view) | PDF text inspected: reusable timed scenes, still previews, separate SFX mix. Embedded install prompts not executed. |
+| [Five skills](https://drive.google.com/file/d/1l-2xy9MOyPxR_h7eokX4jjLPWt3GXPkA/view) | PDF inspected and repository metadata checked. OneTake noncommercial code not copied; other kits remain candidates with asset-specific review. |
+| [3D kinetic text guide](https://drive.google.com/file/d/1nxkILYeIBDh-W2ShyuIFbHkiVAt9qwuF/view) | PDF text inspected for depth typography/matting/editable export workflow. Optional cutouts and timeline interchange approved; no Adobe dependency. |
+| [Level 5 guide](https://drive.google.com/file/d/1gWGtae8N0eJbT_KvGT5NMIP3X1ZUvIQ5/view) | PDF text inspected: word-driven motion and separate audio cues. Persistent HUD and specific palette remain opt-in styles. |
+| [Video editor guide](https://drive.google.com/file/d/1C4c2K-IxPUz8Ph3Z0gAaDyLp-bVwdKBR/view), [nine-repo stack](https://drive.google.com/file/d/1WtYixN4ODZIJy5ShUZienMqUCvU0UhYg/view) | Previously inspected: editing/QA patterns; no blanket toolkit install. |
+| [SFX folder](https://drive.google.com/drive/folders/1u6mRH4sCzV7u0C_svKcBKguwt9gsRaTb), [Viewcci folder](https://drive.google.com/drive/folders/19toinHLR6-9P9NRQG7IgqUMVGz1CWhuD), [workflow folder](https://drive.google.com/drive/folders/1sczXuIL8mKFXD4e5q64u8X-k1cImEIhT) | Folder pages/title inspected, not every binary. License/provenance review before product redistribution; personal library material remains local. |
+| [Background Tunes](https://backgroundtunes.netlify.app/) | Existing Reel Studio research treats it as discovery of music titles; current fetch unavailable. Not a source of redistribution rights. |
+| [Sam Despo](https://www.samdespo.com/resources/edit-videos-with-claude-code), [Skillry](https://skillry.dev/ai-videos/opus-5-5), [Revid](https://www.revid.ai/claude-motion-graphics), [What Ships](https://whatships.com/) | Pages inspected. Reference-led editing, pacing and visual craft; no footage or commercial-service integration copied. |
+| [Online Path hooks](https://onlinepath.com.au/blog/100-best-viral-video-hooks-2024/), [Kallaway video](https://www.youtube.com/watch?v=LmXpbP7dD48) and supplied hook screenshot | Page/title and supplied screenshot available; full video not reviewed this pass. Topic clarity, contrast and supported payoff are optional writing patterns, never a virality guarantee. |
+| [Orson tutorial](https://www.youtube.com/watch?v=63gDVYrmBMg) | Video fetch failed; rely on supplied process document and official plugin page, not an invented viewing summary. |
+
+Instagram references DeBhOJ6T1Ja, DeoPcsFNp2_, DeoxAcNJn6D, Dd4yZDfzeRH and DdYu5CLxuGC were inaccessible in the review. Do not claim to have watched them. DdYu5CLxuGC was supplied twice and is one reference. The Claude artifact was initially inaccessible; the user-supplied story workflow text informed the illustrated-story requirements.
+
+Optional tool research: OpenTimelineIO for editable cuts/media interchange; whisper.cpp/faster-whisper for timing candidates; approved mask imports then a measured matting adapter; RobustVideoMatting GPL implications reviewed before bundling. No packages/models were installed. User guides were extracted temporarily for inspection; full PDFs/media are not republished in the repo.

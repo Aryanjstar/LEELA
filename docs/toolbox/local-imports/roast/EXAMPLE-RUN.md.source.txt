@@ -1,0 +1,32 @@
+# /roast: real test run, 10/26 (honest log)
+**Roasted:** the top of our own page, scrollstopper.shop/kit (visible text, about 1,800 characters).
+**How it ran:** 8 haiku-model subagents in parallel, one persona each, then 1 more subagent for the rewrite. Real subagent calls and outputs.
+
+## Scoreboard
+| Visitor | What they'd do | Clarity | Trust | Want |
+|---|---|---|---|---|
+| Scroller | leave | 6 | 7 | 5 |
+| Buyer | leave | 7 | 4 | 6 |
+| Hater | screenshot-to-roast | 4 | 2 | 4 |
+| Competitor | screenshot-to-roast | 6 | 7 | 7 |
+| Newcomer | leave | 3 | 4 | 2 |
+| Peer | leave | 4 | 4 | 5 |
+| Sponsor | leave | 5 | 3 | 4 |
+| Almost-Follower | leave | 5 | 3 | 4 |
+| **Average** | 6 leave, 2 screenshot, 0 follow or buy | **5.0** | **4.25** | **4.6** |
+Lowest: trust (4.25).
+
+## What they agreed on (worst lines quoted)
+1. "144 people have bought the skill since the free copies ran out." Picked by 3 (Buyer, Hater, Almost-Follower): "unverifiable".
+2. "Get the First Sale Kit was $99.99 $29.99." Picked by 3 (Scroller, Newcomer, Peer): "reads like a typo". **Test artifact:** the page shows $99.99 struck through; the strikethrough is lost when the page is reduced to plain text, so this complaint is partly caused by how I fed it in. Paste text the way a visitor sees it, or describe the formatting.
+3. "Note: draft quality, so expect to fix a few things." Picked by 2 (Competitor, Sponsor): "makes me wonder what else isn't finished".
+Also: the Newcomer didn't understand what a Claude Code skill is (clarity 3).
+
+## The rewrite (3 versions, safest picked)
+Safest: "For anyone launching a product with Claude Code: the One File Studio skill that builds the videos, 12 Claude ad prompts, the One-Night Drop guide, drop scripts, a price ladder, a launch-night run sheet, and 6 build-the-drop prompts. Needs Claude Code on a paid plan and an ElevenLabs key. Won't post for you. The guide says most people sell less. $29.99 (was $99.99)."
+The rewriter kept all facts, dropped the 144 and 55 numbers, and listed proof the owner could add (a dated sales count, a real output sample, the reason for the discount). It flagged its own guess ("who it's for") for confirmation and warned that dropping "draft quality" while item 6 is untested would mislead.
+
+## What this test showed
+- It found real problems. The "144" line is true (Stripe shows about 145 skill-size sales) but a visitor can't check it, which is exactly what they said.
+- Scores are simulated visitors, not real ones. A fast filter, not data.
+- **Cost:** each subagent used about 71k tokens (mostly fixed overhead), so one run is roughly 650k subagent tokens across 9 calls. The skill now offers a lite mode for people who don't want that.

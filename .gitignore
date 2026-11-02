@@ -40,3 +40,6 @@ spikes/**/.hyperframes/
 .cursor/mcp.json
 .vercel
 .env*
+
+# User-approved sound references are versioned with the on-demand toolbox
+!docs/toolbox/local-imports/sfx-pack/**/*.wav

@@ -1,37 +1,40 @@
-# Lila
+# SceneSpindle
 
-**Any idea, at play.** A studio that turns a topic, notes, or a piece of code into a short film: a plan of named scenes, a voice with word timing, and a picture rendered by code.
+**AI Video Production Studio.** An invite-only studio for turning scripts, ideas, code and media into reviewed films, using structured plans and trusted renderers.
 
-The product is Leela (लीला). This repository is LEELA.
+The product combines the existing web app with Reel Studio's editing workflows. The target includes 2D/3D films and recurring episodes; those capabilities are being delivered in slices. **The current web render flow is preview-only, not a complete hosted MP4 pipeline.** See [project status](docs/PROJECT_STATUS.md) and [implementation plan](docs/IMPLEMENTATION_PLAN.md).
 
-## What is on the site
+## Start locally
 
-Five films, each with its own palette and one continuous voice. The voice says the words on the screen.
+Use Node 22 LTS and npm. Python 3 and FFmpeg are needed for media/trace tests; MongoDB must be a replica set for transactional editing (Atlas works). From a fresh checkout:
 
-| Film | What it explains |
-|---|---|
-| Find 21 | A sorted list, and why checking the middle is enough |
-| Why it stays up | A spinning top should fall, and the spin is why it does not |
-| Ek lattu | A story: a top walks, and the moon never lands |
-| Any idea | An idea stuck in your head, and the three ways out |
-| One house | A wedding in ten chats, then one board and one link |
-
-## Run it
-
-Node 22, FFmpeg, and a MongoDB database.
-
-```bash
-cp .env.example .env.local
-npm install
-npm run dev
+```sh
+npm ci
+npm test
+npm run typecheck
 ```
 
-Put keys only in `.env.local`. That file is gitignored. Never commit it.
+Create `.env.local` from `.env.example` only if it does not already exist. Supply your own Mongo URI/database and auth configuration, then `npm run dev`. Do not overwrite existing credentials. The planned doctor command will report presence only. Portable CLI commands are not implemented yet.
 
-## How a film is made
+## Use any AI assistant or IDE
 
-Read `style.md` before an edit. Speech comes from the voice adapter, with word times. HyperFrames draws the picture and renders the MP4. FFmpeg measures the file. The model never writes the HTML.
+Read [AGENTS.md](AGENTS.md) and [the editing workflow](docs/AGENT_WORKFLOW.md). No Claude, Cursor, Codex or other assistant subscription is required to run the repository.
 
-## Docs
+```sh
+npm run studio -- capabilities
+npm run studio -- schema
+npm run studio -- validate-plan path/to/plan.json
+npm run studio -- captions path/to/words.json --max-words 3
+```
 
-`docs/PRD.md`, `docs/ARCHITECTURE.md`, `docs/DATABASE.md`, and `docs/API.md` are the source of truth. `docs/PROJECT_STATUS.md` says what is built.
+The commands above are the **planned interface and are not runnable yet**. They will return JSON and fail with nonzero exit status when inputs are invalid. Capabilities reflect the implemented v1 explainer contract, not the whole roadmap. Caption grouping consumes measured word times; it does not create timestamps from a prompt.
+
+## Architecture and contribution
+
+Next.js/TypeScript, MongoDB, provider adapters, HyperFrames and FFmpeg. Planned heavy Blender rendering runs on a paired PC or Azure worker. Private media stays local unless explicitly opted into hosted processing. Third-party paid services remain disabled without configured authorization; Azure sponsorship balance is not yet verified.
+
+Source of truth: [PRD](docs/PRD.md), [system design](docs/ARCHITECTURE.md), [database design](docs/DATABASE.md), [API](docs/API.md). Also read [design](docs/DESIGN.md), [research review](docs/REFERENCE_REVIEW_2026-11-02.md), and [delivery plan](docs/IMPLEMENTATION_PLAN.md). Historical specifications are retained under docs/history/.
+
+Inspired by [NamasteVideo.ai](https://github.com/akshaymarch7/namaste-video-ai); reused third-party code/assets must retain their own license notices. Screenshots and reference links are inspiration, not redistribution permission. Never commit credentials, personal media, generated large artifacts or local environments.
+
+Planning references: [Brief Builder](docs/BRIEFING_WORKFLOW.md) and [on-demand toolbox](docs/toolbox/README.md). Product implementation is paused; no plugins or models were installed.

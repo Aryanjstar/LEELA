@@ -1,0 +1,6 @@
+interface:
+  display_name: "Scenespindle Toolbox"
+  short_description: "On-demand SceneSpindle planning reference"
+  default_prompt: "Use $scenespindle-toolbox for the relevant planning task."
+policy:
+  allow_implicit_invocation: false

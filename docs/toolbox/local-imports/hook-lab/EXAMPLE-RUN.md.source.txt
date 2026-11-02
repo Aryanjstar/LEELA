@@ -1,0 +1,25 @@
+# /hook-lab: real test run, 10/26 (honest log)
+**Idea tested:** "A 15-second ad for a coffee cart, built by Claude Code from one typed sentence." Audience: small business owners and creators.
+**How it ran:** I (Claude) wrote the 20 hooks; 6 haiku-model subagents played the scrollers in parallel, each given the 20 hooks in a different shuffled order. Real subagent calls, real outputs.
+
+## Result
+**Winner: #10 "I asked Claude for a coffee cart ad. Watch the first mistake."** All 6 scrollers picked it as their BEST, and it also got 6 of 6 STOPs. Their reasons repeated: "promises a flaw to see", "open loop", "personal, not a generic claim".
+Tied on 6 STOPs: #1 "Your ad budget is gone and the video still looks cheap." and #11 "The ad took one sentence. The fix took one more." (#10 wins the tiebreak on BEST picks, 6 to 0.)
+
+| STOPs (of 6) | Hooks |
+|---|---|
+| 6 | 1, 10, 11 |
+| 5 | 2, 4, 6, 7, 12, 15, 16 |
+| 4 | 5, 9 |
+| 3 | 8, 14 |
+| 2 | 18 |
+| 1 | 3, 17, 19 |
+| 0 | 13, 20 |
+
+**By formula (stops out of 24):** Curiosity gap 21, Pain 17, Result 17, Contrarian 13, Scene 4. The scene hooks ("Rainy morning...", "The cursor blinks...") did worst: "slow setup, no payoff yet", "terminal jargon".
+**Swiped by almost everyone:** #13 "You don't need an editor..." and #20 "Here's what a coffee cart ad looks like..." (generic, no tension).
+
+## What this test showed about the skill itself
+- **The panel is generous.** Scrollers stopped on 56% of all hook votes, so STOP counts alone don't separate hooks well (three hooks tied at 6). The BEST pick did the real work. The skill now tells the user to weigh BEST picks and swipes, not only STOPs.
+- **It's a simulation.** All six are Claude playing scrollers. It's a filter, not audience data.
+- **Cost:** each haiku subagent used about 72k tokens, mostly fixed overhead, so one run is roughly 430k subagent tokens. That is a lot of someone's Claude usage for a free skill, so the skill now has a lite mode (one inline pass, clearly labeled).

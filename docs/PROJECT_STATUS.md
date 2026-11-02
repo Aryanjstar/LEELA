@@ -1,3 +1,17 @@
+# SceneSpindle — project status
+
+**Updated 2026-11-02. Implementation paused at the user's request.**
+
+## Current position
+
+Complete — docs only: SceneSpindle product/PRD/system/database/API/design revisions, delivery plan, Brief Builder specification and on-demand toolbox. All 24 new resources are indexed at pinned commits, with selected documentation/license snapshots; Kapso and doc-coauthoring are links only pending license verification. Two small repository skills support briefing and toolbox selection, without global installation or automatic loading.
+
+No application code, new CLI, provider adapter, draft-race fix, runtime dependency, GitHub rename, deployment, commit or push was performed in this planning work. Prior documentation incorrectly described the planned `studio` CLI as available; README and AGENT_WORKFLOW now identify it as unimplemented. Baseline tests were run during the earlier audit, not rerun for this docs-only update.
+
+The web render path remains preview-only and the remaining audit backlog is in IMPLEMENTATION_PLAN.md. Azure credit balance/expiry remain unverified. The product name is SceneSpindle; the remote and local checkout keep their existing names until implementation resumes. The older log below is historical evidence and must not override this status or the version-2 contracts.
+
+## Historical status (retained verbatim from the previous log)
+
 # Leela — Project Status
 
 **Last updated:** 2026-10-19

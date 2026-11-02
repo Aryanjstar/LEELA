@@ -1,0 +1,2744 @@
+{
+  "reviewedAt": "2026-11-02",
+  "mode": "reference-only; no installation or execution",
+  "sources": [
+    {
+      "repo": "Jakeschincariol/instagram-agent-skill",
+      "sha": "d03c56bb598be770c60b201f94237e5d1a4268a6",
+      "url": "https://github.com/Jakeschincariol/instagram-agent-skill",
+      "license": "MIT",
+      "description": "Thirteen Claude skills that run an Instagram account: Reels off 26 scored hook formulas, a viral research skill, a caption linter, and a humanizer. Free, MIT.",
+      "archived": false,
+      "treeTruncated": false,
+      "id": "instagram",
+      "subpath": "",
+      "providedUrl": "https://github.com/Jakeschincariol/instagram-agent-skill",
+      "files": [
+        {
+          "path": "LICENSE",
+          "local": "instagram/LICENSE.source.txt",
+          "sha256": "857c8d5276809c8196b3cd7cb3300324768bfc562b2b6281b06d6865058e186c",
+          "bytes": 1073,
+          "url": "https://raw.githubusercontent.com/Jakeschincariol/instagram-agent-skill/d03c56bb598be770c60b201f94237e5d1a4268a6/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local": "instagram/README.md.source.txt",
+          "sha256": "c020dd05a442eca931524207942ddffe56f67ed47b67563967093337ce52cb8d",
+          "bytes": 16346,
+          "url": "https://raw.githubusercontent.com/Jakeschincariol/instagram-agent-skill/d03c56bb598be770c60b201f94237e5d1a4268a6/README.md"
+        },
+        {
+          "path": "skills/ig-audit/SKILL.md",
+          "local": "instagram/skills__ig-audit__SKILL.md.source.txt",
+          "sha256": "ece765baf4a08ef74047c5d3d9ca522824db29cf46cde9329acc690dd0a60bb0",
+          "bytes": 4556,
+          "url": "https://raw.githubusercontent.com/Jakeschincariol/instagram-agent-skill/d03c56bb598be770c60b201f94237e5d1a4268a6/skills/ig-audit/SKILL.md"
+        },
+        {
+          "path": "skills/ig-caption/SKILL.md",
+          "local": "instagram/skills__ig-caption__SKILL.md.source.txt",
+          "sha256": "44bd93bfbceabebd0eac6742aecd948be4c3aa97c57f830845e1b9b6450b55b6",
+          "bytes": 4628,
+          "url": "https://raw.githubusercontent.com/Jakeschincariol/instagram-agent-skill/d03c56bb598be770c60b201f94237e5d1a4268a6/skills/ig-caption/SKILL.md"
+        },
+        {
+          "path": "skills/ig-reel/SKILL.md",
+          "local": "instagram/skills__ig-reel__SKILL.md.source.txt",
+          "sha256": "fc0374ccc88485d999fa0e2dcd4c7c3932d6949e58008cb6e6f1c484015c5631",
+          "bytes": 6547,
+          "url": "https://raw.githubusercontent.com/Jakeschincariol/instagram-agent-skill/d03c56bb598be770c60b201f94237e5d1a4268a6/skills/ig-reel/SKILL.md"
+        },
+        {
+          "path": "skills/ig-repurpose/SKILL.md",
+          "local": "instagram/skills__ig-repurpose__SKILL.md.source.txt",
+          "sha256": "545f240a5f13657db9f9245f286d4a01e145718ef49d38ff2a2f0cc84322eb19",
+          "bytes": 3411,
+          "url": "https://raw.githubusercontent.com/Jakeschincariol/instagram-agent-skill/d03c56bb598be770c60b201f94237e5d1a4268a6/skills/ig-repurpose/SKILL.md"
+        },
+        {
+          "path": "skills/ig-plan/SKILL.md",
+          "local": "instagram/skills__ig-plan__SKILL.md.source.txt",
+          "sha256": "4e42e13b8a044c23083db7e88d28f0465986602725246a8eacda433d53079918",
+          "bytes": 3916,
+          "url": "https://raw.githubusercontent.com/Jakeschincariol/instagram-agent-skill/d03c56bb598be770c60b201f94237e5d1a4268a6/skills/ig-plan/SKILL.md"
+        }
+      ],
+      "skillIndex": [
+        {
+          "path": "skills/ig-audit/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/instagram-agent-skill/blob/d03c56bb598be770c60b201f94237e5d1a4268a6/skills/ig-audit/SKILL.md"
+        },
+        {
+          "path": "skills/ig-caption/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/instagram-agent-skill/blob/d03c56bb598be770c60b201f94237e5d1a4268a6/skills/ig-caption/SKILL.md"
+        },
+        {
+          "path": "skills/ig-carousel/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/instagram-agent-skill/blob/d03c56bb598be770c60b201f94237e5d1a4268a6/skills/ig-carousel/SKILL.md"
+        },
+        {
+          "path": "skills/ig-comment/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/instagram-agent-skill/blob/d03c56bb598be770c60b201f94237e5d1a4268a6/skills/ig-comment/SKILL.md"
+        },
+        {
+          "path": "skills/ig-dm/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/instagram-agent-skill/blob/d03c56bb598be770c60b201f94237e5d1a4268a6/skills/ig-dm/SKILL.md"
+        },
+        {
+          "path": "skills/ig-human/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/instagram-agent-skill/blob/d03c56bb598be770c60b201f94237e5d1a4268a6/skills/ig-human/SKILL.md"
+        },
+        {
+          "path": "skills/ig-plan/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/instagram-agent-skill/blob/d03c56bb598be770c60b201f94237e5d1a4268a6/skills/ig-plan/SKILL.md"
+        },
+        {
+          "path": "skills/ig-profile/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/instagram-agent-skill/blob/d03c56bb598be770c60b201f94237e5d1a4268a6/skills/ig-profile/SKILL.md"
+        },
+        {
+          "path": "skills/ig-reel/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/instagram-agent-skill/blob/d03c56bb598be770c60b201f94237e5d1a4268a6/skills/ig-reel/SKILL.md"
+        },
+        {
+          "path": "skills/ig-reply/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/instagram-agent-skill/blob/d03c56bb598be770c60b201f94237e5d1a4268a6/skills/ig-reply/SKILL.md"
+        },
+        {
+          "path": "skills/ig-repurpose/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/instagram-agent-skill/blob/d03c56bb598be770c60b201f94237e5d1a4268a6/skills/ig-repurpose/SKILL.md"
+        },
+        {
+          "path": "skills/ig-story/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/instagram-agent-skill/blob/d03c56bb598be770c60b201f94237e5d1a4268a6/skills/ig-story/SKILL.md"
+        },
+        {
+          "path": "skills/ig-viral/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/instagram-agent-skill/blob/d03c56bb598be770c60b201f94237e5d1a4268a6/skills/ig-viral/SKILL.md"
+        }
+      ],
+      "snapshotKind": "selected documentation and licenses; not an installable package",
+      "licenseReview": "Root license retained; dependencies/assets/models require separate review before use.",
+      "category": "Product reference",
+      "useWhen": "Short-form hooks, captions, script beats, repurposing",
+      "decision": "Briefing and publishing metadata, slices B/3/6. Writing aids, not a publishing integration; do not port Unicode stripping or viral-score claims."
+    },
+    {
+      "repo": "zarazhangrui/frontend-slides",
+      "sha": "9906a34d640d2111f724544cbc50f7f130569ae1",
+      "url": "https://github.com/zarazhangrui/frontend-slides",
+      "license": "MIT",
+      "description": "Create beautiful slides on the web using a coding agent's frontend skills",
+      "archived": false,
+      "treeTruncated": false,
+      "id": "slides",
+      "subpath": "",
+      "providedUrl": "https://github.com/zarazhangrui/frontend-slides",
+      "files": [
+        {
+          "path": "LICENSE",
+          "local": "slides/LICENSE.source.txt",
+          "sha256": "62928eb197fe4662d1efc3af0735b3ba5df3c0308badd9a2baf2b619009f5366",
+          "bytes": 1067,
+          "url": "https://raw.githubusercontent.com/zarazhangrui/frontend-slides/9906a34d640d2111f724544cbc50f7f130569ae1/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local": "slides/README.md.source.txt",
+          "sha256": "e358f7aab79a0193b5494c4423ad0e47f13624ee5153095e283e4ae9d1982dac",
+          "bytes": 35554,
+          "url": "https://raw.githubusercontent.com/zarazhangrui/frontend-slides/9906a34d640d2111f724544cbc50f7f130569ae1/README.md"
+        },
+        {
+          "path": "SKILL.md",
+          "local": "slides/SKILL.md.source.txt",
+          "sha256": "832994fe1dfcce2aa7ceca9a1b7b708eca94becef242713999855f4e946cf4d5",
+          "bytes": 28187,
+          "url": "https://raw.githubusercontent.com/zarazhangrui/frontend-slides/9906a34d640d2111f724544cbc50f7f130569ae1/SKILL.md"
+        },
+        {
+          "path": "plugins/frontend-slides/skills/frontend-slides/SKILL.md",
+          "local": "slides/plugins__frontend-slides__skills__frontend-slides__SKILL.md.source.txt",
+          "sha256": "832994fe1dfcce2aa7ceca9a1b7b708eca94becef242713999855f4e946cf4d5",
+          "bytes": 28187,
+          "url": "https://raw.githubusercontent.com/zarazhangrui/frontend-slides/9906a34d640d2111f724544cbc50f7f130569ae1/plugins/frontend-slides/skills/frontend-slides/SKILL.md"
+        }
+      ],
+      "skillIndex": [
+        {
+          "path": "SKILL.md",
+          "url": "https://github.com/zarazhangrui/frontend-slides/blob/9906a34d640d2111f724544cbc50f7f130569ae1/SKILL.md"
+        },
+        {
+          "path": "plugins/frontend-slides/skills/frontend-slides/SKILL.md",
+          "url": "https://github.com/zarazhangrui/frontend-slides/blob/9906a34d640d2111f724544cbc50f7f130569ae1/plugins/frontend-slides/skills/frontend-slides/SKILL.md"
+        }
+      ],
+      "snapshotKind": "selected documentation and licenses; not an installable package",
+      "licenseReview": "Root license retained; dependencies/assets/models require separate review before use.",
+      "category": "Optional creative reference",
+      "useWhen": "HTML decks, presentations and storyboard pitch previews",
+      "decision": "Use when a deck is actually requested. Not a new slide-export promise or a replacement video renderer."
+    },
+    {
+      "repo": "lyogavin/airllm",
+      "sha": "c6f3ec04ae69dea6fc8ad5886cc1d017eda291fe",
+      "url": "https://github.com/lyogavin/airllm",
+      "license": "Apache-2.0",
+      "description": "AirLLM 2.8T LLM inference with single 4GB GPU",
+      "archived": false,
+      "treeTruncated": false,
+      "id": "airllm",
+      "subpath": "",
+      "providedUrl": "https://github.com/lyogavin/airllm",
+      "files": [
+        {
+          "path": "LICENSE",
+          "local": "airllm/LICENSE.source.txt",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357,
+          "url": "https://raw.githubusercontent.com/lyogavin/airllm/c6f3ec04ae69dea6fc8ad5886cc1d017eda291fe/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local": "airllm/README.md.source.txt",
+          "sha256": "1ee1ea96cfb4301a56f14f410d3383c0c24a469108d23ad03a8a5f24a6b04343",
+          "bytes": 19135,
+          "url": "https://raw.githubusercontent.com/lyogavin/airllm/c6f3ec04ae69dea6fc8ad5886cc1d017eda291fe/README.md"
+        },
+        {
+          "path": "README_ja.md",
+          "local": "airllm/README_ja.md.source.txt",
+          "sha256": "af708f1c83b7334719942827360a20d9597147cfa2e6e542c198d68266f2f245",
+          "bytes": 33299,
+          "url": "https://raw.githubusercontent.com/lyogavin/airllm/c6f3ec04ae69dea6fc8ad5886cc1d017eda291fe/README_ja.md"
+        }
+      ],
+      "skillIndex": [],
+      "snapshotKind": "selected documentation and licenses; not an installable package",
+      "licenseReview": "Root license retained; dependencies/assets/models require separate review before use.",
+      "category": "Deferred experiment",
+      "useWhen": "Layer-wise inference on constrained hardware",
+      "decision": "Benchmark later on an explicitly chosen machine. VRAM headlines do not prove RAM/disk/latency suitability; no weights downloaded on the 8GB Mac."
+    },
+    {
+      "repo": "coreyhaines31/marketingskills",
+      "sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+      "url": "https://github.com/coreyhaines31/marketingskills",
+      "license": "MIT",
+      "description": "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
+      "archived": false,
+      "treeTruncated": false,
+      "id": "marketing",
+      "subpath": "",
+      "providedUrl": "https://github.com/coreyhaines31/marketingskills",
+      "files": [
+        {
+          "path": "LICENSE",
+          "local": "marketing/LICENSE.source.txt",
+          "sha256": "b70d71e24e40fce5da8f4b6f9cd862096a048e433db7f3c8cac5e348e6d34591",
+          "bytes": 1069,
+          "url": "https://raw.githubusercontent.com/coreyhaines31/marketingskills/88c79f6528a9347420e57ceb1fff9a60de651768/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local": "marketing/README.md.source.txt",
+          "sha256": "69c172878d7a66305ef57928d0fbb4056e379cb8a316e23fc1d6f9869519f798",
+          "bytes": 26281,
+          "url": "https://raw.githubusercontent.com/coreyhaines31/marketingskills/88c79f6528a9347420e57ceb1fff9a60de651768/README.md"
+        },
+        {
+          "path": ".github/PULL_REQUEST_TEMPLATE/new-skill.md",
+          "local": "marketing/.github__PULL_REQUEST_TEMPLATE__new-skill.md.source.txt",
+          "sha256": "fdd855bb1ecfa34720ae3ddf46deaf779de6f29922c7899a3bdf8fcb150990d4",
+          "bytes": 414,
+          "url": "https://raw.githubusercontent.com/coreyhaines31/marketingskills/88c79f6528a9347420e57ceb1fff9a60de651768/.github/PULL_REQUEST_TEMPLATE/new-skill.md"
+        },
+        {
+          "path": "skills/ab-testing/SKILL.md",
+          "local": "marketing/skills__ab-testing__SKILL.md.source.txt",
+          "sha256": "c5c547f2ccee5034bf24b1afa5e7c1ae2913f2618bc65f3e0788a1c55f7759b9",
+          "bytes": 13346,
+          "url": "https://raw.githubusercontent.com/coreyhaines31/marketingskills/88c79f6528a9347420e57ceb1fff9a60de651768/skills/ab-testing/SKILL.md"
+        },
+        {
+          "path": "skills/copywriting/SKILL.md",
+          "local": "marketing/skills__copywriting__SKILL.md.source.txt",
+          "sha256": "02f0ab1ddd41d95b3c230d4bcff3de6578c8f2e45776c8ef2e4b931636af5bee",
+          "bytes": 15553,
+          "url": "https://raw.githubusercontent.com/coreyhaines31/marketingskills/88c79f6528a9347420e57ceb1fff9a60de651768/skills/copywriting/SKILL.md"
+        },
+        {
+          "path": "skills/content-strategy/SKILL.md",
+          "local": "marketing/skills__content-strategy__SKILL.md.source.txt",
+          "sha256": "5e74201646b8ae0b7ddfd2f4a4a14149096f490667b32bcb9e3a35e7326d88b0",
+          "bytes": 19387,
+          "url": "https://raw.githubusercontent.com/coreyhaines31/marketingskills/88c79f6528a9347420e57ceb1fff9a60de651768/skills/content-strategy/SKILL.md"
+        }
+      ],
+      "skillIndex": [
+        {
+          "path": "skills/ab-testing/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/ab-testing/SKILL.md"
+        },
+        {
+          "path": "skills/ad-creative/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/ad-creative/SKILL.md"
+        },
+        {
+          "path": "skills/ads/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/ads/SKILL.md"
+        },
+        {
+          "path": "skills/ai-seo/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/ai-seo/SKILL.md"
+        },
+        {
+          "path": "skills/analytics/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/analytics/SKILL.md"
+        },
+        {
+          "path": "skills/aso/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/aso/SKILL.md"
+        },
+        {
+          "path": "skills/attribution/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/attribution/SKILL.md"
+        },
+        {
+          "path": "skills/churn-prevention/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/churn-prevention/SKILL.md"
+        },
+        {
+          "path": "skills/co-marketing/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/co-marketing/SKILL.md"
+        },
+        {
+          "path": "skills/cold-email/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/cold-email/SKILL.md"
+        },
+        {
+          "path": "skills/community-marketing/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/community-marketing/SKILL.md"
+        },
+        {
+          "path": "skills/competitor-profiling/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/competitor-profiling/SKILL.md"
+        },
+        {
+          "path": "skills/competitors/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/competitors/SKILL.md"
+        },
+        {
+          "path": "skills/content-strategy/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/content-strategy/SKILL.md"
+        },
+        {
+          "path": "skills/conversion-tracking/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/conversion-tracking/SKILL.md"
+        },
+        {
+          "path": "skills/copy-editing/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/copy-editing/SKILL.md"
+        },
+        {
+          "path": "skills/copywriting/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/copywriting/SKILL.md"
+        },
+        {
+          "path": "skills/cro/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/cro/SKILL.md"
+        },
+        {
+          "path": "skills/customer-research/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/customer-research/SKILL.md"
+        },
+        {
+          "path": "skills/directory-submissions/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/directory-submissions/SKILL.md"
+        },
+        {
+          "path": "skills/emails/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/emails/SKILL.md"
+        },
+        {
+          "path": "skills/events/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/events/SKILL.md"
+        },
+        {
+          "path": "skills/free-tools/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/free-tools/SKILL.md"
+        },
+        {
+          "path": "skills/image/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/image/SKILL.md"
+        },
+        {
+          "path": "skills/influencer-marketing/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/influencer-marketing/SKILL.md"
+        },
+        {
+          "path": "skills/launch/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/launch/SKILL.md"
+        },
+        {
+          "path": "skills/lead-magnets/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/lead-magnets/SKILL.md"
+        },
+        {
+          "path": "skills/link-building/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/link-building/SKILL.md"
+        },
+        {
+          "path": "skills/marketing-council/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/marketing-council/SKILL.md"
+        },
+        {
+          "path": "skills/marketing-ideas/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/marketing-ideas/SKILL.md"
+        },
+        {
+          "path": "skills/marketing-loops/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/marketing-loops/SKILL.md"
+        },
+        {
+          "path": "skills/marketing-plan/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/marketing-plan/SKILL.md"
+        },
+        {
+          "path": "skills/marketing-psychology/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/marketing-psychology/SKILL.md"
+        },
+        {
+          "path": "skills/offers/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/offers/SKILL.md"
+        },
+        {
+          "path": "skills/onboarding/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/onboarding/SKILL.md"
+        },
+        {
+          "path": "skills/paywalls/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/paywalls/SKILL.md"
+        },
+        {
+          "path": "skills/popups/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/popups/SKILL.md"
+        },
+        {
+          "path": "skills/pricing/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/pricing/SKILL.md"
+        },
+        {
+          "path": "skills/product-marketing/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/product-marketing/SKILL.md"
+        },
+        {
+          "path": "skills/programmatic-seo/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/programmatic-seo/SKILL.md"
+        },
+        {
+          "path": "skills/prospecting/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/prospecting/SKILL.md"
+        },
+        {
+          "path": "skills/public-relations/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/public-relations/SKILL.md"
+        },
+        {
+          "path": "skills/referrals/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/referrals/SKILL.md"
+        },
+        {
+          "path": "skills/reverse-engineer-marketing/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/reverse-engineer-marketing/SKILL.md"
+        },
+        {
+          "path": "skills/revops/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/revops/SKILL.md"
+        },
+        {
+          "path": "skills/sales-enablement/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/sales-enablement/SKILL.md"
+        },
+        {
+          "path": "skills/schema/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/schema/SKILL.md"
+        },
+        {
+          "path": "skills/seo-audit/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/seo-audit/SKILL.md"
+        },
+        {
+          "path": "skills/signup/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/signup/SKILL.md"
+        },
+        {
+          "path": "skills/site-architecture/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/site-architecture/SKILL.md"
+        },
+        {
+          "path": "skills/sms/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/sms/SKILL.md"
+        },
+        {
+          "path": "skills/social/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/social/SKILL.md"
+        },
+        {
+          "path": "skills/video/SKILL.md",
+          "url": "https://github.com/coreyhaines31/marketingskills/blob/88c79f6528a9347420e57ceb1fff9a60de651768/skills/video/SKILL.md"
+        }
+      ],
+      "snapshotKind": "selected documentation and licenses; not an installable package",
+      "licenseReview": "Root license retained; dependencies/assets/models require separate review before use.",
+      "category": "Product/support reference",
+      "useWhen": "Audience, positioning, landing copy and content strategy",
+      "decision": "Briefing and landing copy, slices B/6. No invented outcomes, unsolicited outreach or required paid tools."
+    },
+    {
+      "repo": "heygen-com/hyperframes",
+      "sha": "f6536e9f5deab41ffe30132543ed1586e2b16088",
+      "url": "https://github.com/heygen-com/hyperframes",
+      "license": "Apache-2.0",
+      "description": "Write HTML. Render video. Built for agents.",
+      "archived": false,
+      "treeTruncated": false,
+      "id": "hyperframes",
+      "subpath": "",
+      "providedUrl": "https://github.com/heygen-com/hyperframes",
+      "files": [
+        {
+          "path": "LICENSE",
+          "local": "hyperframes/LICENSE.source.txt",
+          "sha256": "4259155fb06f127687ee7b0a8a3682d45132db0f2da26cbc0b7a2d1e796436b8",
+          "bytes": 10763,
+          "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/f6536e9f5deab41ffe30132543ed1586e2b16088/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local": "hyperframes/README.md.source.txt",
+          "sha256": "63b6aa611972f7db19cf238ef0484afacf03f4f7fb28cf983a3bb2716fe605d3",
+          "bytes": 23708,
+          "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/f6536e9f5deab41ffe30132543ed1586e2b16088/README.md"
+        },
+        {
+          "path": "skills/figma/SKILL.md",
+          "local": "hyperframes/skills__figma__SKILL.md.source.txt",
+          "sha256": "d9537758a88bf3cbfc5699167742e437a6791c57c0180556c930ec6c3aae0ab6",
+          "bytes": 6167,
+          "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/f6536e9f5deab41ffe30132543ed1586e2b16088/skills/figma/SKILL.md"
+        },
+        {
+          "path": "skills/hyperframes-cli/SKILL.md",
+          "local": "hyperframes/skills__hyperframes-cli__SKILL.md.source.txt",
+          "sha256": "cfaa2a4dfc696c48929b2a6115ac16e3c04134cef13bd99050758a2936f3d903",
+          "bytes": 7166,
+          "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/f6536e9f5deab41ffe30132543ed1586e2b16088/skills/hyperframes-cli/SKILL.md"
+        },
+        {
+          "path": "skills/hyperframes/SKILL.md",
+          "local": "hyperframes/skills__hyperframes__SKILL.md.source.txt",
+          "sha256": "85ea4a4158acc1d4ca87ab1a6c93521aae77f16023e381561da66c9dd0c37517",
+          "bytes": 7165,
+          "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/f6536e9f5deab41ffe30132543ed1586e2b16088/skills/hyperframes/SKILL.md"
+        },
+        {
+          "path": "skills/hyperframes-registry/SKILL.md",
+          "local": "hyperframes/skills__hyperframes-registry__SKILL.md.source.txt",
+          "sha256": "0ac5bb49dd7aed66e0d61248eca94e8c9f1a95b482c8004fb0113f724fffe6cd",
+          "bytes": 4336,
+          "url": "https://raw.githubusercontent.com/heygen-com/hyperframes/f6536e9f5deab41ffe30132543ed1586e2b16088/skills/hyperframes-registry/SKILL.md"
+        }
+      ],
+      "skillIndex": [
+        {
+          "path": "registry/blocks/canopy-part-title/SKILL.md",
+          "url": "https://github.com/heygen-com/hyperframes/blob/f6536e9f5deab41ffe30132543ed1586e2b16088/registry/blocks/canopy-part-title/SKILL.md"
+        },
+        {
+          "path": "registry/blocks/code-slice-hero/SKILL.md",
+          "url": "https://github.com/heygen-com/hyperframes/blob/f6536e9f5deab41ffe30132543ed1586e2b16088/registry/blocks/code-slice-hero/SKILL.md"
+        },
+        {
+          "path": "registry/blocks/cuboid-carousel/SKILL.md",
+          "url": "https://github.com/heygen-com/hyperframes/blob/f6536e9f5deab41ffe30132543ed1586e2b16088/registry/blocks/cuboid-carousel/SKILL.md"
+        },
+        {
+          "path": "registry/blocks/frost-sequence-camera-orbit/SKILL.md",
+          "url": "https://github.com/heygen-com/hyperframes/blob/f6536e9f5deab41ffe30132543ed1586e2b16088/registry/blocks/frost-sequence-camera-orbit/SKILL.md"
+        },
+        {
+          "path": "registry/blocks/glass-shard-title/SKILL.md",
+          "url": "https://github.com/heygen-com/hyperframes/blob/f6536e9f5deab41ffe30132543ed1586e2b16088/registry/blocks/glass-shard-title/SKILL.md"
+        },
+        {
+          "path": "registry/blocks/orbit-card/SKILL.md",
+          "url": "https://github.com/heygen-com/hyperframes/blob/f6536e9f5deab41ffe30132543ed1586e2b16088/registry/blocks/orbit-card/SKILL.md"
+        },
+        {
+          "path": "registry/blocks/wireframe-portal-title/SKILL.md",
+          "url": "https://github.com/heygen-com/hyperframes/blob/f6536e9f5deab41ffe30132543ed1586e2b16088/registry/blocks/wireframe-portal-title/SKILL.md"
+        },
+        {
+          "path": "skills/figma/SKILL.md",
+          "url": "https://github.com/heygen-com/hyperframes/blob/f6536e9f5deab41ffe30132543ed1586e2b16088/skills/figma/SKILL.md"
+        },
+        {
+          "path": "skills/hyperframes-cli/SKILL.md",
+          "url": "https://github.com/heygen-com/hyperframes/blob/f6536e9f5deab41ffe30132543ed1586e2b16088/skills/hyperframes-cli/SKILL.md"
+        },
+        {
+          "path": "skills/hyperframes-registry/SKILL.md",
+          "url": "https://github.com/heygen-com/hyperframes/blob/f6536e9f5deab41ffe30132543ed1586e2b16088/skills/hyperframes-registry/SKILL.md"
+        },
+        {
+          "path": "skills/hyperframes/SKILL.md",
+          "url": "https://github.com/heygen-com/hyperframes/blob/f6536e9f5deab41ffe30132543ed1586e2b16088/skills/hyperframes/SKILL.md"
+        },
+        {
+          "path": "skills/media-use/SKILL.md",
+          "url": "https://github.com/heygen-com/hyperframes/blob/f6536e9f5deab41ffe30132543ed1586e2b16088/skills/media-use/SKILL.md"
+        },
+        {
+          "path": "skills/remotion-to-hyperframes/SKILL.md",
+          "url": "https://github.com/heygen-com/hyperframes/blob/f6536e9f5deab41ffe30132543ed1586e2b16088/skills/remotion-to-hyperframes/SKILL.md"
+        },
+        {
+          "path": "skills/reverse-any-video/SKILL.md",
+          "url": "https://github.com/heygen-com/hyperframes/blob/f6536e9f5deab41ffe30132543ed1586e2b16088/skills/reverse-any-video/SKILL.md"
+        },
+        {
+          "path": "skills/slideshow/SKILL.md",
+          "url": "https://github.com/heygen-com/hyperframes/blob/f6536e9f5deab41ffe30132543ed1586e2b16088/skills/slideshow/SKILL.md"
+        }
+      ],
+      "snapshotKind": "selected documentation and licenses; not an installable package",
+      "licenseReview": "Root license retained; dependencies/assets/models require separate review before use.",
+      "category": "Core renderer reference",
+      "useWhen": "Deterministic HTML motion, previews and rendering",
+      "decision": "Existing engine, slices 1\u20134. Pin compatible versions; do not upgrade/install merely because a snapshot is newer."
+    },
+    {
+      "repo": "ahujasid/mcp-for-blender",
+      "sha": "992233bb258975a05eec8b5691465c50c2831e34",
+      "url": "https://github.com/ahujasid/mcp-for-blender",
+      "license": "MIT",
+      "description": "Community plugin to control Blender 3D with any LLM of your choice. Not affiliated with the official Blender Foundation.",
+      "archived": false,
+      "treeTruncated": false,
+      "id": "blender-mcp",
+      "subpath": "",
+      "providedUrl": "https://github.com/ahujasid/mcp-for-blender",
+      "files": [
+        {
+          "path": "LICENSE",
+          "local": "blender-mcp/LICENSE.source.txt",
+          "sha256": "049501fd54d27852507853a5b88094ca1c6ff97404418a5032f3310eecc9cde6",
+          "bytes": 1071,
+          "url": "https://raw.githubusercontent.com/ahujasid/mcp-for-blender/992233bb258975a05eec8b5691465c50c2831e34/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local": "blender-mcp/README.md.source.txt",
+          "sha256": "f0c11f3e33c0b29c0ce4dd4cfd69524b97e0173726854d4d84c25bc9ac3ace91",
+          "bytes": 37453,
+          "url": "https://raw.githubusercontent.com/ahujasid/mcp-for-blender/992233bb258975a05eec8b5691465c50c2831e34/README.md"
+        }
+      ],
+      "skillIndex": [],
+      "snapshotKind": "selected documentation and licenses; not an installable package",
+      "licenseReview": "Root license retained; dependencies/assets/models require separate review before use.",
+      "category": "Optional authoring tool",
+      "useWhen": "Interactive creation of rigs, models and scenes",
+      "decision": "Slice 4, trusted author workstation only. Arbitrary Python execution cannot be exposed as a public render API; telemetry and remote assets remain explicit choices."
+    },
+    {
+      "repo": "garrytan/gstack",
+      "sha": "3d99c224972942c447c1f94c9061da900e667aab",
+      "url": "https://github.com/garrytan/gstack",
+      "license": "MIT",
+      "description": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
+      "archived": false,
+      "treeTruncated": false,
+      "id": "gstack",
+      "subpath": "",
+      "providedUrl": "https://github.com/garrytan/gstack",
+      "files": [
+        {
+          "path": "LICENSE",
+          "local": "gstack/LICENSE.source.txt",
+          "sha256": "e56fbb5b3d95756f3fa1cfefa24732ec79f18ece1ad08a4e79e00df57e8b198c",
+          "bytes": 1066,
+          "url": "https://raw.githubusercontent.com/garrytan/gstack/3d99c224972942c447c1f94c9061da900e667aab/LICENSE"
+        },
+        {
+          "path": "NOTICE.md",
+          "local": "gstack/NOTICE.md.source.txt",
+          "sha256": "35b1b00d1421d6309ef379a4bb8b4c658783f8f19c4c5fd3f9f621b1e496daf0",
+          "bytes": 11475,
+          "url": "https://raw.githubusercontent.com/garrytan/gstack/3d99c224972942c447c1f94c9061da900e667aab/NOTICE.md"
+        },
+        {
+          "path": "README.md",
+          "local": "gstack/README.md.source.txt",
+          "sha256": "b4dd9822ef07532a5cdc810004685a45080381cc9205ce06a84729bf1ce41b98",
+          "bytes": 38005,
+          "url": "https://raw.githubusercontent.com/garrytan/gstack/3d99c224972942c447c1f94c9061da900e667aab/README.md"
+        },
+        {
+          "path": "SKILL.md",
+          "local": "gstack/SKILL.md.source.txt",
+          "sha256": "9359f0d037c679eee4c160fde835252e75c3dfee50cbc4e360c3cbe69e037a39",
+          "bytes": 20843,
+          "url": "https://raw.githubusercontent.com/garrytan/gstack/3d99c224972942c447c1f94c9061da900e667aab/SKILL.md"
+        },
+        {
+          "path": "plan-eng-review/SKILL.md",
+          "local": "gstack/plan-eng-review__SKILL.md.source.txt",
+          "sha256": "cd4d272e6bddf9d2c5a37e57bb03e99b3b4918fdc4a72324c8e0ddd3624287d0",
+          "bytes": 41414,
+          "url": "https://raw.githubusercontent.com/garrytan/gstack/3d99c224972942c447c1f94c9061da900e667aab/plan-eng-review/SKILL.md"
+        },
+        {
+          "path": "qa-only/SKILL.md",
+          "local": "gstack/qa-only__SKILL.md.source.txt",
+          "sha256": "fd8b7b36c5aeed4fb425134ae2c3ca93c3fee5f183f7e7d5b382711780313646",
+          "bytes": 21913,
+          "url": "https://raw.githubusercontent.com/garrytan/gstack/3d99c224972942c447c1f94c9061da900e667aab/qa-only/SKILL.md"
+        }
+      ],
+      "skillIndex": [
+        {
+          "path": "SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/SKILL.md"
+        },
+        {
+          "path": "autoplan/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/autoplan/SKILL.md"
+        },
+        {
+          "path": "benchmark-models/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/benchmark-models/SKILL.md"
+        },
+        {
+          "path": "benchmark/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/benchmark/SKILL.md"
+        },
+        {
+          "path": "browse/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/browse/SKILL.md"
+        },
+        {
+          "path": "browser-skills/hackernews-frontpage/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/browser-skills/hackernews-frontpage/SKILL.md"
+        },
+        {
+          "path": "canary/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/canary/SKILL.md"
+        },
+        {
+          "path": "captain/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/captain/SKILL.md"
+        },
+        {
+          "path": "capy/skill/gstack/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/capy/skill/gstack/SKILL.md"
+        },
+        {
+          "path": "careful/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/careful/SKILL.md"
+        },
+        {
+          "path": "codex/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/codex/SKILL.md"
+        },
+        {
+          "path": "context-restore/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/context-restore/SKILL.md"
+        },
+        {
+          "path": "context-save/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/context-save/SKILL.md"
+        },
+        {
+          "path": "cso/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/cso/SKILL.md"
+        },
+        {
+          "path": "design-consultation/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/design-consultation/SKILL.md"
+        },
+        {
+          "path": "design-html/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/design-html/SKILL.md"
+        },
+        {
+          "path": "design-motion/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/design-motion/SKILL.md"
+        },
+        {
+          "path": "design-review/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/design-review/SKILL.md"
+        },
+        {
+          "path": "design-shotgun/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/design-shotgun/SKILL.md"
+        },
+        {
+          "path": "deslop-shared-libs/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/deslop-shared-libs/SKILL.md"
+        },
+        {
+          "path": "devex-review/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/devex-review/SKILL.md"
+        },
+        {
+          "path": "diagram/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/diagram/SKILL.md"
+        },
+        {
+          "path": "document-generate/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/document-generate/SKILL.md"
+        },
+        {
+          "path": "document-release/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/document-release/SKILL.md"
+        },
+        {
+          "path": "eval-plan/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/eval-plan/SKILL.md"
+        },
+        {
+          "path": "freeze/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/freeze/SKILL.md"
+        },
+        {
+          "path": "gstack-upgrade/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/gstack-upgrade/SKILL.md"
+        },
+        {
+          "path": "guard/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/guard/SKILL.md"
+        },
+        {
+          "path": "health/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/health/SKILL.md"
+        },
+        {
+          "path": "investigate/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/investigate/SKILL.md"
+        },
+        {
+          "path": "ios-clean/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/ios-clean/SKILL.md"
+        },
+        {
+          "path": "ios-design-review/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/ios-design-review/SKILL.md"
+        },
+        {
+          "path": "ios-fix/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/ios-fix/SKILL.md"
+        },
+        {
+          "path": "ios-qa/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/ios-qa/SKILL.md"
+        },
+        {
+          "path": "ios-sync/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/ios-sync/SKILL.md"
+        },
+        {
+          "path": "land-and-deploy/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/land-and-deploy/SKILL.md"
+        },
+        {
+          "path": "landing-report/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/landing-report/SKILL.md"
+        },
+        {
+          "path": "learn/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/learn/SKILL.md"
+        },
+        {
+          "path": "make-pdf/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/make-pdf/SKILL.md"
+        },
+        {
+          "path": "modernize/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/modernize/SKILL.md"
+        },
+        {
+          "path": "office-hours/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/office-hours/SKILL.md"
+        },
+        {
+          "path": "open-gstack-browser/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/open-gstack-browser/SKILL.md"
+        },
+        {
+          "path": "openclaw/skills/gstack-openclaw-ceo-review/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/openclaw/skills/gstack-openclaw-ceo-review/SKILL.md"
+        },
+        {
+          "path": "openclaw/skills/gstack-openclaw-investigate/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/openclaw/skills/gstack-openclaw-investigate/SKILL.md"
+        },
+        {
+          "path": "openclaw/skills/gstack-openclaw-office-hours/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/openclaw/skills/gstack-openclaw-office-hours/SKILL.md"
+        },
+        {
+          "path": "openclaw/skills/gstack-openclaw-retro/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/openclaw/skills/gstack-openclaw-retro/SKILL.md"
+        },
+        {
+          "path": "pair-agent/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/pair-agent/SKILL.md"
+        },
+        {
+          "path": "plan-ceo-review/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/plan-ceo-review/SKILL.md"
+        },
+        {
+          "path": "plan-design-review/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/plan-design-review/SKILL.md"
+        },
+        {
+          "path": "plan-devex-review/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/plan-devex-review/SKILL.md"
+        },
+        {
+          "path": "plan-eng-review/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/plan-eng-review/SKILL.md"
+        },
+        {
+          "path": "plan-tune/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/plan-tune/SKILL.md"
+        },
+        {
+          "path": "qa-only/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/qa-only/SKILL.md"
+        },
+        {
+          "path": "qa/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/qa/SKILL.md"
+        },
+        {
+          "path": "retro/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/retro/SKILL.md"
+        },
+        {
+          "path": "review/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/review/SKILL.md"
+        },
+        {
+          "path": "scrape/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/scrape/SKILL.md"
+        },
+        {
+          "path": "setup-browser-cookies/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/setup-browser-cookies/SKILL.md"
+        },
+        {
+          "path": "setup-deploy/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/setup-deploy/SKILL.md"
+        },
+        {
+          "path": "setup-gbrain/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/setup-gbrain/SKILL.md"
+        },
+        {
+          "path": "ship/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/ship/SKILL.md"
+        },
+        {
+          "path": "skillify/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/skillify/SKILL.md"
+        },
+        {
+          "path": "spec/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/spec/SKILL.md"
+        },
+        {
+          "path": "sync-gbrain/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/sync-gbrain/SKILL.md"
+        },
+        {
+          "path": "test-audit/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/test-audit/SKILL.md"
+        },
+        {
+          "path": "ubicloud/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/ubicloud/SKILL.md"
+        },
+        {
+          "path": "unfreeze/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/unfreeze/SKILL.md"
+        },
+        {
+          "path": "verify/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/verify/SKILL.md"
+        },
+        {
+          "path": "write-skill/SKILL.md",
+          "url": "https://github.com/garrytan/gstack/blob/3d99c224972942c447c1f94c9061da900e667aab/write-skill/SKILL.md"
+        }
+      ],
+      "snapshotKind": "selected documentation and licenses; not an installable package",
+      "licenseReview": "Root license retained; dependencies/assets/models require separate review before use.",
+      "category": "Optional development reference",
+      "useWhen": "Architecture review, QA and release checklists",
+      "decision": "Use selected review practices on a matching engineering task. No bootstrap, telemetry, issue filing, deploy or auto-ship installation."
+    },
+    {
+      "repo": "obra/superpowers",
+      "sha": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b",
+      "url": "https://github.com/obra/superpowers",
+      "license": "MIT",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "archived": false,
+      "treeTruncated": false,
+      "id": "superpowers",
+      "subpath": "",
+      "providedUrl": "https://github.com/obra/superpowers",
+      "files": [
+        {
+          "path": "LICENSE",
+          "local": "superpowers/LICENSE.source.txt",
+          "sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+          "bytes": 1070,
+          "url": "https://raw.githubusercontent.com/obra/superpowers/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local": "superpowers/README.md.source.txt",
+          "sha256": "79f29f50c735862d2e304ea547b4c9aa67d9db6909ff6fb7b5ea922d7bcbc3e7",
+          "bytes": 14847,
+          "url": "https://raw.githubusercontent.com/obra/superpowers/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/README.md"
+        },
+        {
+          "path": "skills/brainstorming/SKILL.md",
+          "local": "superpowers/skills__brainstorming__SKILL.md.source.txt",
+          "sha256": "61a7ef918652108c76a3fd01e02dd92d39996c6b46d4cb2819cbd03f6c45e46a",
+          "bytes": 13602,
+          "url": "https://raw.githubusercontent.com/obra/superpowers/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/skills/brainstorming/SKILL.md"
+        },
+        {
+          "path": "skills/diagnosing-superpowers/SKILL.md",
+          "local": "superpowers/skills__diagnosing-superpowers__SKILL.md.source.txt",
+          "sha256": "3143de8695c5a2d63e8b1675f33837578076f464deb127c2ebdd0b46fceef886",
+          "bytes": 6941,
+          "url": "https://raw.githubusercontent.com/obra/superpowers/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/skills/diagnosing-superpowers/SKILL.md"
+        },
+        {
+          "path": "skills/writing-plans/SKILL.md",
+          "local": "superpowers/skills__writing-plans__SKILL.md.source.txt",
+          "sha256": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a",
+          "bytes": 10335,
+          "url": "https://raw.githubusercontent.com/obra/superpowers/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/skills/writing-plans/SKILL.md"
+        },
+        {
+          "path": "skills/systematic-debugging/SKILL.md",
+          "local": "superpowers/skills__systematic-debugging__SKILL.md.source.txt",
+          "sha256": "51c6435d98c83c42c96ba7c35725a0b2c376cd487fb1a4e6bd0ddbe7e33ef202",
+          "bytes": 9530,
+          "url": "https://raw.githubusercontent.com/obra/superpowers/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/skills/systematic-debugging/SKILL.md"
+        }
+      ],
+      "skillIndex": [
+        {
+          "path": "skills/brainstorming/SKILL.md",
+          "url": "https://github.com/obra/superpowers/blob/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/skills/brainstorming/SKILL.md"
+        },
+        {
+          "path": "skills/diagnosing-superpowers/SKILL.md",
+          "url": "https://github.com/obra/superpowers/blob/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/skills/diagnosing-superpowers/SKILL.md"
+        },
+        {
+          "path": "skills/dispatching-parallel-agents/SKILL.md",
+          "url": "https://github.com/obra/superpowers/blob/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/skills/dispatching-parallel-agents/SKILL.md"
+        },
+        {
+          "path": "skills/executing-plans/SKILL.md",
+          "url": "https://github.com/obra/superpowers/blob/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/skills/executing-plans/SKILL.md"
+        },
+        {
+          "path": "skills/finishing-a-development-branch/SKILL.md",
+          "url": "https://github.com/obra/superpowers/blob/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/skills/finishing-a-development-branch/SKILL.md"
+        },
+        {
+          "path": "skills/receiving-code-review/SKILL.md",
+          "url": "https://github.com/obra/superpowers/blob/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/skills/receiving-code-review/SKILL.md"
+        },
+        {
+          "path": "skills/requesting-code-review/SKILL.md",
+          "url": "https://github.com/obra/superpowers/blob/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/skills/requesting-code-review/SKILL.md"
+        },
+        {
+          "path": "skills/subagent-driven-development/SKILL.md",
+          "url": "https://github.com/obra/superpowers/blob/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/skills/subagent-driven-development/SKILL.md"
+        },
+        {
+          "path": "skills/systematic-debugging/SKILL.md",
+          "url": "https://github.com/obra/superpowers/blob/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/skills/systematic-debugging/SKILL.md"
+        },
+        {
+          "path": "skills/test-driven-development/SKILL.md",
+          "url": "https://github.com/obra/superpowers/blob/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/skills/test-driven-development/SKILL.md"
+        },
+        {
+          "path": "skills/using-git-worktrees/SKILL.md",
+          "url": "https://github.com/obra/superpowers/blob/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/skills/using-git-worktrees/SKILL.md"
+        },
+        {
+          "path": "skills/using-superpowers/SKILL.md",
+          "url": "https://github.com/obra/superpowers/blob/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/skills/using-superpowers/SKILL.md"
+        },
+        {
+          "path": "skills/verification-before-completion/SKILL.md",
+          "url": "https://github.com/obra/superpowers/blob/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/skills/verification-before-completion/SKILL.md"
+        },
+        {
+          "path": "skills/writing-plans/SKILL.md",
+          "url": "https://github.com/obra/superpowers/blob/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/skills/writing-plans/SKILL.md"
+        },
+        {
+          "path": "skills/writing-skills/SKILL.md",
+          "url": "https://github.com/obra/superpowers/blob/2ce8aa15d05bd57213e6f746f953aafb7ded7a8b/skills/writing-skills/SKILL.md"
+        }
+      ],
+      "snapshotKind": "selected documentation and licenses; not an installable package",
+      "licenseReview": "Root license retained; dependencies/assets/models require separate review before use.",
+      "category": "Optional development reference",
+      "useWhen": "Brainstorming, planning, debugging and verification",
+      "decision": "Use the relevant procedure only. Do not install automatic startup hooks or replace project instructions."
+    },
+    {
+      "repo": "VoltAgent/awesome-claude-code-subagents",
+      "sha": "ed74d115b7fb7026a22a4f816a8e3250f425e3b4",
+      "url": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+      "license": "MIT",
+      "description": "A collection of 100+ specialized Claude Code subagents covering a wide range of development use cases",
+      "archived": false,
+      "treeTruncated": false,
+      "id": "subagents",
+      "subpath": "",
+      "providedUrl": "https://github.com/VoltAgent/awesome-claude-code-subagents",
+      "files": [
+        {
+          "path": "LICENSE",
+          "local": "subagents/LICENSE.source.txt",
+          "sha256": "8ed27772f4430d6e3815599b849c1b6e59088671133ef67e9b1be4acef2b75da",
+          "bytes": 1065,
+          "url": "https://raw.githubusercontent.com/VoltAgent/awesome-claude-code-subagents/ed74d115b7fb7026a22a4f816a8e3250f425e3b4/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local": "subagents/README.md.source.txt",
+          "sha256": "7d6162f0c116aa0d728d084022175bfd257aded077de8d8630ea4765f42bbde8",
+          "bytes": 36098,
+          "url": "https://raw.githubusercontent.com/VoltAgent/awesome-claude-code-subagents/ed74d115b7fb7026a22a4f816a8e3250f425e3b4/README.md"
+        }
+      ],
+      "skillIndex": [],
+      "snapshotKind": "selected documentation and licenses; not an installable package",
+      "licenseReview": "Root license retained; dependencies/assets/models require separate review before use.",
+      "category": "Optional development reference",
+      "useWhen": "Specialist role descriptions",
+      "decision": "Consult a relevant role when authorized delegation is useful. Saving a role library does not authorize spawning agents."
+    },
+    {
+      "repo": "wshobson/agents",
+      "sha": "7e2fb559cf4b824b27f1fec49fe88f7511066d26",
+      "url": "https://github.com/wshobson/agents",
+      "license": "MIT",
+      "description": "Multi-harness agentic plugin marketplace for Claude Code, Codex, Cursor, OpenCode, GitHub Copilot, Google Antigravity, and Pi",
+      "archived": false,
+      "treeTruncated": false,
+      "id": "agents",
+      "subpath": "",
+      "providedUrl": "https://github.com/wshobson/agents",
+      "files": [
+        {
+          "path": "LICENSE",
+          "local": "agents/LICENSE.source.txt",
+          "sha256": "f89abb55d9f073f38f1703e4518f0613c788c6174be7f13b8dfe48a1c076c746",
+          "bytes": 1068,
+          "url": "https://raw.githubusercontent.com/wshobson/agents/7e2fb559cf4b824b27f1fec49fe88f7511066d26/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local": "agents/README.md.source.txt",
+          "sha256": "8469d4f011ce26fb97a34cf079610c8cabb8ef82bcfb20417818f7c1e8738c81",
+          "bytes": 9662,
+          "url": "https://raw.githubusercontent.com/wshobson/agents/7e2fb559cf4b824b27f1fec49fe88f7511066d26/README.md"
+        },
+        {
+          "path": "plugins/accessibility-compliance/skills/screen-reader-testing/SKILL.md",
+          "local": "agents/plugins__accessibility-compliance__skills__screen-reader-testing__SKILL.md.source.txt",
+          "sha256": "d7a4190a8869fcd60e38e1dc0d92d62573d025e46afb3a03eba140e841d7185d",
+          "bytes": 6423,
+          "url": "https://raw.githubusercontent.com/wshobson/agents/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/accessibility-compliance/skills/screen-reader-testing/SKILL.md"
+        },
+        {
+          "path": "plugins/accessibility-compliance/skills/wcag-audit-patterns/SKILL.md",
+          "local": "agents/plugins__accessibility-compliance__skills__wcag-audit-patterns__SKILL.md.source.txt",
+          "sha256": "db263a3405deb95a63175f33da4a9d82d8595599fbee4a81979059b35a7cec40",
+          "bytes": 2511,
+          "url": "https://raw.githubusercontent.com/wshobson/agents/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/accessibility-compliance/skills/wcag-audit-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/developer-essentials/skills/e2e-testing-patterns/SKILL.md",
+          "local": "agents/plugins__developer-essentials__skills__e2e-testing-patterns__SKILL.md.source.txt",
+          "sha256": "b59a3d80c852f41bb73d6941410cd0fc98bbdb63a61d2ed0da2415f8dde0e1c7",
+          "bytes": 4231,
+          "url": "https://raw.githubusercontent.com/wshobson/agents/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/developer-essentials/skills/e2e-testing-patterns/SKILL.md"
+        }
+      ],
+      "skillIndex": [
+        {
+          "path": "plugins/accessibility-compliance/skills/screen-reader-testing/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/accessibility-compliance/skills/screen-reader-testing/SKILL.md"
+        },
+        {
+          "path": "plugins/accessibility-compliance/skills/wcag-audit-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/accessibility-compliance/skills/wcag-audit-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/agent-teams/skills/multi-reviewer-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/agent-teams/skills/multi-reviewer-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/agent-teams/skills/parallel-debugging/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/agent-teams/skills/parallel-debugging/SKILL.md"
+        },
+        {
+          "path": "plugins/agent-teams/skills/parallel-feature-development/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/agent-teams/skills/parallel-feature-development/SKILL.md"
+        },
+        {
+          "path": "plugins/agent-teams/skills/task-coordination-strategies/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/agent-teams/skills/task-coordination-strategies/SKILL.md"
+        },
+        {
+          "path": "plugins/agent-teams/skills/team-communication-protocols/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/agent-teams/skills/team-communication-protocols/SKILL.md"
+        },
+        {
+          "path": "plugins/agent-teams/skills/team-composition-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/agent-teams/skills/team-composition-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/api-scaffolding/skills/fastapi-templates/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/api-scaffolding/skills/fastapi-templates/SKILL.md"
+        },
+        {
+          "path": "plugins/avoid-ai-writing/skills/avoid-ai-writing/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/avoid-ai-writing/skills/avoid-ai-writing/SKILL.md"
+        },
+        {
+          "path": "plugins/backend-development/skills/api-design-principles/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/backend-development/skills/api-design-principles/SKILL.md"
+        },
+        {
+          "path": "plugins/backend-development/skills/architecture-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/backend-development/skills/architecture-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/backend-development/skills/cqrs-implementation/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/backend-development/skills/cqrs-implementation/SKILL.md"
+        },
+        {
+          "path": "plugins/backend-development/skills/event-store-design/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/backend-development/skills/event-store-design/SKILL.md"
+        },
+        {
+          "path": "plugins/backend-development/skills/microservices-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/backend-development/skills/microservices-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/backend-development/skills/projection-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/backend-development/skills/projection-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/backend-development/skills/saga-orchestration/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/backend-development/skills/saga-orchestration/SKILL.md"
+        },
+        {
+          "path": "plugins/backend-development/skills/temporal-python-testing/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/backend-development/skills/temporal-python-testing/SKILL.md"
+        },
+        {
+          "path": "plugins/backend-development/skills/workflow-orchestration-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/backend-development/skills/workflow-orchestration-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/before-you-build/skills/before-you-build/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/before-you-build/skills/before-you-build/SKILL.md"
+        },
+        {
+          "path": "plugins/block-no-verify/skills/block-no-verify-hook/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/block-no-verify/skills/block-no-verify-hook/SKILL.md"
+        },
+        {
+          "path": "plugins/blockchain-web3/skills/defi-protocol-templates/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/blockchain-web3/skills/defi-protocol-templates/SKILL.md"
+        },
+        {
+          "path": "plugins/blockchain-web3/skills/nft-standards/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/blockchain-web3/skills/nft-standards/SKILL.md"
+        },
+        {
+          "path": "plugins/blockchain-web3/skills/solidity-security/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/blockchain-web3/skills/solidity-security/SKILL.md"
+        },
+        {
+          "path": "plugins/blockchain-web3/skills/web3-testing/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/blockchain-web3/skills/web3-testing/SKILL.md"
+        },
+        {
+          "path": "plugins/brand-landingpage/skills/brand-landingpage/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/brand-landingpage/skills/brand-landingpage/SKILL.md"
+        },
+        {
+          "path": "plugins/business-analytics/skills/data-storytelling/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/business-analytics/skills/data-storytelling/SKILL.md"
+        },
+        {
+          "path": "plugins/business-analytics/skills/kpi-dashboard-design/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/business-analytics/skills/kpi-dashboard-design/SKILL.md"
+        },
+        {
+          "path": "plugins/cicd-automation/skills/deployment-pipeline-design/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/cicd-automation/skills/deployment-pipeline-design/SKILL.md"
+        },
+        {
+          "path": "plugins/cicd-automation/skills/github-actions-templates/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/cicd-automation/skills/github-actions-templates/SKILL.md"
+        },
+        {
+          "path": "plugins/cicd-automation/skills/gitlab-ci-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/cicd-automation/skills/gitlab-ci-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/cicd-automation/skills/secrets-management/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/cicd-automation/skills/secrets-management/SKILL.md"
+        },
+        {
+          "path": "plugins/cloud-infrastructure/skills/cost-optimization/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/cloud-infrastructure/skills/cost-optimization/SKILL.md"
+        },
+        {
+          "path": "plugins/cloud-infrastructure/skills/hybrid-cloud-networking/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/cloud-infrastructure/skills/hybrid-cloud-networking/SKILL.md"
+        },
+        {
+          "path": "plugins/cloud-infrastructure/skills/istio-traffic-management/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/cloud-infrastructure/skills/istio-traffic-management/SKILL.md"
+        },
+        {
+          "path": "plugins/cloud-infrastructure/skills/linkerd-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/cloud-infrastructure/skills/linkerd-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/cloud-infrastructure/skills/mtls-configuration/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/cloud-infrastructure/skills/mtls-configuration/SKILL.md"
+        },
+        {
+          "path": "plugins/cloud-infrastructure/skills/multi-cloud-architecture/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/cloud-infrastructure/skills/multi-cloud-architecture/SKILL.md"
+        },
+        {
+          "path": "plugins/cloud-infrastructure/skills/service-mesh-observability/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/cloud-infrastructure/skills/service-mesh-observability/SKILL.md"
+        },
+        {
+          "path": "plugins/cloud-infrastructure/skills/terraform-module-library/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/cloud-infrastructure/skills/terraform-module-library/SKILL.md"
+        },
+        {
+          "path": "plugins/conductor/skills/context-driven-development/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/conductor/skills/context-driven-development/SKILL.md"
+        },
+        {
+          "path": "plugins/conductor/skills/track-management/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/conductor/skills/track-management/SKILL.md"
+        },
+        {
+          "path": "plugins/conductor/skills/workflow-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/conductor/skills/workflow-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/content-marketing/skills/social-evidence-research/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/content-marketing/skills/social-evidence-research/SKILL.md"
+        },
+        {
+          "path": "plugins/data-engineering/skills/airflow-dag-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/data-engineering/skills/airflow-dag-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/data-engineering/skills/data-quality-frameworks/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/data-engineering/skills/data-quality-frameworks/SKILL.md"
+        },
+        {
+          "path": "plugins/data-engineering/skills/dbt-transformation-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/data-engineering/skills/dbt-transformation-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/data-engineering/skills/spark-optimization/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/data-engineering/skills/spark-optimization/SKILL.md"
+        },
+        {
+          "path": "plugins/database-design/skills/postgresql-table-design/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/database-design/skills/postgresql-table-design/SKILL.md"
+        },
+        {
+          "path": "plugins/developer-essentials/skills/auth-implementation-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/developer-essentials/skills/auth-implementation-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/developer-essentials/skills/bazel-build-optimization/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/developer-essentials/skills/bazel-build-optimization/SKILL.md"
+        },
+        {
+          "path": "plugins/developer-essentials/skills/code-review-excellence/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/developer-essentials/skills/code-review-excellence/SKILL.md"
+        },
+        {
+          "path": "plugins/developer-essentials/skills/debugging-strategies/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/developer-essentials/skills/debugging-strategies/SKILL.md"
+        },
+        {
+          "path": "plugins/developer-essentials/skills/e2e-testing-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/developer-essentials/skills/e2e-testing-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/developer-essentials/skills/error-handling-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/developer-essentials/skills/error-handling-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/developer-essentials/skills/git-advanced-workflows/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/developer-essentials/skills/git-advanced-workflows/SKILL.md"
+        },
+        {
+          "path": "plugins/developer-essentials/skills/monorepo-management/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/developer-essentials/skills/monorepo-management/SKILL.md"
+        },
+        {
+          "path": "plugins/developer-essentials/skills/nx-workspace-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/developer-essentials/skills/nx-workspace-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/developer-essentials/skills/sql-optimization-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/developer-essentials/skills/sql-optimization-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/developer-essentials/skills/turborepo-caching/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/developer-essentials/skills/turborepo-caching/SKILL.md"
+        },
+        {
+          "path": "plugins/dgx-spark-ops/skills/spark-environment-setup/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/dgx-spark-ops/skills/spark-environment-setup/SKILL.md"
+        },
+        {
+          "path": "plugins/dgx-spark-ops/skills/spark-memory-thermal-ops/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/dgx-spark-ops/skills/spark-memory-thermal-ops/SKILL.md"
+        },
+        {
+          "path": "plugins/dgx-spark-ops/skills/spark-training-gotchas/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/dgx-spark-ops/skills/spark-training-gotchas/SKILL.md"
+        },
+        {
+          "path": "plugins/documentation-generation/skills/architecture-decision-records/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/documentation-generation/skills/architecture-decision-records/SKILL.md"
+        },
+        {
+          "path": "plugins/documentation-generation/skills/changelog-automation/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/documentation-generation/skills/changelog-automation/SKILL.md"
+        },
+        {
+          "path": "plugins/documentation-generation/skills/openapi-spec-generation/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/documentation-generation/skills/openapi-spec-generation/SKILL.md"
+        },
+        {
+          "path": "plugins/documentation-standards/skills/grounded-vault/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/documentation-standards/skills/grounded-vault/SKILL.md"
+        },
+        {
+          "path": "plugins/documentation-standards/skills/hads/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/documentation-standards/skills/hads/SKILL.md"
+        },
+        {
+          "path": "plugins/dotnet-contribution/skills/dotnet-backend-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/dotnet-contribution/skills/dotnet-backend-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/file-conversion/skills/file-conversion/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/file-conversion/skills/file-conversion/SKILL.md"
+        },
+        {
+          "path": "plugins/framework-migration/skills/angular-migration/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/framework-migration/skills/angular-migration/SKILL.md"
+        },
+        {
+          "path": "plugins/framework-migration/skills/database-migration/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/framework-migration/skills/database-migration/SKILL.md"
+        },
+        {
+          "path": "plugins/framework-migration/skills/dependency-upgrade/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/framework-migration/skills/dependency-upgrade/SKILL.md"
+        },
+        {
+          "path": "plugins/framework-migration/skills/react-modernization/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/framework-migration/skills/react-modernization/SKILL.md"
+        },
+        {
+          "path": "plugins/frontend-mobile-development/skills/nextjs-app-router-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/frontend-mobile-development/skills/nextjs-app-router-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/frontend-mobile-development/skills/react-native-architecture/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/frontend-mobile-development/skills/react-native-architecture/SKILL.md"
+        },
+        {
+          "path": "plugins/frontend-mobile-development/skills/react-state-management/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/frontend-mobile-development/skills/react-state-management/SKILL.md"
+        },
+        {
+          "path": "plugins/frontend-mobile-development/skills/tailwind-design-system/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/frontend-mobile-development/skills/tailwind-design-system/SKILL.md"
+        },
+        {
+          "path": "plugins/game-development/skills/godot-gdscript-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/game-development/skills/godot-gdscript-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/game-development/skills/unity-ecs-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/game-development/skills/unity-ecs-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/hermes-tweet/skills/hermes-tweet/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/hermes-tweet/skills/hermes-tweet/SKILL.md"
+        },
+        {
+          "path": "plugins/hr-legal-compliance/skills/employment-contract-templates/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/hr-legal-compliance/skills/employment-contract-templates/SKILL.md"
+        },
+        {
+          "path": "plugins/hr-legal-compliance/skills/gdpr-data-handling/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/hr-legal-compliance/skills/gdpr-data-handling/SKILL.md"
+        },
+        {
+          "path": "plugins/incident-response/skills/connectivity-triage/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/incident-response/skills/connectivity-triage/SKILL.md"
+        },
+        {
+          "path": "plugins/incident-response/skills/incident-runbook-templates/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/incident-response/skills/incident-runbook-templates/SKILL.md"
+        },
+        {
+          "path": "plugins/incident-response/skills/on-call-handoff-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/incident-response/skills/on-call-handoff-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/incident-response/skills/postmortem-writing/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/incident-response/skills/postmortem-writing/SKILL.md"
+        },
+        {
+          "path": "plugins/javascript-typescript/skills/javascript-testing-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/javascript-typescript/skills/javascript-testing-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/javascript-typescript/skills/modern-javascript-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/javascript-typescript/skills/modern-javascript-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/javascript-typescript/skills/nodejs-backend-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/javascript-typescript/skills/nodejs-backend-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/javascript-typescript/skills/typescript-advanced-types/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/javascript-typescript/skills/typescript-advanced-types/SKILL.md"
+        },
+        {
+          "path": "plugins/kubernetes-operations/skills/gitops-workflow/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/kubernetes-operations/skills/gitops-workflow/SKILL.md"
+        },
+        {
+          "path": "plugins/kubernetes-operations/skills/helm-chart-scaffolding/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/kubernetes-operations/skills/helm-chart-scaffolding/SKILL.md"
+        },
+        {
+          "path": "plugins/kubernetes-operations/skills/k8s-manifest-generator/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/kubernetes-operations/skills/k8s-manifest-generator/SKILL.md"
+        },
+        {
+          "path": "plugins/kubernetes-operations/skills/k8s-security-policies/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/kubernetes-operations/skills/k8s-security-policies/SKILL.md"
+        },
+        {
+          "path": "plugins/llm-application-dev/skills/embedding-strategies/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/llm-application-dev/skills/embedding-strategies/SKILL.md"
+        },
+        {
+          "path": "plugins/llm-application-dev/skills/hybrid-search-implementation/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/llm-application-dev/skills/hybrid-search-implementation/SKILL.md"
+        },
+        {
+          "path": "plugins/llm-application-dev/skills/langchain-architecture/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/llm-application-dev/skills/langchain-architecture/SKILL.md"
+        },
+        {
+          "path": "plugins/llm-application-dev/skills/llm-evaluation/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/llm-application-dev/skills/llm-evaluation/SKILL.md"
+        },
+        {
+          "path": "plugins/llm-application-dev/skills/prompt-engineering-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/llm-application-dev/skills/prompt-engineering-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/llm-application-dev/skills/rag-implementation/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/llm-application-dev/skills/rag-implementation/SKILL.md"
+        },
+        {
+          "path": "plugins/llm-application-dev/skills/similarity-search-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/llm-application-dev/skills/similarity-search-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/llm-application-dev/skills/vector-index-tuning/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/llm-application-dev/skills/vector-index-tuning/SKILL.md"
+        },
+        {
+          "path": "plugins/llm-finetuning/skills/checkpoint-promotion/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/llm-finetuning/skills/checkpoint-promotion/SKILL.md"
+        },
+        {
+          "path": "plugins/llm-finetuning/skills/dataset-curation/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/llm-finetuning/skills/dataset-curation/SKILL.md"
+        },
+        {
+          "path": "plugins/llm-finetuning/skills/eval-harness-first/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/llm-finetuning/skills/eval-harness-first/SKILL.md"
+        },
+        {
+          "path": "plugins/llm-finetuning/skills/finetuning-method-selection/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/llm-finetuning/skills/finetuning-method-selection/SKILL.md"
+        },
+        {
+          "path": "plugins/llm-finetuning/skills/grpo-rlvr-training/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/llm-finetuning/skills/grpo-rlvr-training/SKILL.md"
+        },
+        {
+          "path": "plugins/llm-finetuning/skills/lora-qlora-recipes/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/llm-finetuning/skills/lora-qlora-recipes/SKILL.md"
+        },
+        {
+          "path": "plugins/llm-finetuning/skills/preference-optimization/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/llm-finetuning/skills/preference-optimization/SKILL.md"
+        },
+        {
+          "path": "plugins/llm-finetuning/skills/quantized-export/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/llm-finetuning/skills/quantized-export/SKILL.md"
+        },
+        {
+          "path": "plugins/llm-finetuning/skills/trace-to-training-data/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/llm-finetuning/skills/trace-to-training-data/SKILL.md"
+        },
+        {
+          "path": "plugins/llm-finetuning/skills/vision-sft/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/llm-finetuning/skills/vision-sft/SKILL.md"
+        },
+        {
+          "path": "plugins/machine-learning-ops/skills/ml-pipeline-workflow/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/machine-learning-ops/skills/ml-pipeline-workflow/SKILL.md"
+        },
+        {
+          "path": "plugins/machine-learning-ops/skills/recsys-pipeline-architect/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/machine-learning-ops/skills/recsys-pipeline-architect/SKILL.md"
+        },
+        {
+          "path": "plugins/observability-monitoring/skills/distributed-tracing/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/observability-monitoring/skills/distributed-tracing/SKILL.md"
+        },
+        {
+          "path": "plugins/observability-monitoring/skills/grafana-dashboards/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/observability-monitoring/skills/grafana-dashboards/SKILL.md"
+        },
+        {
+          "path": "plugins/observability-monitoring/skills/prometheus-configuration/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/observability-monitoring/skills/prometheus-configuration/SKILL.md"
+        },
+        {
+          "path": "plugins/observability-monitoring/skills/slo-implementation/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/observability-monitoring/skills/slo-implementation/SKILL.md"
+        },
+        {
+          "path": "plugins/payment-processing/skills/billing-automation/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/payment-processing/skills/billing-automation/SKILL.md"
+        },
+        {
+          "path": "plugins/payment-processing/skills/paypal-integration/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/payment-processing/skills/paypal-integration/SKILL.md"
+        },
+        {
+          "path": "plugins/payment-processing/skills/pci-compliance/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/payment-processing/skills/pci-compliance/SKILL.md"
+        },
+        {
+          "path": "plugins/payment-processing/skills/stripe-integration/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/payment-processing/skills/stripe-integration/SKILL.md"
+        },
+        {
+          "path": "plugins/plugin-eval/skills/evaluation-methodology/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/plugin-eval/skills/evaluation-methodology/SKILL.md"
+        },
+        {
+          "path": "plugins/pptx-deck-creation/skills/pptx-deck-context/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/pptx-deck-creation/skills/pptx-deck-context/SKILL.md"
+        },
+        {
+          "path": "plugins/pptx-deck-creation/skills/pptx-quality-gates/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/pptx-deck-creation/skills/pptx-quality-gates/SKILL.md"
+        },
+        {
+          "path": "plugins/pptx-deck-creation/skills/pptx-reference-deck-analysis/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/pptx-deck-creation/skills/pptx-reference-deck-analysis/SKILL.md"
+        },
+        {
+          "path": "plugins/pptx-deck-creation/skills/pptx-slide-specification/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/pptx-deck-creation/skills/pptx-slide-specification/SKILL.md"
+        },
+        {
+          "path": "plugins/pptx-deck-creation/skills/pptx-visual-assets/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/pptx-deck-creation/skills/pptx-visual-assets/SKILL.md"
+        },
+        {
+          "path": "plugins/protect-mcp/skills/protect-mcp-setup/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/protect-mcp/skills/protect-mcp-setup/SKILL.md"
+        },
+        {
+          "path": "plugins/python-development/skills/async-python-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/python-development/skills/async-python-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/python-development/skills/python-anti-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/python-development/skills/python-anti-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/python-development/skills/python-background-jobs/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/python-development/skills/python-background-jobs/SKILL.md"
+        },
+        {
+          "path": "plugins/python-development/skills/python-code-style/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/python-development/skills/python-code-style/SKILL.md"
+        },
+        {
+          "path": "plugins/python-development/skills/python-configuration/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/python-development/skills/python-configuration/SKILL.md"
+        },
+        {
+          "path": "plugins/python-development/skills/python-design-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/python-development/skills/python-design-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/python-development/skills/python-error-handling/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/python-development/skills/python-error-handling/SKILL.md"
+        },
+        {
+          "path": "plugins/python-development/skills/python-observability/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/python-development/skills/python-observability/SKILL.md"
+        },
+        {
+          "path": "plugins/python-development/skills/python-packaging/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/python-development/skills/python-packaging/SKILL.md"
+        },
+        {
+          "path": "plugins/python-development/skills/python-performance-optimization/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/python-development/skills/python-performance-optimization/SKILL.md"
+        },
+        {
+          "path": "plugins/python-development/skills/python-project-structure/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/python-development/skills/python-project-structure/SKILL.md"
+        },
+        {
+          "path": "plugins/python-development/skills/python-resilience/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/python-development/skills/python-resilience/SKILL.md"
+        },
+        {
+          "path": "plugins/python-development/skills/python-resource-management/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/python-development/skills/python-resource-management/SKILL.md"
+        },
+        {
+          "path": "plugins/python-development/skills/python-testing-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/python-development/skills/python-testing-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/python-development/skills/python-type-safety/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/python-development/skills/python-type-safety/SKILL.md"
+        },
+        {
+          "path": "plugins/python-development/skills/uv-package-manager/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/python-development/skills/uv-package-manager/SKILL.md"
+        },
+        {
+          "path": "plugins/quantitative-trading/skills/backtesting-frameworks/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/quantitative-trading/skills/backtesting-frameworks/SKILL.md"
+        },
+        {
+          "path": "plugins/quantitative-trading/skills/risk-metrics-calculation/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/quantitative-trading/skills/risk-metrics-calculation/SKILL.md"
+        },
+        {
+          "path": "plugins/reverse-engineering/skills/anti-reversing-techniques/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/reverse-engineering/skills/anti-reversing-techniques/SKILL.md"
+        },
+        {
+          "path": "plugins/reverse-engineering/skills/binary-analysis-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/reverse-engineering/skills/binary-analysis-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/reverse-engineering/skills/memory-forensics/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/reverse-engineering/skills/memory-forensics/SKILL.md"
+        },
+        {
+          "path": "plugins/reverse-engineering/skills/protocol-reverse-engineering/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/reverse-engineering/skills/protocol-reverse-engineering/SKILL.md"
+        },
+        {
+          "path": "plugins/review-agent-governance/skills/review-agent-setup/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/review-agent-governance/skills/review-agent-setup/SKILL.md"
+        },
+        {
+          "path": "plugins/security-scanning/skills/attack-tree-construction/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/security-scanning/skills/attack-tree-construction/SKILL.md"
+        },
+        {
+          "path": "plugins/security-scanning/skills/sast-configuration/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/security-scanning/skills/sast-configuration/SKILL.md"
+        },
+        {
+          "path": "plugins/security-scanning/skills/security-requirement-extraction/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/security-scanning/skills/security-requirement-extraction/SKILL.md"
+        },
+        {
+          "path": "plugins/security-scanning/skills/stride-analysis-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/security-scanning/skills/stride-analysis-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/security-scanning/skills/threat-mitigation-mapping/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/security-scanning/skills/threat-mitigation-mapping/SKILL.md"
+        },
+        {
+          "path": "plugins/shell-scripting/skills/bash-defensive-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/shell-scripting/skills/bash-defensive-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/shell-scripting/skills/bats-testing-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/shell-scripting/skills/bats-testing-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/shell-scripting/skills/shellcheck-configuration/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/shell-scripting/skills/shellcheck-configuration/SKILL.md"
+        },
+        {
+          "path": "plugins/ship-mate/skills/scan/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/ship-mate/skills/scan/SKILL.md"
+        },
+        {
+          "path": "plugins/signed-audit-trails/skills/signed-audit-trails-recipe/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/signed-audit-trails/skills/signed-audit-trails-recipe/SKILL.md"
+        },
+        {
+          "path": "plugins/skill-forge-essentials/skills/ai-debt-detector/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/skill-forge-essentials/skills/ai-debt-detector/SKILL.md"
+        },
+        {
+          "path": "plugins/skill-forge-essentials/skills/session-guard/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/skill-forge-essentials/skills/session-guard/SKILL.md"
+        },
+        {
+          "path": "plugins/skill-forge-essentials/skills/visual-edit-precision/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/skill-forge-essentials/skills/visual-edit-precision/SKILL.md"
+        },
+        {
+          "path": "plugins/social-publishing/skills/social-publishing/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/social-publishing/skills/social-publishing/SKILL.md"
+        },
+        {
+          "path": "plugins/startup-business-analyst/skills/competitive-landscape/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/startup-business-analyst/skills/competitive-landscape/SKILL.md"
+        },
+        {
+          "path": "plugins/startup-business-analyst/skills/market-sizing-analysis/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/startup-business-analyst/skills/market-sizing-analysis/SKILL.md"
+        },
+        {
+          "path": "plugins/startup-business-analyst/skills/startup-financial-modeling/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/startup-business-analyst/skills/startup-financial-modeling/SKILL.md"
+        },
+        {
+          "path": "plugins/startup-business-analyst/skills/startup-metrics-framework/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/startup-business-analyst/skills/startup-metrics-framework/SKILL.md"
+        },
+        {
+          "path": "plugins/startup-business-analyst/skills/team-composition-analysis/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/startup-business-analyst/skills/team-composition-analysis/SKILL.md"
+        },
+        {
+          "path": "plugins/superself/skills/superself/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/superself/skills/superself/SKILL.md"
+        },
+        {
+          "path": "plugins/systems-programming/skills/go-concurrency-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/systems-programming/skills/go-concurrency-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/systems-programming/skills/memory-safety-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/systems-programming/skills/memory-safety-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/systems-programming/skills/rust-async-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/systems-programming/skills/rust-async-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/ui-design/skills/accessibility-compliance/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/ui-design/skills/accessibility-compliance/SKILL.md"
+        },
+        {
+          "path": "plugins/ui-design/skills/design-system-patterns/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/ui-design/skills/design-system-patterns/SKILL.md"
+        },
+        {
+          "path": "plugins/ui-design/skills/interaction-design/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/ui-design/skills/interaction-design/SKILL.md"
+        },
+        {
+          "path": "plugins/ui-design/skills/mobile-android-design/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/ui-design/skills/mobile-android-design/SKILL.md"
+        },
+        {
+          "path": "plugins/ui-design/skills/mobile-ios-design/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/ui-design/skills/mobile-ios-design/SKILL.md"
+        },
+        {
+          "path": "plugins/ui-design/skills/react-native-design/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/ui-design/skills/react-native-design/SKILL.md"
+        },
+        {
+          "path": "plugins/ui-design/skills/responsive-design/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/ui-design/skills/responsive-design/SKILL.md"
+        },
+        {
+          "path": "plugins/ui-design/skills/visual-design-foundations/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/ui-design/skills/visual-design-foundations/SKILL.md"
+        },
+        {
+          "path": "plugins/ui-design/skills/web-component-design/SKILL.md",
+          "url": "https://github.com/wshobson/agents/blob/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/ui-design/skills/web-component-design/SKILL.md"
+        }
+      ],
+      "snapshotKind": "selected documentation and licenses; not an installable package",
+      "licenseReview": "Root license retained; dependencies/assets/models require separate review before use.",
+      "category": "Optional development reference",
+      "useWhen": "Scoped engineering workflows and testing patterns",
+      "decision": "Use selected modules; no wholesale marketplace install or duplicate application orchestration layer."
+    },
+    {
+      "repo": "alexyc9381/court-skill",
+      "sha": "2abd32db25783720faf2589b456de944534f611d",
+      "url": "https://github.com/alexyc9381/court-skill",
+      "license": "MIT",
+      "description": "Put your idea on trial in front of a jury of 12 Claudes. A free Claude Code skill.",
+      "archived": false,
+      "treeTruncated": false,
+      "id": "court",
+      "subpath": "",
+      "providedUrl": "https://github.com/alexyc9381/court-skill",
+      "files": [
+        {
+          "path": "LICENSE",
+          "local": "court/LICENSE.source.txt",
+          "sha256": "f2ca46fa1a9c9366f53dbcb64652487f72fd82edd4161be4ccf0017e0eabe0d2",
+          "bytes": 1100,
+          "url": "https://raw.githubusercontent.com/alexyc9381/court-skill/2abd32db25783720faf2589b456de944534f611d/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local": "court/README.md.source.txt",
+          "sha256": "e9e124eb235ab06751a04ceddc0da60ffc4d669744c2c427dec09d1798f97737",
+          "bytes": 3971,
+          "url": "https://raw.githubusercontent.com/alexyc9381/court-skill/2abd32db25783720faf2589b456de944534f611d/README.md"
+        },
+        {
+          "path": "skills/court/SKILL.md",
+          "local": "court/skills__court__SKILL.md.source.txt",
+          "sha256": "db5fb5440288aed39593d214f394ad1da7477a43d52ab29b4cc20987ca4fdc31",
+          "bytes": 5169,
+          "url": "https://raw.githubusercontent.com/alexyc9381/court-skill/2abd32db25783720faf2589b456de944534f611d/skills/court/SKILL.md"
+        }
+      ],
+      "skillIndex": [
+        {
+          "path": "skills/court/SKILL.md",
+          "url": "https://github.com/alexyc9381/court-skill/blob/2abd32db25783720faf2589b456de944534f611d/skills/court/SKILL.md"
+        }
+      ],
+      "snapshotKind": "selected documentation and licenses; not an installable package",
+      "licenseReview": "Root license retained; dependencies/assets/models require separate review before use.",
+      "category": "Optional critique reference",
+      "useWhen": "Adversarial review of a major idea or tradeoff",
+      "decision": "Only on a requested critique; not legal adjudication. Avoid a 12-juror/17-call default in ordinary brief refinement."
+    },
+    {
+      "repo": "alisadiq-ai/agi-ali-freebies",
+      "sha": "74cd86125cbfd21820f55e64016c1c549d41d6c2",
+      "url": "https://github.com/alisadiq-ai/agi-ali-freebies",
+      "license": "Apache-2.0",
+      "description": "Free Claude skills and prompts from my @agiwithali reels: learn anything with 10 codes, a 7-reviewer resume panel, an idea trial, 20 motion-design styles and more.",
+      "archived": false,
+      "treeTruncated": false,
+      "id": "resume",
+      "subpath": "skills/resume-panel",
+      "providedUrl": "https://github.com/alisadiq-ai/agi-ali-freebies/tree/main/skills/resume-panel",
+      "files": [
+        {
+          "path": "LICENSE",
+          "local": "resume/LICENSE.source.txt",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357,
+          "url": "https://raw.githubusercontent.com/alisadiq-ai/agi-ali-freebies/74cd86125cbfd21820f55e64016c1c549d41d6c2/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local": "resume/README.md.source.txt",
+          "sha256": "ff5715fec95e2c99c75332f340ec2ca0167ccedf76f2469c9ed292034bbcfb57",
+          "bytes": 2577,
+          "url": "https://raw.githubusercontent.com/alisadiq-ai/agi-ali-freebies/74cd86125cbfd21820f55e64016c1c549d41d6c2/README.md"
+        },
+        {
+          "path": "skills/resume-panel/SKILL.md",
+          "local": "resume/skills__resume-panel__SKILL.md.source.txt",
+          "sha256": "6b04972ec8581cfccb00ac65a80a3e81c127f7b9472dd87560be5ae1623f5ad9",
+          "bytes": 4117,
+          "url": "https://raw.githubusercontent.com/alisadiq-ai/agi-ali-freebies/74cd86125cbfd21820f55e64016c1c549d41d6c2/skills/resume-panel/SKILL.md"
+        }
+      ],
+      "skillIndex": [
+        {
+          "path": "skills/resume-panel/SKILL.md",
+          "url": "https://github.com/alisadiq-ai/agi-ali-freebies/blob/74cd86125cbfd21820f55e64016c1c549d41d6c2/skills/resume-panel/SKILL.md"
+        }
+      ],
+      "snapshotKind": "selected documentation and licenses; not an installable package",
+      "licenseReview": "Root license retained; dependencies/assets/models require separate review before use.",
+      "category": "Other-use reference",
+      "useWhen": "Resume review and project presentation",
+      "decision": "Use on a future resume request. Does not add recruitment functionality to SceneSpindle."
+    },
+    {
+      "repo": "Jakeschincariol/youtube-agent-skill",
+      "sha": "a2feb2104981a375ffd4f87ee04f4f5344ac43c6",
+      "url": "https://github.com/Jakeschincariol/youtube-agent-skill",
+      "license": "MIT",
+      "description": "Eleven Claude skills that run a YouTube channel: scripts off 21 hook formulas with a scored hook, title and thumbnail linted as one pairing, an edit decision list from your transcript, a retention reader that finds where viewers actually leave, a Shorts cutter, and a virality engine. Free, MIT.",
+      "archived": false,
+      "treeTruncated": false,
+      "id": "youtube",
+      "subpath": "",
+      "providedUrl": "https://github.com/Jakeschincariol/youtube-agent-skill",
+      "files": [
+        {
+          "path": "LICENSE",
+          "local": "youtube/LICENSE.source.txt",
+          "sha256": "857c8d5276809c8196b3cd7cb3300324768bfc562b2b6281b06d6865058e186c",
+          "bytes": 1073,
+          "url": "https://raw.githubusercontent.com/Jakeschincariol/youtube-agent-skill/a2feb2104981a375ffd4f87ee04f4f5344ac43c6/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local": "youtube/README.md.source.txt",
+          "sha256": "6ca16ff2c83405ea859093168bbe31552f56a8b59a191962067b6c732781cfd8",
+          "bytes": 5294,
+          "url": "https://raw.githubusercontent.com/Jakeschincariol/youtube-agent-skill/a2feb2104981a375ffd4f87ee04f4f5344ac43c6/README.md"
+        },
+        {
+          "path": "skills/yt-audit/SKILL.md",
+          "local": "youtube/skills__yt-audit__SKILL.md.source.txt",
+          "sha256": "a4d6583d9d8ef274bb589abd3c222330bcd5d731b1a05d921dd0d25b8b1ecb98",
+          "bytes": 2327,
+          "url": "https://raw.githubusercontent.com/Jakeschincariol/youtube-agent-skill/a2feb2104981a375ffd4f87ee04f4f5344ac43c6/skills/yt-audit/SKILL.md"
+        },
+        {
+          "path": "skills/yt-chapters/SKILL.md",
+          "local": "youtube/skills__yt-chapters__SKILL.md.source.txt",
+          "sha256": "06d2fc094d59ec6da73d812bd7b21590f8099352922ea2e3151b45922bf315b3",
+          "bytes": 1380,
+          "url": "https://raw.githubusercontent.com/Jakeschincariol/youtube-agent-skill/a2feb2104981a375ffd4f87ee04f4f5344ac43c6/skills/yt-chapters/SKILL.md"
+        },
+        {
+          "path": "skills/yt-script/SKILL.md",
+          "local": "youtube/skills__yt-script__SKILL.md.source.txt",
+          "sha256": "23fe2c4c52b4dbdae03295d71a8bdede254a94b3d6b0da83b025e8b622020366",
+          "bytes": 2685,
+          "url": "https://raw.githubusercontent.com/Jakeschincariol/youtube-agent-skill/a2feb2104981a375ffd4f87ee04f4f5344ac43c6/skills/yt-script/SKILL.md"
+        },
+        {
+          "path": "skills/yt-edit/SKILL.md",
+          "local": "youtube/skills__yt-edit__SKILL.md.source.txt",
+          "sha256": "b9f83e8b972e91a4abb5e0f4f9fc4b5cde9e8727609ce1213b0e583718cd8aeb",
+          "bytes": 1639,
+          "url": "https://raw.githubusercontent.com/Jakeschincariol/youtube-agent-skill/a2feb2104981a375ffd4f87ee04f4f5344ac43c6/skills/yt-edit/SKILL.md"
+        },
+        {
+          "path": "skills/yt-package/SKILL.md",
+          "local": "youtube/skills__yt-package__SKILL.md.source.txt",
+          "sha256": "0347a791664ff5d05eda87b2535e34ef8177c9e9b5e5c077c2f8113942108506",
+          "bytes": 2303,
+          "url": "https://raw.githubusercontent.com/Jakeschincariol/youtube-agent-skill/a2feb2104981a375ffd4f87ee04f4f5344ac43c6/skills/yt-package/SKILL.md"
+        },
+        {
+          "path": "skills/yt-shorts/SKILL.md",
+          "local": "youtube/skills__yt-shorts__SKILL.md.source.txt",
+          "sha256": "cbaaaf907bb14491baba0ea23e3415f268f7fff21897c6eb487e7cb1113b32c8",
+          "bytes": 1516,
+          "url": "https://raw.githubusercontent.com/Jakeschincariol/youtube-agent-skill/a2feb2104981a375ffd4f87ee04f4f5344ac43c6/skills/yt-shorts/SKILL.md"
+        },
+        {
+          "path": "skills/yt-retention/SKILL.md",
+          "local": "youtube/skills__yt-retention__SKILL.md.source.txt",
+          "sha256": "2777dd1f8f9ea04174bf13c9dc0132be907fb3852380376db359bcf786ba4f8e",
+          "bytes": 1696,
+          "url": "https://raw.githubusercontent.com/Jakeschincariol/youtube-agent-skill/a2feb2104981a375ffd4f87ee04f4f5344ac43c6/skills/yt-retention/SKILL.md"
+        }
+      ],
+      "skillIndex": [
+        {
+          "path": "skills/yt-audit/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/youtube-agent-skill/blob/a2feb2104981a375ffd4f87ee04f4f5344ac43c6/skills/yt-audit/SKILL.md"
+        },
+        {
+          "path": "skills/yt-chapters/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/youtube-agent-skill/blob/a2feb2104981a375ffd4f87ee04f4f5344ac43c6/skills/yt-chapters/SKILL.md"
+        },
+        {
+          "path": "skills/yt-comment/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/youtube-agent-skill/blob/a2feb2104981a375ffd4f87ee04f4f5344ac43c6/skills/yt-comment/SKILL.md"
+        },
+        {
+          "path": "skills/yt-edit/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/youtube-agent-skill/blob/a2feb2104981a375ffd4f87ee04f4f5344ac43c6/skills/yt-edit/SKILL.md"
+        },
+        {
+          "path": "skills/yt-package/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/youtube-agent-skill/blob/a2feb2104981a375ffd4f87ee04f4f5344ac43c6/skills/yt-package/SKILL.md"
+        },
+        {
+          "path": "skills/yt-plan/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/youtube-agent-skill/blob/a2feb2104981a375ffd4f87ee04f4f5344ac43c6/skills/yt-plan/SKILL.md"
+        },
+        {
+          "path": "skills/yt-retention/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/youtube-agent-skill/blob/a2feb2104981a375ffd4f87ee04f4f5344ac43c6/skills/yt-retention/SKILL.md"
+        },
+        {
+          "path": "skills/yt-script/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/youtube-agent-skill/blob/a2feb2104981a375ffd4f87ee04f4f5344ac43c6/skills/yt-script/SKILL.md"
+        },
+        {
+          "path": "skills/yt-seo/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/youtube-agent-skill/blob/a2feb2104981a375ffd4f87ee04f4f5344ac43c6/skills/yt-seo/SKILL.md"
+        },
+        {
+          "path": "skills/yt-shorts/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/youtube-agent-skill/blob/a2feb2104981a375ffd4f87ee04f4f5344ac43c6/skills/yt-shorts/SKILL.md"
+        },
+        {
+          "path": "skills/yt-viral/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/youtube-agent-skill/blob/a2feb2104981a375ffd4f87ee04f4f5344ac43c6/skills/yt-viral/SKILL.md"
+        }
+      ],
+      "snapshotKind": "selected documentation and licenses; not an installable package",
+      "licenseReview": "Root license retained; dependencies/assets/models require separate review before use.",
+      "category": "Product reference",
+      "useWhen": "Episode scripts, titles/thumbnails, transcript edit decisions, Shorts",
+      "decision": "Briefing and export packaging, slices B/3/6. Retention analysis only from supplied/authorized data; OAuth publishing remains separate."
+    },
+    {
+      "repo": "Jakeschincariol/day-trader-skill",
+      "sha": "3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd",
+      "url": "https://github.com/Jakeschincariol/day-trader-skill",
+      "license": "MIT",
+      "description": "11 Claude skills for day trading: scan thousands of charts, track breaking news, time every entry and exit, and replay every outcome before you risk a dollar.",
+      "archived": false,
+      "treeTruncated": false,
+      "id": "day-trader",
+      "subpath": "",
+      "providedUrl": "https://github.com/Jakeschincariol/day-trader-skill",
+      "files": [
+        {
+          "path": "LICENSE",
+          "local": "day-trader/LICENSE.source.txt",
+          "sha256": "857c8d5276809c8196b3cd7cb3300324768bfc562b2b6281b06d6865058e186c",
+          "bytes": 1073,
+          "url": "https://raw.githubusercontent.com/Jakeschincariol/day-trader-skill/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local": "day-trader/README.md.source.txt",
+          "sha256": "ec48389fea2edf82769cde46ceec9c11438bcb26739ffe4d787e642ec7729f1f",
+          "bytes": 11216,
+          "url": "https://raw.githubusercontent.com/Jakeschincariol/day-trader-skill/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/README.md"
+        },
+        {
+          "path": "trader-alerts/SKILL.md",
+          "local": "day-trader/trader-alerts__SKILL.md.source.txt",
+          "sha256": "48ba7c580fc64b48ee03b83a6206288641a97495c71dd78205c7f1c6e8b87d11",
+          "bytes": 8204,
+          "url": "https://raw.githubusercontent.com/Jakeschincariol/day-trader-skill/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-alerts/SKILL.md"
+        },
+        {
+          "path": "trader-analyst/SKILL.md",
+          "local": "day-trader/trader-analyst__SKILL.md.source.txt",
+          "sha256": "884edfcfcfe0c8c3392093e5eb25da5f37a3fed89ec15f8a968e3c782c8eb8d3",
+          "bytes": 5943,
+          "url": "https://raw.githubusercontent.com/Jakeschincariol/day-trader-skill/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-analyst/SKILL.md"
+        }
+      ],
+      "skillIndex": [
+        {
+          "path": "trader-alerts/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-alerts/SKILL.md"
+        },
+        {
+          "path": "trader-analyst/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-analyst/SKILL.md"
+        },
+        {
+          "path": "trader-broker/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-broker/SKILL.md"
+        },
+        {
+          "path": "trader-budget/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-budget/SKILL.md"
+        },
+        {
+          "path": "trader-entry/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-entry/SKILL.md"
+        },
+        {
+          "path": "trader-exit/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-exit/SKILL.md"
+        },
+        {
+          "path": "trader-news/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-news/SKILL.md"
+        },
+        {
+          "path": "trader-pelosi/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-pelosi/SKILL.md"
+        },
+        {
+          "path": "trader-risk/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-risk/SKILL.md"
+        },
+        {
+          "path": "trader-scanner/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-scanner/SKILL.md"
+        },
+        {
+          "path": "trader-timemachine/SKILL.md",
+          "url": "https://github.com/Jakeschincariol/day-trader-skill/blob/3d0f4ef6986f4984b7c6bd46f7ff4f87744c3abd/trader-timemachine/SKILL.md"
+        }
+      ],
+      "snapshotKind": "selected documentation and licenses; not an installable package",
+      "licenseReview": "Root license retained; dependencies/assets/models require separate review before use.",
+      "category": "Other-use reference",
+      "useWhen": "Trading research workflows",
+      "decision": "Outside SceneSpindle. No trading connection, credentials, market claims or transactions enabled."
+    },
+    {
+      "repo": "gokapso/agent-skills",
+      "sha": "415c1b4d90af6f3e60c1e825f0f4f2bfd6b70dfd",
+      "url": "https://github.com/gokapso/agent-skills",
+      "license": null,
+      "description": "Kapso agent skills for WhatsApp.",
+      "archived": false,
+      "treeTruncated": false,
+      "id": "kapso",
+      "subpath": "",
+      "providedUrl": "https://github.com/gokapso/agent-skills",
+      "files": [],
+      "skillIndex": [
+        {
+          "path": "skills/automate-whatsapp/SKILL.md",
+          "url": "https://github.com/gokapso/agent-skills/blob/415c1b4d90af6f3e60c1e825f0f4f2bfd6b70dfd/skills/automate-whatsapp/SKILL.md"
+        },
+        {
+          "path": "skills/integrate-whatsapp-calling/SKILL.md",
+          "url": "https://github.com/gokapso/agent-skills/blob/415c1b4d90af6f3e60c1e825f0f4f2bfd6b70dfd/skills/integrate-whatsapp-calling/SKILL.md"
+        },
+        {
+          "path": "skills/integrate-whatsapp/SKILL.md",
+          "url": "https://github.com/gokapso/agent-skills/blob/415c1b4d90af6f3e60c1e825f0f4f2bfd6b70dfd/skills/integrate-whatsapp/SKILL.md"
+        },
+        {
+          "path": "skills/observe-whatsapp/SKILL.md",
+          "url": "https://github.com/gokapso/agent-skills/blob/415c1b4d90af6f3e60c1e825f0f4f2bfd6b70dfd/skills/observe-whatsapp/SKILL.md"
+        }
+      ],
+      "snapshotKind": "pinned links only; license unresolved",
+      "licenseReview": "No explicit applicable license file verified for this requested subtree; retain pinned links only pending review.",
+      "category": "Other-use reference",
+      "useWhen": "WhatsApp integrations",
+      "decision": "Outside current scope; requires Kapso credentials/service and license clarification. Pinned links only."
+    },
+    {
+      "repo": "anthropics/claude-plugins-official",
+      "sha": "a7ba5b93db0c7c8d17f3f1d25853adca79598a1a",
+      "url": "https://github.com/anthropics/claude-plugins-official",
+      "license": "Apache-2.0",
+      "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+      "archived": false,
+      "treeTruncated": false,
+      "id": "feature-dev",
+      "subpath": "plugins/feature-dev",
+      "providedUrl": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/feature-dev",
+      "files": [
+        {
+          "path": "LICENSE",
+          "local": "feature-dev/LICENSE.source.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "bytes": 11358,
+          "url": "https://raw.githubusercontent.com/anthropics/claude-plugins-official/a7ba5b93db0c7c8d17f3f1d25853adca79598a1a/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local": "feature-dev/README.md.source.txt",
+          "sha256": "f34b8730d2b61617045c61ea2d9bf3ab08561305bfac77ea061e755bf46aeac2",
+          "bytes": 3859,
+          "url": "https://raw.githubusercontent.com/anthropics/claude-plugins-official/a7ba5b93db0c7c8d17f3f1d25853adca79598a1a/README.md"
+        },
+        {
+          "path": "plugins/feature-dev/LICENSE",
+          "local": "feature-dev/plugins__feature-dev__LICENSE.source.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "bytes": 11358,
+          "url": "https://raw.githubusercontent.com/anthropics/claude-plugins-official/a7ba5b93db0c7c8d17f3f1d25853adca79598a1a/plugins/feature-dev/LICENSE"
+        },
+        {
+          "path": "plugins/feature-dev/README.md",
+          "local": "feature-dev/plugins__feature-dev__README.md.source.txt",
+          "sha256": "6c304db2b1052f14399f87ba1b042f8b74f431485a3100de61ec53307f115098",
+          "bytes": 11697,
+          "url": "https://raw.githubusercontent.com/anthropics/claude-plugins-official/a7ba5b93db0c7c8d17f3f1d25853adca79598a1a/plugins/feature-dev/README.md"
+        },
+        {
+          "path": "plugins/feature-dev/commands/feature-dev.md",
+          "local": "feature-dev/plugins__feature-dev__commands__feature-dev.md.source.txt",
+          "sha256": "652e5d6264fd253fcb70c2f84de986a88d77109a02410aacd90230a6ab4bf557",
+          "bytes": 5097,
+          "url": "https://raw.githubusercontent.com/anthropics/claude-plugins-official/a7ba5b93db0c7c8d17f3f1d25853adca79598a1a/plugins/feature-dev/commands/feature-dev.md"
+        }
+      ],
+      "skillIndex": [],
+      "snapshotKind": "selected documentation and licenses; not an installable package",
+      "licenseReview": "Root license retained; dependencies/assets/models require separate review before use.",
+      "category": "Optional development reference",
+      "useWhen": "Explore, design, implement and review a feature",
+      "decision": "Use when implementation resumes; not a reason to implement during a planning-only request."
+    },
+    {
+      "repo": "anthropics/skills",
+      "sha": "ca45fc496a3436251f191354091d557da31c15b5",
+      "url": "https://github.com/anthropics/skills",
+      "license": null,
+      "description": "Public repository for Agent Skills",
+      "archived": false,
+      "treeTruncated": false,
+      "id": "skill-creator",
+      "subpath": "skills/skill-creator",
+      "providedUrl": "https://github.com/anthropics/skills/tree/main/skills/skill-creator",
+      "files": [
+        {
+          "path": "README.md",
+          "local": "skill-creator/README.md.source.txt",
+          "sha256": "2fb9c4cc026366ea6e21c60cb23c908a4d27c62071819cc06beffaac102d0694",
+          "bytes": 5552,
+          "url": "https://raw.githubusercontent.com/anthropics/skills/ca45fc496a3436251f191354091d557da31c15b5/README.md"
+        },
+        {
+          "path": "skills/skill-creator/LICENSE.txt",
+          "local": "skill-creator/skills__skill-creator__LICENSE.txt.source.txt",
+          "sha256": "bc6b3af2f331cbc7fb0da1344efb2cbe5877a31498b4d70dbc7000f3405a1362",
+          "bytes": 11345,
+          "url": "https://raw.githubusercontent.com/anthropics/skills/ca45fc496a3436251f191354091d557da31c15b5/skills/skill-creator/LICENSE.txt"
+        },
+        {
+          "path": "skills/skill-creator/SKILL.md",
+          "local": "skill-creator/skills__skill-creator__SKILL.md.source.txt",
+          "sha256": "dcd4803e61e913e6fc27294184cd3a71f09f5e924ff20c8a9a20173e7b3c2bcf",
+          "bytes": 33168,
+          "url": "https://raw.githubusercontent.com/anthropics/skills/ca45fc496a3436251f191354091d557da31c15b5/skills/skill-creator/SKILL.md"
+        }
+      ],
+      "skillIndex": [
+        {
+          "path": "skills/skill-creator/SKILL.md",
+          "url": "https://github.com/anthropics/skills/blob/ca45fc496a3436251f191354091d557da31c15b5/skills/skill-creator/SKILL.md"
+        }
+      ],
+      "snapshotKind": "selected documentation and licenses; not an installable package",
+      "licenseReview": "Requested skill has its own Apache-2.0 LICENSE.txt; root repository has mixed licensing.",
+      "category": "Optional authoring reference",
+      "useWhen": "Reusable skill structure and evaluation",
+      "decision": "Use for future skill creation; preserve harness portability and current project permissions."
+    },
+    {
+      "repo": "anthropics/skills",
+      "sha": "ca45fc496a3436251f191354091d557da31c15b5",
+      "url": "https://github.com/anthropics/skills",
+      "license": null,
+      "description": "Public repository for Agent Skills",
+      "archived": false,
+      "treeTruncated": false,
+      "id": "doc-coauthoring",
+      "subpath": "skills/doc-coauthoring",
+      "providedUrl": "https://github.com/anthropics/skills/tree/main/skills/doc-coauthoring",
+      "files": [],
+      "skillIndex": [
+        {
+          "path": "skills/doc-coauthoring/SKILL.md",
+          "url": "https://github.com/anthropics/skills/blob/ca45fc496a3436251f191354091d557da31c15b5/skills/doc-coauthoring/SKILL.md"
+        }
+      ],
+      "snapshotKind": "pinned links only; license unresolved",
+      "licenseReview": "No explicit applicable license file verified for this requested subtree; retain pinned links only pending review.",
+      "category": "Optional authoring reference",
+      "useWhen": "Collaborative document refinement",
+      "decision": "Use for a document task; no applicable license file verified in requested subtree, so pinned links only."
+    },
+    {
+      "repo": "anthropics/skills",
+      "sha": "ca45fc496a3436251f191354091d557da31c15b5",
+      "url": "https://github.com/anthropics/skills",
+      "license": null,
+      "description": "Public repository for Agent Skills",
+      "archived": false,
+      "treeTruncated": false,
+      "id": "slack-gif",
+      "subpath": "skills/slack-gif-creator",
+      "providedUrl": "https://github.com/anthropics/skills/tree/main/skills/slack-gif-creator",
+      "files": [
+        {
+          "path": "README.md",
+          "local": "slack-gif/README.md.source.txt",
+          "sha256": "2fb9c4cc026366ea6e21c60cb23c908a4d27c62071819cc06beffaac102d0694",
+          "bytes": 5552,
+          "url": "https://raw.githubusercontent.com/anthropics/skills/ca45fc496a3436251f191354091d557da31c15b5/README.md"
+        },
+        {
+          "path": "skills/slack-gif-creator/LICENSE.txt",
+          "local": "slack-gif/skills__slack-gif-creator__LICENSE.txt.source.txt",
+          "sha256": "bc6b3af2f331cbc7fb0da1344efb2cbe5877a31498b4d70dbc7000f3405a1362",
+          "bytes": 11345,
+          "url": "https://raw.githubusercontent.com/anthropics/skills/ca45fc496a3436251f191354091d557da31c15b5/skills/slack-gif-creator/LICENSE.txt"
+        },
+        {
+          "path": "skills/slack-gif-creator/SKILL.md",
+          "local": "slack-gif/skills__slack-gif-creator__SKILL.md.source.txt",
+          "sha256": "2efca615ce55a3edd8fc05c779068a8085816617991987e446606403cd3abb22",
+          "bytes": 7841,
+          "url": "https://raw.githubusercontent.com/anthropics/skills/ca45fc496a3436251f191354091d557da31c15b5/skills/slack-gif-creator/SKILL.md"
+        }
+      ],
+      "skillIndex": [
+        {
+          "path": "skills/slack-gif-creator/SKILL.md",
+          "url": "https://github.com/anthropics/skills/blob/ca45fc496a3436251f191354091d557da31c15b5/skills/slack-gif-creator/SKILL.md"
+        }
+      ],
+      "snapshotKind": "selected documentation and licenses; not an installable package",
+      "licenseReview": "Requested skill has its own Apache-2.0 LICENSE.txt; root repository has mixed licensing.",
+      "category": "Optional creative reference",
+      "useWhen": "Small animated GIFs for documentation or demos",
+      "decision": "Use only for requested GIF output; does not authorize uploading to Slack or replace MP4 rendering."
+    },
+    {
+      "repo": "ChromeDevTools/chrome-devtools-mcp",
+      "sha": "8d009e854f8aa55b1ec31628e836d4d4731b8ec8",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "license": "Apache-2.0",
+      "description": "Chrome DevTools for coding agents",
+      "archived": false,
+      "treeTruncated": false,
+      "id": "chrome-devtools",
+      "subpath": "",
+      "providedUrl": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "files": [
+        {
+          "path": "LICENSE",
+          "local": "chrome-devtools/LICENSE.source.txt",
+          "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+          "bytes": 11357,
+          "url": "https://raw.githubusercontent.com/ChromeDevTools/chrome-devtools-mcp/8d009e854f8aa55b1ec31628e836d4d4731b8ec8/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local": "chrome-devtools/README.md.source.txt",
+          "sha256": "4a22b624199834be81356782ef36f99258f4aa1b3ff6e85dd615a1e669e6c3e5",
+          "bytes": 9517,
+          "url": "https://raw.githubusercontent.com/ChromeDevTools/chrome-devtools-mcp/8d009e854f8aa55b1ec31628e836d4d4731b8ec8/README.md"
+        },
+        {
+          "path": "skills/a11y-debugging/SKILL.md",
+          "local": "chrome-devtools/skills__a11y-debugging__SKILL.md.source.txt",
+          "sha256": "e6e1620e4c1d54bef04c3de1bdabb327602b62b7b3db703557865eac84b871b1",
+          "bytes": 6042,
+          "url": "https://raw.githubusercontent.com/ChromeDevTools/chrome-devtools-mcp/8d009e854f8aa55b1ec31628e836d4d4731b8ec8/skills/a11y-debugging/SKILL.md"
+        },
+        {
+          "path": "skills/chrome-devtools-cli/SKILL.md",
+          "local": "chrome-devtools/skills__chrome-devtools-cli__SKILL.md.source.txt",
+          "sha256": "6e55a0a67f665c3e0b7774b8652d1bb7a45c4a8f784164eba06b5e7d80f1c5c1",
+          "bytes": 12031,
+          "url": "https://raw.githubusercontent.com/ChromeDevTools/chrome-devtools-mcp/8d009e854f8aa55b1ec31628e836d4d4731b8ec8/skills/chrome-devtools-cli/SKILL.md"
+        }
+      ],
+      "skillIndex": [
+        {
+          "path": "skills/a11y-debugging/SKILL.md",
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/8d009e854f8aa55b1ec31628e836d4d4731b8ec8/skills/a11y-debugging/SKILL.md"
+        },
+        {
+          "path": "skills/chrome-devtools-cli/SKILL.md",
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/8d009e854f8aa55b1ec31628e836d4d4731b8ec8/skills/chrome-devtools-cli/SKILL.md"
+        },
+        {
+          "path": "skills/chrome-devtools/SKILL.md",
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/8d009e854f8aa55b1ec31628e836d4d4731b8ec8/skills/chrome-devtools/SKILL.md"
+        },
+        {
+          "path": "skills/cookie-debugging/SKILL.md",
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/8d009e854f8aa55b1ec31628e836d4d4731b8ec8/skills/cookie-debugging/SKILL.md"
+        },
+        {
+          "path": "skills/debug-optimize-lcp/SKILL.md",
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/8d009e854f8aa55b1ec31628e836d4d4731b8ec8/skills/debug-optimize-lcp/SKILL.md"
+        },
+        {
+          "path": "skills/memory-leak-debugging/SKILL.md",
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/8d009e854f8aa55b1ec31628e836d4d4731b8ec8/skills/memory-leak-debugging/SKILL.md"
+        },
+        {
+          "path": "skills/troubleshooting/SKILL.md",
+          "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/8d009e854f8aa55b1ec31628e836d4d4731b8ec8/skills/troubleshooting/SKILL.md"
+        }
+      ],
+      "snapshotKind": "selected documentation and licenses; not an installable package",
+      "licenseReview": "Root license retained; dependencies/assets/models require separate review before use.",
+      "category": "Optional development tool",
+      "useWhen": "Performance, console, network and UI diagnosis",
+      "decision": "Slice 6 QA. Use an isolated test profile; existing sufficient browser tooling takes precedence; no broad browser/account access."
+    },
+    {
+      "repo": "microsoft/playwright-mcp",
+      "sha": "ec572ee8354015293bed67145db21eed386e876d",
+      "url": "https://github.com/microsoft/playwright-mcp",
+      "license": "Apache-2.0",
+      "description": "Playwright MCP server",
+      "archived": false,
+      "treeTruncated": false,
+      "id": "playwright",
+      "subpath": "",
+      "providedUrl": "https://github.com/microsoft/playwright-mcp",
+      "files": [
+        {
+          "path": "LICENSE",
+          "local": "playwright/LICENSE.source.txt",
+          "sha256": "9a7110fc2d2f964038e5dc49128f908f29f47a574c961cba16085914e879cbda",
+          "bytes": 11552,
+          "url": "https://raw.githubusercontent.com/microsoft/playwright-mcp/ec572ee8354015293bed67145db21eed386e876d/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local": "playwright/README.md.source.txt",
+          "sha256": "b3a0d1f804f4db560344ae3ef98e8e8497d9c41d2fc433a95d4060c40a401d4b",
+          "bytes": 69048,
+          "url": "https://raw.githubusercontent.com/microsoft/playwright-mcp/ec572ee8354015293bed67145db21eed386e876d/README.md"
+        },
+        {
+          "path": ".claude/skills/playwright-triage/SKILL.md",
+          "local": "playwright/.claude__skills__playwright-triage__SKILL.md.source.txt",
+          "sha256": "0c7eed8c5467673268636384f51db8397a28c8b96b1cc1687e52bfc189aa7681",
+          "bytes": 6750,
+          "url": "https://raw.githubusercontent.com/microsoft/playwright-mcp/ec572ee8354015293bed67145db21eed386e876d/.claude/skills/playwright-triage/SKILL.md"
+        }
+      ],
+      "skillIndex": [],
+      "snapshotKind": "selected documentation and licenses; not an installable package",
+      "licenseReview": "Root license retained; dependencies/assets/models require separate review before use.",
+      "category": "Optional development tool",
+      "useWhen": "Interactive browser journeys",
+      "decision": "Slice 6 QA. MCP is an optional development client; Playwright tests remain the reproducible CI contract."
+    },
+    {
+      "repo": "modelcontextprotocol/servers",
+      "sha": "194cc86e3ae6400958555bd4116849d822d69263",
+      "url": "https://github.com/modelcontextprotocol/servers",
+      "license": "NOASSERTION",
+      "description": "Model Context Protocol Servers",
+      "archived": false,
+      "treeTruncated": false,
+      "id": "memory",
+      "subpath": "src/memory",
+      "providedUrl": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
+      "files": [
+        {
+          "path": "LICENSE",
+          "local": "memory/LICENSE.source.txt",
+          "sha256": "0382b0057770ca05e9c350a50aa3b1c1fea84da0bc81d723bf00b9aa841be58a",
+          "bytes": 12227,
+          "url": "https://raw.githubusercontent.com/modelcontextprotocol/servers/194cc86e3ae6400958555bd4116849d822d69263/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local": "memory/README.md.source.txt",
+          "sha256": "7194de8faaea9a804af4b6dc4bd24ab4545f047f7c81da678f0f77f4a802c6f9",
+          "bytes": 10562,
+          "url": "https://raw.githubusercontent.com/modelcontextprotocol/servers/194cc86e3ae6400958555bd4116849d822d69263/README.md"
+        },
+        {
+          "path": "src/memory/README.md",
+          "local": "memory/src__memory__README.md.source.txt",
+          "sha256": "1f9b3f0783efedda126a46354e8c59a9918f565613531f20333f51420167f8f6",
+          "bytes": 13526,
+          "url": "https://raw.githubusercontent.com/modelcontextprotocol/servers/194cc86e3ae6400958555bd4116849d822d69263/src/memory/README.md"
+        }
+      ],
+      "skillIndex": [],
+      "snapshotKind": "selected documentation and licenses; not an installable package",
+      "licenseReview": "Mixed MIT/Apache transition; documentation CC-BY-4.0 per upstream LICENSE.",
+      "category": "Optional development reference",
+      "useWhen": "Knowledge-graph memory patterns",
+      "decision": "Do not make this reference server the multi-user app database. Mongo project/series memory remains authoritative and owner-scoped."
+    },
+    {
+      "repo": "nidhinjs/prompt-master",
+      "sha": "49b3a72469b1e7287d66387004ccfcca90e5968a",
+      "url": "https://github.com/nidhinjs/prompt-master",
+      "license": "MIT",
+      "description": "A Claude skill that writes the accurate prompts for any AI tool. Zero tokens or credits wasted. Full context and memory retention",
+      "archived": false,
+      "treeTruncated": false,
+      "id": "prompt-master",
+      "subpath": "",
+      "providedUrl": "https://github.com/nidhinjs/prompt-master",
+      "files": [
+        {
+          "path": "LICENSE",
+          "local": "prompt-master/LICENSE.source.txt",
+          "sha256": "29e8ba0b54274eaa92b7cb074fe1765ba7b83993e0d2605e5308c6972a47daa7",
+          "bytes": 1077,
+          "url": "https://raw.githubusercontent.com/nidhinjs/prompt-master/49b3a72469b1e7287d66387004ccfcca90e5968a/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local": "prompt-master/README.md.source.txt",
+          "sha256": "3a43506bd5d3c19e39fd16cdacfc8b199107291801867099dbf330c5da5a38e7",
+          "bytes": 22550,
+          "url": "https://raw.githubusercontent.com/nidhinjs/prompt-master/49b3a72469b1e7287d66387004ccfcca90e5968a/README.md"
+        },
+        {
+          "path": "SKILL.md",
+          "local": "prompt-master/SKILL.md.source.txt",
+          "sha256": "36e68cdcd62c38b2f99c2538c83fefb8c8837ea9b7eed75297fe76e45c452e75",
+          "bytes": 33508,
+          "url": "https://raw.githubusercontent.com/nidhinjs/prompt-master/49b3a72469b1e7287d66387004ccfcca90e5968a/SKILL.md"
+        }
+      ],
+      "skillIndex": [
+        {
+          "path": "SKILL.md",
+          "url": "https://github.com/nidhinjs/prompt-master/blob/49b3a72469b1e7287d66387004ccfcca90e5968a/SKILL.md"
+        }
+      ],
+      "snapshotKind": "selected documentation and licenses; not an installable package",
+      "licenseReview": "Root license retained; dependencies/assets/models require separate review before use.",
+      "category": "Briefing reference",
+      "useWhen": "Intent, constraints, target capability and concise prompt structure",
+      "decision": "Slice B. Adapt useful framing; no promise of perfect output, zero wasted tokens or universal model compatibility."
+    },
+    {
+      "repo": "tradesdontlie/tradingview-mcp",
+      "sha": "c05b8f5755ed8e64ea242de88ddbf46aa24d56a4",
+      "url": "https://github.com/tradesdontlie/tradingview-mcp",
+      "license": "NOASSERTION",
+      "description": "AI-assisted TradingView chart analysis \u2014 connect Claude Code to your TradingView Desktop for personal workflow automation",
+      "archived": false,
+      "treeTruncated": false,
+      "id": "tradingview",
+      "subpath": "",
+      "providedUrl": "https://github.com/tradesdontlie/tradingview-mcp",
+      "files": [
+        {
+          "path": "LICENSE",
+          "local": "tradingview/LICENSE.source.txt",
+          "sha256": "1f368594b544a3b7d96cd78e059861d089e7302a364cab766f86939b79f18ae6",
+          "bytes": 1723,
+          "url": "https://raw.githubusercontent.com/tradesdontlie/tradingview-mcp/c05b8f5755ed8e64ea242de88ddbf46aa24d56a4/LICENSE"
+        },
+        {
+          "path": "README.md",
+          "local": "tradingview/README.md.source.txt",
+          "sha256": "c52470ccb9d7c55c57a2e9b41127ad5f9297eea3171282640b290a43e073f30e",
+          "bytes": 18364,
+          "url": "https://raw.githubusercontent.com/tradesdontlie/tradingview-mcp/c05b8f5755ed8e64ea242de88ddbf46aa24d56a4/README.md"
+        },
+        {
+          "path": "skills/chart-analysis/SKILL.md",
+          "local": "tradingview/skills__chart-analysis__SKILL.md.source.txt",
+          "sha256": "54fae699e94aea37ead204b4ec8a7336d0d6fbabc1a3743a3c85138cabf8038c",
+          "bytes": 2078,
+          "url": "https://raw.githubusercontent.com/tradesdontlie/tradingview-mcp/c05b8f5755ed8e64ea242de88ddbf46aa24d56a4/skills/chart-analysis/SKILL.md"
+        },
+        {
+          "path": "skills/multi-symbol-scan/SKILL.md",
+          "local": "tradingview/skills__multi-symbol-scan__SKILL.md.source.txt",
+          "sha256": "2a92c30cd4b183dc31f69fa14fff3901f8629a6752c5aa356da97356de375348",
+          "bytes": 1797,
+          "url": "https://raw.githubusercontent.com/tradesdontlie/tradingview-mcp/c05b8f5755ed8e64ea242de88ddbf46aa24d56a4/skills/multi-symbol-scan/SKILL.md"
+        }
+      ],
+      "skillIndex": [
+        {
+          "path": "skills/chart-analysis/SKILL.md",
+          "url": "https://github.com/tradesdontlie/tradingview-mcp/blob/c05b8f5755ed8e64ea242de88ddbf46aa24d56a4/skills/chart-analysis/SKILL.md"
+        },
+        {
+          "path": "skills/multi-symbol-scan/SKILL.md",
+          "url": "https://github.com/tradesdontlie/tradingview-mcp/blob/c05b8f5755ed8e64ea242de88ddbf46aa24d56a4/skills/multi-symbol-scan/SKILL.md"
+        },
+        {
+          "path": "skills/pine-develop/SKILL.md",
+          "url": "https://github.com/tradesdontlie/tradingview-mcp/blob/c05b8f5755ed8e64ea242de88ddbf46aa24d56a4/skills/pine-develop/SKILL.md"
+        },
+        {
+          "path": "skills/replay-practice/SKILL.md",
+          "url": "https://github.com/tradesdontlie/tradingview-mcp/blob/c05b8f5755ed8e64ea242de88ddbf46aa24d56a4/skills/replay-practice/SKILL.md"
+        },
+        {
+          "path": "skills/strategy-report/SKILL.md",
+          "url": "https://github.com/tradesdontlie/tradingview-mcp/blob/c05b8f5755ed8e64ea242de88ddbf46aa24d56a4/skills/strategy-report/SKILL.md"
+        }
+      ],
+      "snapshotKind": "selected documentation and licenses; not an installable package",
+      "licenseReview": "MIT code license plus third-party trademark/data/terms notices.",
+      "category": "Other-use reference",
+      "useWhen": "Desktop chart/Pine Script workflows",
+      "decision": "Outside SceneSpindle; separate subscription/account, CDP exposure and terms review needed if later requested."
+    }
+  ]
+}

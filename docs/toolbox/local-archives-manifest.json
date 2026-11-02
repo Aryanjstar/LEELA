@@ -1,0 +1,1519 @@
+{
+  "reviewedAt": "2026-11-02",
+  "mode": "local reference only; no installation or execution",
+  "archives": [
+    {
+      "id": "roast",
+      "archiveName": "roast.zip",
+      "archiveSha256": "12090b817d2218a37321feb0cff331391aea49fde8366be8c2b87b26d86d8064",
+      "files": [
+        {
+          "sourcePath": "roast/README.md",
+          "localPath": "local-imports/roast/README.md.source.txt",
+          "sha256": "5e686f6118e9ee83849cbc6a3ae2f43f419de21e640ae68a2fcf0e2610a452a3",
+          "bytes": 904
+        },
+        {
+          "sourcePath": "roast/SKILL.md",
+          "localPath": "local-imports/roast/SKILL.md.source.txt",
+          "sha256": "e225215875a789ec710be87d29f0edf560384164676d031e432f3e3554ff613b",
+          "bytes": 4587
+        },
+        {
+          "sourcePath": "roast/EXAMPLE-RUN.md",
+          "localPath": "local-imports/roast/EXAMPLE-RUN.md.source.txt",
+          "sha256": "8858d31f5c121c35062d744fb1d4276d1648509a50809d9e411b2d59d1920e2b",
+          "bytes": 2703
+        }
+      ],
+      "license": "No explicit license included in the supplied archive"
+    },
+    {
+      "id": "hook-lab",
+      "archiveName": "hook-lab.zip",
+      "archiveSha256": "b9f55df391bc7f88d07b3ec1229960ad878b9fbbdc81bfe0fe283d10b0706cad",
+      "files": [
+        {
+          "sourcePath": "hook-lab/README.md",
+          "localPath": "local-imports/hook-lab/README.md.source.txt",
+          "sha256": "047a369531a790961e7f8dc1fbb7534316d11dbeb71ad09aab5c95b52c8c9583",
+          "bytes": 873
+        },
+        {
+          "sourcePath": "hook-lab/SKILL.md",
+          "localPath": "local-imports/hook-lab/SKILL.md.source.txt",
+          "sha256": "4e6ac37ebc3ccd68f10e8e8f0e3e91bd21d4b77af410db7547ccd12e18e49096",
+          "bytes": 4356
+        },
+        {
+          "sourcePath": "hook-lab/EXAMPLE-RUN.md",
+          "localPath": "local-imports/hook-lab/EXAMPLE-RUN.md.source.txt",
+          "sha256": "8541b516e1bb00e9dcdb5aafbcb1437c7dec4657c66402f571a2ab5406fc112e",
+          "bytes": 1993
+        }
+      ],
+      "license": "No explicit license included in the supplied archive"
+    },
+    {
+      "id": "sfx-pack",
+      "archiveName": "sfx-pack.zip",
+      "archiveSha256": "e07ec3f6b913c01f6816d0ec1780aecdc8e1a407e02e3fb34d636b9cfc451c52",
+      "files": [
+        {
+          "sourcePath": "ui/cursor_tick_v3.wav",
+          "localPath": "local-imports/sfx-pack/ui/cursor_tick_v3.wav",
+          "sha256": "9cb13a213b7a3fe2281f00fc59faeb4a5dc8ed772dcbdc61835ec7cffa63df8f",
+          "bytes": 3884,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.04
+          }
+        },
+        {
+          "sourcePath": "ui/cursor_tick_v2.wav",
+          "localPath": "local-imports/sfx-pack/ui/cursor_tick_v2.wav",
+          "sha256": "88b68fb27d4d3fb971439b24e5f461d46a5f023b2a631acd92890f3eb009f930",
+          "bytes": 3884,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.04
+          }
+        },
+        {
+          "sourcePath": "ui/cursor_tick_v1.wav",
+          "localPath": "local-imports/sfx-pack/ui/cursor_tick_v1.wav",
+          "sha256": "919aab6f1bcfed925fdaae807177050c26db98612e71a9fe4890603790332fa5",
+          "bytes": 3884,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.04
+          }
+        },
+        {
+          "sourcePath": "ui/key_v1.wav",
+          "localPath": "local-imports/sfx-pack/ui/key_v1.wav",
+          "sha256": "c5c0a76db0978a7ddcf458e5a9e6f532ec461b145a264452090d4840966e8164",
+          "bytes": 4364,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.045
+          }
+        },
+        {
+          "sourcePath": "ui/key_v3.wav",
+          "localPath": "local-imports/sfx-pack/ui/key_v3.wav",
+          "sha256": "e0e22a2790fc41e560efbfa5503a39e09b210312bfc16c07772874a0967414bb",
+          "bytes": 4364,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.045
+          }
+        },
+        {
+          "sourcePath": "ui/key_v2.wav",
+          "localPath": "local-imports/sfx-pack/ui/key_v2.wav",
+          "sha256": "2aebd1f5191402edbed813bd53fc51210338b0f5f2ec51faccb1224cb8f2624f",
+          "bytes": 4364,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.045
+          }
+        },
+        {
+          "sourcePath": "ui/toggle_v1.wav",
+          "localPath": "local-imports/sfx-pack/ui/toggle_v1.wav",
+          "sha256": "af30ce7caa243451e20a3955a2f0b4d6ffa1a1fa63879207ee01a8a0ac068424",
+          "bytes": 11564,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.12
+          }
+        },
+        {
+          "sourcePath": "ui/toggle_v3.wav",
+          "localPath": "local-imports/sfx-pack/ui/toggle_v3.wav",
+          "sha256": "6093f22263025f0c4a7b3aa828f532820f88d4854295cabdbd439e32e2fdd240",
+          "bytes": 11564,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.12
+          }
+        },
+        {
+          "sourcePath": "ui/toggle_v2.wav",
+          "localPath": "local-imports/sfx-pack/ui/toggle_v2.wav",
+          "sha256": "40e860f92274b53dc092c4c64068a4d8389cf488f64b6e5cf0229888103057dc",
+          "bytes": 11564,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.12
+          }
+        },
+        {
+          "sourcePath": "ui/blip_v1.wav",
+          "localPath": "local-imports/sfx-pack/ui/blip_v1.wav",
+          "sha256": "f6ad8d887de648a00b3e1212444490b56bd85ddf03c63021321951cb38db6fcb",
+          "bytes": 8684,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.09
+          }
+        },
+        {
+          "sourcePath": "ui/pop_v2.wav",
+          "localPath": "local-imports/sfx-pack/ui/pop_v2.wav",
+          "sha256": "307f74d73c1b2e1bcefcff70ebf782eb4c1a7e66171b1db3ccd20ad11a042fe7",
+          "bytes": 11564,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.12
+          }
+        },
+        {
+          "sourcePath": "ui/pop_v3.wav",
+          "localPath": "local-imports/sfx-pack/ui/pop_v3.wav",
+          "sha256": "b4a560844db1f5fa9231c43f0fb3fe64525162ec45633fe305200d082084556f",
+          "bytes": 11564,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.12
+          }
+        },
+        {
+          "sourcePath": "ui/blip_v2.wav",
+          "localPath": "local-imports/sfx-pack/ui/blip_v2.wav",
+          "sha256": "baa41509577dded53e6a6efc6c51bc21ac7f01aa4b92cfa0daa5154179f7ca5c",
+          "bytes": 8684,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.09
+          }
+        },
+        {
+          "sourcePath": "ui/pop_v1.wav",
+          "localPath": "local-imports/sfx-pack/ui/pop_v1.wav",
+          "sha256": "5f75b153309b76273ba7f0de303b62d472bbefd1f5dc824665879297aadefb8b",
+          "bytes": 11564,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.12
+          }
+        },
+        {
+          "sourcePath": "ui/blip_v3.wav",
+          "localPath": "local-imports/sfx-pack/ui/blip_v3.wav",
+          "sha256": "1f4a49b6dd48779aa9e96e03d3440c510204c85c383aed265cfe8ddfa0ea5e85",
+          "bytes": 8684,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.09
+          }
+        },
+        {
+          "sourcePath": "ui/notification_v2.wav",
+          "localPath": "local-imports/sfx-pack/ui/notification_v2.wav",
+          "sha256": "106e6d7a761e410c2b8dca397eb2b194c74e0284f3e968c940f5508007745be2",
+          "bytes": 58604,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.61
+          }
+        },
+        {
+          "sourcePath": "ui/notification_v3.wav",
+          "localPath": "local-imports/sfx-pack/ui/notification_v3.wav",
+          "sha256": "caaa3ee3788bb4418fb9a1cb6b7427e80ebb785f0c07de8a7fb88b67557319a9",
+          "bytes": 58604,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.61
+          }
+        },
+        {
+          "sourcePath": "ui/notification_v1.wav",
+          "localPath": "local-imports/sfx-pack/ui/notification_v1.wav",
+          "sha256": "af0c42a4987d6cfd41de4bf753c026749cd83b0ecd3a2f274b31b05cd9dd8a9b",
+          "bytes": 58604,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.61
+          }
+        },
+        {
+          "sourcePath": "ui/success_v3.wav",
+          "localPath": "local-imports/sfx-pack/ui/success_v3.wav",
+          "sha256": "c95179c091c97a7fc17b836304fdf322845f04f604e1cfee3bdc6c4ab47a3d0e",
+          "bytes": 85484,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.89
+          }
+        },
+        {
+          "sourcePath": "ui/spacebar_v1.wav",
+          "localPath": "local-imports/sfx-pack/ui/spacebar_v1.wav",
+          "sha256": "2d17fd4314283683c45f8ef003ebdc21bfa8729cc04aaada041169e48e575fdf",
+          "bytes": 8684,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.09
+          }
+        },
+        {
+          "sourcePath": "ui/click_v1.wav",
+          "localPath": "local-imports/sfx-pack/ui/click_v1.wav",
+          "sha256": "5a8ec9edbf90f3a0513a3f9f63f5ef6079039c9f084a357db6c426a326624d9c",
+          "bytes": 4844,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.05
+          }
+        },
+        {
+          "sourcePath": "ui/success_v2.wav",
+          "localPath": "local-imports/sfx-pack/ui/success_v2.wav",
+          "sha256": "a5fcb2f11d489d3cdb3c356fc6de7acc69df477df8234c3218e421d66b17c43f",
+          "bytes": 85484,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.89
+          }
+        },
+        {
+          "sourcePath": "ui/hover_v1.wav",
+          "localPath": "local-imports/sfx-pack/ui/hover_v1.wav",
+          "sha256": "a01986719e431568b53638086c8945b78139c581b12ef7c95c1f8c5cb5f12a5e",
+          "bytes": 9644,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.1
+          }
+        },
+        {
+          "sourcePath": "ui/hover_v3.wav",
+          "localPath": "local-imports/sfx-pack/ui/hover_v3.wav",
+          "sha256": "039b382ec4dd997441467f2ddb0fa655b9a9816544504b63a29704ddd3c40e59",
+          "bytes": 9644,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.1
+          }
+        },
+        {
+          "sourcePath": "ui/spacebar_v2.wav",
+          "localPath": "local-imports/sfx-pack/ui/spacebar_v2.wav",
+          "sha256": "790e074dbd087acba6ed0a07484838b460fd0eea94bff46e886e4dce1980b7ae",
+          "bytes": 8684,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.09
+          }
+        },
+        {
+          "sourcePath": "ui/click_v3.wav",
+          "localPath": "local-imports/sfx-pack/ui/click_v3.wav",
+          "sha256": "1f581b79c84bdabae04786d91c1d0dd913787209e4a0ecab6efcd175a7b7dbad",
+          "bytes": 4844,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.05
+          }
+        },
+        {
+          "sourcePath": "ui/click_v2.wav",
+          "localPath": "local-imports/sfx-pack/ui/click_v2.wav",
+          "sha256": "332a5b2bc2ff714f6386ba46bf9d569d393e948445362ef122df36d32afe07f6",
+          "bytes": 4844,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.05
+          }
+        },
+        {
+          "sourcePath": "ui/spacebar_v3.wav",
+          "localPath": "local-imports/sfx-pack/ui/spacebar_v3.wav",
+          "sha256": "102c396febc8b3df0f56d0e60fce9c4633f81308eba7d0d1986e7b9cbe3cf7cb",
+          "bytes": 8684,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.09
+          }
+        },
+        {
+          "sourcePath": "ui/success_v1.wav",
+          "localPath": "local-imports/sfx-pack/ui/success_v1.wav",
+          "sha256": "54d3a9aaa9a3cddb50cf8ff72c0d93e0090ff93057cdd15c64e1547f2d61b7a0",
+          "bytes": 85484,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.89
+          }
+        },
+        {
+          "sourcePath": "ui/hover_v2.wav",
+          "localPath": "local-imports/sfx-pack/ui/hover_v2.wav",
+          "sha256": "4db7ab3c4fb8f5d315742631e75e21d594f70bc97d48dbdcc2a252963c6b8c21",
+          "bytes": 9644,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.1
+          }
+        },
+        {
+          "sourcePath": "ui/error_v2.wav",
+          "localPath": "local-imports/sfx-pack/ui/error_v2.wav",
+          "sha256": "74e45b464b81c9dc0c657e6adb18dd77969944244a3613051b3266331f29eebd",
+          "bytes": 30764,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.32
+          }
+        },
+        {
+          "sourcePath": "ui/error_v3.wav",
+          "localPath": "local-imports/sfx-pack/ui/error_v3.wav",
+          "sha256": "2583e556c3c286c767f7d0c465bf26b8819ce8b2198ea600d74bcaf409397856",
+          "bytes": 30764,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.32
+          }
+        },
+        {
+          "sourcePath": "ui/error_v1.wav",
+          "localPath": "local-imports/sfx-pack/ui/error_v1.wav",
+          "sha256": "2039814110e25e37e842be3b6a0045a70ccabf6e0912fb0cd180086e35ba9c06",
+          "bytes": 30764,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.32
+          }
+        },
+        {
+          "sourcePath": "impacts/punch_v1.wav",
+          "localPath": "local-imports/sfx-pack/impacts/punch_v1.wav",
+          "sha256": "0fce9e685f00c38b789d812b8d6cec89d5bc4e326b94fee026f3aae1e415651b",
+          "bytes": 28844,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.3
+          }
+        },
+        {
+          "sourcePath": "impacts/sub_drop_v1.wav",
+          "localPath": "local-imports/sfx-pack/impacts/sub_drop_v1.wav",
+          "sha256": "2dd63ba06cee79333e292681f0a41d59f986305e36180218ab307bb77a419b0d",
+          "bytes": 134444,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 1.4
+          }
+        },
+        {
+          "sourcePath": "impacts/punch_v2.wav",
+          "localPath": "local-imports/sfx-pack/impacts/punch_v2.wav",
+          "sha256": "0907b18f0531e29ddd5f242150aa558ddaf2aaa1eaee3e23c16a827742ecf0d6",
+          "bytes": 28844,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.3
+          }
+        },
+        {
+          "sourcePath": "impacts/sub_drop_v2.wav",
+          "localPath": "local-imports/sfx-pack/impacts/sub_drop_v2.wav",
+          "sha256": "cbb4e7392b5b597d8c1a2631507edd8a09c184d9ece82b8c42dbfb2dbb4103e2",
+          "bytes": 134444,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 1.4
+          }
+        },
+        {
+          "sourcePath": "impacts/sub_drop_v3.wav",
+          "localPath": "local-imports/sfx-pack/impacts/sub_drop_v3.wav",
+          "sha256": "a0fea6f25ca41c8fa34a1dfc6d6eb8f22810e24c9da4687215f4ae65b54c0b65",
+          "bytes": 134444,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 1.4
+          }
+        },
+        {
+          "sourcePath": "impacts/punch_v3.wav",
+          "localPath": "local-imports/sfx-pack/impacts/punch_v3.wav",
+          "sha256": "2d50f3eeb98faf013c825a61772cc900a2e3c9e76fb68d566f28332024fdfd80",
+          "bytes": 28844,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.3
+          }
+        },
+        {
+          "sourcePath": "impacts/ko_bell_v1.wav",
+          "localPath": "local-imports/sfx-pack/impacts/ko_bell_v1.wav",
+          "sha256": "033aeb0aff65a1a2995ea8cb27145c5696fd596791970b2356301d05ebe2b89e",
+          "bytes": 211244,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 2.2
+          }
+        },
+        {
+          "sourcePath": "impacts/ko_bell_v2.wav",
+          "localPath": "local-imports/sfx-pack/impacts/ko_bell_v2.wav",
+          "sha256": "d8a63b66332a2bf8da2c6d9a7b1a3eaf98833c64e07b653f77d33167094e84e9",
+          "bytes": 211244,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 2.2
+          }
+        },
+        {
+          "sourcePath": "impacts/ko_bell_v3.wav",
+          "localPath": "local-imports/sfx-pack/impacts/ko_bell_v3.wav",
+          "sha256": "337b25d349d78e54d1ef4a2532e55f77c05472bc4738ddc77a8a7014268bea71",
+          "bytes": 211244,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 2.2
+          }
+        },
+        {
+          "sourcePath": "impacts/boom_v1.wav",
+          "localPath": "local-imports/sfx-pack/impacts/boom_v1.wav",
+          "sha256": "fbfb0c7d12843698b59352f63a5277bc27eefcdc49dd9b3511da984ea1e768b6",
+          "bytes": 153644,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 1.6
+          }
+        },
+        {
+          "sourcePath": "impacts/boom_v2.wav",
+          "localPath": "local-imports/sfx-pack/impacts/boom_v2.wav",
+          "sha256": "fff451643f40ff40726c8e0e1dbb5b2b3d68f66b2627db49aecfe3a13e6d0a11",
+          "bytes": 153644,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 1.6
+          }
+        },
+        {
+          "sourcePath": "impacts/boom_v3.wav",
+          "localPath": "local-imports/sfx-pack/impacts/boom_v3.wav",
+          "sha256": "08474dfcee5d6040337f391e2383f5da8ed425b586edf1e97d9674f4b4a5e6a3",
+          "bytes": 153644,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 1.6
+          }
+        },
+        {
+          "sourcePath": "impacts/hit_v1.wav",
+          "localPath": "local-imports/sfx-pack/impacts/hit_v1.wav",
+          "sha256": "f916aced6533b10f596cdafaa67af61cac1e1ad187e76372d7704d37d5a54a31",
+          "bytes": 43244,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.45
+          }
+        },
+        {
+          "sourcePath": "impacts/hit_v3.wav",
+          "localPath": "local-imports/sfx-pack/impacts/hit_v3.wav",
+          "sha256": "9abcfbc98b5e06d64e8c53cb3f7acd0797157ad5df27fe26c356cf0bb422027c",
+          "bytes": 43244,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.45
+          }
+        },
+        {
+          "sourcePath": "impacts/hit_v2.wav",
+          "localPath": "local-imports/sfx-pack/impacts/hit_v2.wav",
+          "sha256": "88faae7dd83cc21a7f02edcd7d95f42f85350a7ebb992c77fc18e45eb643380f",
+          "bytes": 43244,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.45
+          }
+        },
+        {
+          "sourcePath": "motion/boing_v3.wav",
+          "localPath": "local-imports/sfx-pack/motion/boing_v3.wav",
+          "sha256": "407eb389aefbd6c2b6c18fe1c8d5e598aa39ac190e4fcf06b9968d94c4abd18a",
+          "bytes": 52844,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.55
+          }
+        },
+        {
+          "sourcePath": "motion/boing_v2.wav",
+          "localPath": "local-imports/sfx-pack/motion/boing_v2.wav",
+          "sha256": "a09cd461261ca21a015b97743e55497980e98efe21494476b1de4ba50b5af591",
+          "bytes": 52844,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.55
+          }
+        },
+        {
+          "sourcePath": "motion/boing_v1.wav",
+          "localPath": "local-imports/sfx-pack/motion/boing_v1.wav",
+          "sha256": "b8473b47e955cf8a7aa69321722604cb14414dc6076a7c1bebefb45f7a740726",
+          "bytes": 52844,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.55
+          }
+        },
+        {
+          "sourcePath": "motion/glitch_v3.wav",
+          "localPath": "local-imports/sfx-pack/motion/glitch_v3.wav",
+          "sha256": "4fadc63fe3c77fdae2e3b7c67e5121b9d9a2af83cc6e978c53962038d34908ea",
+          "bytes": 36524,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.38
+          }
+        },
+        {
+          "sourcePath": "motion/pluck_v3.wav",
+          "localPath": "local-imports/sfx-pack/motion/pluck_v3.wav",
+          "sha256": "13ba15b73fcb9aa798a3dfb46cdaa73f893dfc89116936d7a2ef286720ab65e6",
+          "bytes": 48044,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.5
+          }
+        },
+        {
+          "sourcePath": "motion/scanner_v1.wav",
+          "localPath": "local-imports/sfx-pack/motion/scanner_v1.wav",
+          "sha256": "6756347521a0271e62b2cebbaa782908953a34a6acfe9c07d23c0ad792193984",
+          "bytes": 86444,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.9
+          }
+        },
+        {
+          "sourcePath": "motion/pluck_v2.wav",
+          "localPath": "local-imports/sfx-pack/motion/pluck_v2.wav",
+          "sha256": "441e40821e4cd484c7c5cabee9de66af677fb6ddb1c85f4740bb44a9393067fa",
+          "bytes": 48044,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.5
+          }
+        },
+        {
+          "sourcePath": "motion/glitch_v2.wav",
+          "localPath": "local-imports/sfx-pack/motion/glitch_v2.wav",
+          "sha256": "f4c00931e101485253ada5194541dba4d4a0d77c1cd2cd4d6d539702f5c3c28e",
+          "bytes": 36524,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.38
+          }
+        },
+        {
+          "sourcePath": "motion/scanner_v2.wav",
+          "localPath": "local-imports/sfx-pack/motion/scanner_v2.wav",
+          "sha256": "c9d54d99cae34d0f5a1fd0ff4ac0577c6711757a12d0c03ed37a7a53d1ff2c4e",
+          "bytes": 86444,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.9
+          }
+        },
+        {
+          "sourcePath": "motion/scanner_v3.wav",
+          "localPath": "local-imports/sfx-pack/motion/scanner_v3.wav",
+          "sha256": "5f6b5ba9f82930cf25fbdcb648b30c4a5420b98458ebfd6708fd2bf60431f5f5",
+          "bytes": 86444,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.9
+          }
+        },
+        {
+          "sourcePath": "motion/pluck_v1.wav",
+          "localPath": "local-imports/sfx-pack/motion/pluck_v1.wav",
+          "sha256": "a8f4de2cc9f7fc36db5c1da23508557c034326f61463ecb94841003b776c5bf4",
+          "bytes": 48044,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.5
+          }
+        },
+        {
+          "sourcePath": "motion/glitch_v1.wav",
+          "localPath": "local-imports/sfx-pack/motion/glitch_v1.wav",
+          "sha256": "afdfb0bdbceb335a8845f422119dee21588bff6caa4a0d0922ad225c66ac9903",
+          "bytes": 33242,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.3458125
+          }
+        },
+        {
+          "sourcePath": "motion/stutter_v3.wav",
+          "localPath": "local-imports/sfx-pack/motion/stutter_v3.wav",
+          "sha256": "37c5ce968ecadfba6d60beaa436f8f4055647a56048ba6fed285717db88b19ff",
+          "bytes": 29804,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.31
+          }
+        },
+        {
+          "sourcePath": "motion/stutter_v2.wav",
+          "localPath": "local-imports/sfx-pack/motion/stutter_v2.wav",
+          "sha256": "24075383317332ae3d99d492dff381c96ddb86f7d98dc61df780a62b53b4f4e5",
+          "bytes": 29804,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.31
+          }
+        },
+        {
+          "sourcePath": "motion/stutter_v1.wav",
+          "localPath": "local-imports/sfx-pack/motion/stutter_v1.wav",
+          "sha256": "350d0934090a6437b346374312a56ba5ea48715cf99f4999babd1a2e87909655",
+          "bytes": 29804,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.31
+          }
+        },
+        {
+          "sourcePath": "motion/chime_v2.wav",
+          "localPath": "local-imports/sfx-pack/motion/chime_v2.wav",
+          "sha256": "8eb1119e1e51da83013bdf69abb041b284e47f948c608bc855a76b30a36057c7",
+          "bytes": 135404,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 1.41
+          }
+        },
+        {
+          "sourcePath": "motion/chime_v3.wav",
+          "localPath": "local-imports/sfx-pack/motion/chime_v3.wav",
+          "sha256": "5beaebfa60a9083a60edbbfb6159b6917befa9e5c0c46e151b0758089b48cd21",
+          "bytes": 135404,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 1.41
+          }
+        },
+        {
+          "sourcePath": "motion/chime_v1.wav",
+          "localPath": "local-imports/sfx-pack/motion/chime_v1.wav",
+          "sha256": "5e0a2269f4142a893c14217fd378f0782705c9c71316b5c7878c58f8e2ddb187",
+          "bytes": 135404,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 1.41
+          }
+        },
+        {
+          "sourcePath": "motion/sparkle_v2.wav",
+          "localPath": "local-imports/sfx-pack/motion/sparkle_v2.wav",
+          "sha256": "3d19faf9ab72e7bc359bbc694478b4672536eca43694e325832102b1cd1b5e43",
+          "bytes": 66930,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.6967291666666666
+          }
+        },
+        {
+          "sourcePath": "motion/sparkle_v3.wav",
+          "localPath": "local-imports/sfx-pack/motion/sparkle_v3.wav",
+          "sha256": "3fa3bfc22b11db175b96083f3f099fb7db4e19143aeaa7ef5d9aec9fcf4c4f11",
+          "bytes": 63564,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.6616666666666666
+          }
+        },
+        {
+          "sourcePath": "motion/sparkle_v1.wav",
+          "localPath": "local-imports/sfx-pack/motion/sparkle_v1.wav",
+          "sha256": "5a812e6d3dd4bbd7b9d1293c6eb853ded137d18a023cb47c7f415bff34e28106",
+          "bytes": 59178,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.6159791666666666
+          }
+        },
+        {
+          "sourcePath": "motion/bubble_v3.wav",
+          "localPath": "local-imports/sfx-pack/motion/bubble_v3.wav",
+          "sha256": "fac8ec86c5645488a1828092468236c86b8aad86da20da09feabf53dbd73e895",
+          "bytes": 9644,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.1
+          }
+        },
+        {
+          "sourcePath": "motion/bubble_v2.wav",
+          "localPath": "local-imports/sfx-pack/motion/bubble_v2.wav",
+          "sha256": "ad8c6a9e9942c2a1f6e3b21c62b0f7087bcae928532aac732094a19453dddf82",
+          "bytes": 9644,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.1
+          }
+        },
+        {
+          "sourcePath": "motion/bubble_v1.wav",
+          "localPath": "local-imports/sfx-pack/motion/bubble_v1.wav",
+          "sha256": "5aa2adeb80eb809735dc9fe679182c32a44100d84ffaa61d6e1d8160b818f730",
+          "bytes": 9644,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.1
+          }
+        },
+        {
+          "sourcePath": "game/health_drain_v3.wav",
+          "localPath": "local-imports/sfx-pack/game/health_drain_v3.wav",
+          "sha256": "7d2c51cbe18637a2ad107ef461e3fbea04e1af135fc4629c39028b11cfeea5ef",
+          "bytes": 76844,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.8
+          }
+        },
+        {
+          "sourcePath": "game/jump_v1.wav",
+          "localPath": "local-imports/sfx-pack/game/jump_v1.wav",
+          "sha256": "1966fdcdbcb0e969432512178a9b0991bd51cca5ecadca68a3bf5bdd917e52e5",
+          "bytes": 21164,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.22
+          }
+        },
+        {
+          "sourcePath": "game/health_drain_v2.wav",
+          "localPath": "local-imports/sfx-pack/game/health_drain_v2.wav",
+          "sha256": "750b5753a152cb36529c05108ea6c30caf786b0dc637941f02f65e6ae6e5556d",
+          "bytes": 76844,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.8
+          }
+        },
+        {
+          "sourcePath": "game/jump_v2.wav",
+          "localPath": "local-imports/sfx-pack/game/jump_v2.wav",
+          "sha256": "041ef7d20360e3bbc56cb728af0867158c964aee00ad4bba26244bde0388cf34",
+          "bytes": 21164,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.22
+          }
+        },
+        {
+          "sourcePath": "game/jump_v3.wav",
+          "localPath": "local-imports/sfx-pack/game/jump_v3.wav",
+          "sha256": "f024e1d3dfd31c6be1fcd46e44cd8cf6e8516f430e1843b8a2b63d8026d4a24c",
+          "bytes": 21164,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.22
+          }
+        },
+        {
+          "sourcePath": "game/health_drain_v1.wav",
+          "localPath": "local-imports/sfx-pack/game/health_drain_v1.wav",
+          "sha256": "c49795a302ae0e08745c17ab0056127a9ca8712cc365c21682fd2d404fcfa8f5",
+          "bytes": 76844,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.8
+          }
+        },
+        {
+          "sourcePath": "game/hit_flash_v3.wav",
+          "localPath": "local-imports/sfx-pack/game/hit_flash_v3.wav",
+          "sha256": "dcbe7a6104ac76eaaf0e3a33f7f6676701e0364a8db31d42371a9767cac4da93",
+          "bytes": 17324,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.18
+          }
+        },
+        {
+          "sourcePath": "game/hit_flash_v2.wav",
+          "localPath": "local-imports/sfx-pack/game/hit_flash_v2.wav",
+          "sha256": "441b466b05c087b2fcabb7ae448376cadb9153dbc3db1e881fcc39cd1aab8628",
+          "bytes": 17324,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.18
+          }
+        },
+        {
+          "sourcePath": "game/hit_flash_v1.wav",
+          "localPath": "local-imports/sfx-pack/game/hit_flash_v1.wav",
+          "sha256": "e9b5475441cff2940bd0ee19c1d91bb57d949df50dacadf1269ab35ed363427f",
+          "bytes": 17324,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.18
+          }
+        },
+        {
+          "sourcePath": "game/level_up_v1.wav",
+          "localPath": "local-imports/sfx-pack/game/level_up_v1.wav",
+          "sha256": "6f97c573c3cae54c401ed8c2c0ddeeca1f3b1a5d038008827c0acb763b07ca14",
+          "bytes": 37484,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.39
+          }
+        },
+        {
+          "sourcePath": "game/level_up_v2.wav",
+          "localPath": "local-imports/sfx-pack/game/level_up_v2.wav",
+          "sha256": "e7d4d2d029c6d19843042b473d0c8e82ffc61e8d0e87eb02bdee3ed8b3686d34",
+          "bytes": 37484,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.39
+          }
+        },
+        {
+          "sourcePath": "game/level_up_v3.wav",
+          "localPath": "local-imports/sfx-pack/game/level_up_v3.wav",
+          "sha256": "de1ae663a8736ff47f636fc924cf976ca988da2ef68ea2ff0f6e0e3b5f8c82b9",
+          "bytes": 37484,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.39
+          }
+        },
+        {
+          "sourcePath": "game/coin_v1.wav",
+          "localPath": "local-imports/sfx-pack/game/coin_v1.wav",
+          "sha256": "801473678cff1bd44b4abbd7a660157ed897172cdb2345e02267752e1f630bb3",
+          "bytes": 35564,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.37
+          }
+        },
+        {
+          "sourcePath": "game/coin_v2.wav",
+          "localPath": "local-imports/sfx-pack/game/coin_v2.wav",
+          "sha256": "5910cb0c63b039f7efc7b9c763bebf1699eba170814870f1a24e7f37524aeaa9",
+          "bytes": 35564,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.37
+          }
+        },
+        {
+          "sourcePath": "game/coin_v3.wav",
+          "localPath": "local-imports/sfx-pack/game/coin_v3.wav",
+          "sha256": "a78a71707a04ffa83ecf1ea6870cb0d194934d32c82d973c075958bdc1266739",
+          "bytes": 35564,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.37
+          }
+        },
+        {
+          "sourcePath": "README.txt",
+          "localPath": "local-imports/sfx-pack/README.txt",
+          "sha256": "1f578fdf79208cde5a72f743d097fdbf27a872b4817622e53ee472f91a6b5305",
+          "bytes": 506
+        },
+        {
+          "sourcePath": "text/paper_rip_v1.wav",
+          "localPath": "local-imports/sfx-pack/text/paper_rip_v1.wav",
+          "sha256": "0980989f740213518285301436c714816786104e158d30e877db33d9241bbc74",
+          "bytes": 52844,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.55
+          }
+        },
+        {
+          "sourcePath": "text/text_slam_v1.wav",
+          "localPath": "local-imports/sfx-pack/text/text_slam_v1.wav",
+          "sha256": "2849be963ba6c11d73a05dd831bf3c2d6e95917f4970d640c3f7210d6b55b667",
+          "bytes": 48044,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.5
+          }
+        },
+        {
+          "sourcePath": "text/text_slam_v3.wav",
+          "localPath": "local-imports/sfx-pack/text/text_slam_v3.wav",
+          "sha256": "96da87d835e13e0fe9b10268bdb53d328e8aaa6831d5b65b3944581b6dc39b02",
+          "bytes": 48044,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.5
+          }
+        },
+        {
+          "sourcePath": "text/paper_rip_v3.wav",
+          "localPath": "local-imports/sfx-pack/text/paper_rip_v3.wav",
+          "sha256": "7dac1fb725935190155b167c6a61ec5a00bd753c0a3cde056295281abeb39c83",
+          "bytes": 52844,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.55
+          }
+        },
+        {
+          "sourcePath": "text/paper_rip_v2.wav",
+          "localPath": "local-imports/sfx-pack/text/paper_rip_v2.wav",
+          "sha256": "e9874ec9c9f0ec5507f61d8114a53ba59c540350c5b63f91eef03e35ff629cae",
+          "bytes": 52844,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.55
+          }
+        },
+        {
+          "sourcePath": "text/text_slam_v2.wav",
+          "localPath": "local-imports/sfx-pack/text/text_slam_v2.wav",
+          "sha256": "6197f3197009d9d7eb13d7e80ce3aa541aa870463493a1eebab7ce1d80cfea88",
+          "bytes": 48044,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.5
+          }
+        },
+        {
+          "sourcePath": "text/card_flip_v1.wav",
+          "localPath": "local-imports/sfx-pack/text/card_flip_v1.wav",
+          "sha256": "e6aef798626b6c48f4388c8fc4dc2448ea2f00d7e955f5e53f59e63a6323396e",
+          "bytes": 15404,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.16
+          }
+        },
+        {
+          "sourcePath": "text/word_pop_v2.wav",
+          "localPath": "local-imports/sfx-pack/text/word_pop_v2.wav",
+          "sha256": "5bdd6f47949c9c84d2e5beab7f7a5ae055b842660044740a14ac29639b69df18",
+          "bytes": 3404,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.035
+          }
+        },
+        {
+          "sourcePath": "text/word_pop_v3.wav",
+          "localPath": "local-imports/sfx-pack/text/word_pop_v3.wav",
+          "sha256": "e11d8e0a6d36532a757240c84602702722644e65c5b84d2ec7cbf93b6198193c",
+          "bytes": 3404,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.035
+          }
+        },
+        {
+          "sourcePath": "text/card_flip_v2.wav",
+          "localPath": "local-imports/sfx-pack/text/card_flip_v2.wav",
+          "sha256": "f4835c5a20a478fc27066a2caf1fbc502563405deeb4fa2eea495a82e5a95264",
+          "bytes": 15404,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.16
+          }
+        },
+        {
+          "sourcePath": "text/word_pop_v1.wav",
+          "localPath": "local-imports/sfx-pack/text/word_pop_v1.wav",
+          "sha256": "5122bb73f3b807151c707009320a44d454c39eadf525e0633a588f262558089f",
+          "bytes": 3404,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.035
+          }
+        },
+        {
+          "sourcePath": "text/card_flip_v3.wav",
+          "localPath": "local-imports/sfx-pack/text/card_flip_v3.wav",
+          "sha256": "8671a12cff8ca3e29c79ae4164c340d7904087493defbf94346018686cb91c88",
+          "bytes": 15404,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.16
+          }
+        },
+        {
+          "sourcePath": "text/stamp_v1.wav",
+          "localPath": "local-imports/sfx-pack/text/stamp_v1.wav",
+          "sha256": "c982cae32bf28dc049c8f15b133c34c8f8efd43ccbed3f54fd846120e3ad1534",
+          "bytes": 12578,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.1305625
+          }
+        },
+        {
+          "sourcePath": "text/stamp_v3.wav",
+          "localPath": "local-imports/sfx-pack/text/stamp_v3.wav",
+          "sha256": "dd392f6aab33732f4728911586d364134650d4838c6d16c2d5788d2c714ff7b3",
+          "bytes": 12194,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.1265625
+          }
+        },
+        {
+          "sourcePath": "text/stamp_v2.wav",
+          "localPath": "local-imports/sfx-pack/text/stamp_v2.wav",
+          "sha256": "84e3ec4c9d72061490da797d4a4039451139b8ff638e55b040b632e2a30fdc34",
+          "bytes": 12300,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.12766666666666668
+          }
+        },
+        {
+          "sourcePath": "transitions/downlifter_v1.wav",
+          "localPath": "local-imports/sfx-pack/transitions/downlifter_v1.wav",
+          "sha256": "c94d9a920eda904e30e01f88caf71e785ebda6251325baa5700b2de645e538d6",
+          "bytes": 99308,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 1.034
+          }
+        },
+        {
+          "sourcePath": "transitions/downlifter_v3.wav",
+          "localPath": "local-imports/sfx-pack/transitions/downlifter_v3.wav",
+          "sha256": "af40ebfb3f1bae3d4232e0490de818e1207047d579a0601c87b08f25aa2eb0ee",
+          "bytes": 111980,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 1.166
+          }
+        },
+        {
+          "sourcePath": "transitions/downlifter_v2.wav",
+          "localPath": "local-imports/sfx-pack/transitions/downlifter_v2.wav",
+          "sha256": "c7492224fb08a2c6e154e902a6bfd717ddd0b528896652be88bc9559f935f200",
+          "bytes": 105644,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 1.1
+          }
+        },
+        {
+          "sourcePath": "transitions/reverse_riser_v3.wav",
+          "localPath": "local-imports/sfx-pack/transitions/reverse_riser_v3.wav",
+          "sha256": "44cc53b975802be6cb5f1ed01c4e301b8db26fbed0e1161a8cab1c6b202e2f56",
+          "bytes": 81452,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.848
+          }
+        },
+        {
+          "sourcePath": "transitions/reverse_riser_v2.wav",
+          "localPath": "local-imports/sfx-pack/transitions/reverse_riser_v2.wav",
+          "sha256": "14d6d0d2b10dbfd197c400ac96bcf303ae169ce4d5634ef7132df6f7685e94fb",
+          "bytes": 76844,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.8
+          }
+        },
+        {
+          "sourcePath": "transitions/reverse_riser_v1.wav",
+          "localPath": "local-imports/sfx-pack/transitions/reverse_riser_v1.wav",
+          "sha256": "35b7bd525a1aac814828f4e68e10ff079f87dbf2d262fbb68419bd6472f70b8d",
+          "bytes": 72236,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.752
+          }
+        },
+        {
+          "sourcePath": "transitions/riser_v1.wav",
+          "localPath": "local-imports/sfx-pack/transitions/riser_v1.wav",
+          "sha256": "65f1c93f8159c8ffec318f873613ad5a70d5f60ab622acf8a9ef061bbd6059ac",
+          "bytes": 144428,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 1.504
+          }
+        },
+        {
+          "sourcePath": "transitions/riser_v3.wav",
+          "localPath": "local-imports/sfx-pack/transitions/riser_v3.wav",
+          "sha256": "7688a2f826dd32bdd80fefe0398d327fe5e5c91c0d77da02923dc26bb18d36b4",
+          "bytes": 162860,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 1.696
+          }
+        },
+        {
+          "sourcePath": "transitions/riser_v2.wav",
+          "localPath": "local-imports/sfx-pack/transitions/riser_v2.wav",
+          "sha256": "63cbfabd22144c360ee358aea885e2e5b8eb40101896a5c7ab69ed13863cc385",
+          "bytes": 153644,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 1.6
+          }
+        },
+        {
+          "sourcePath": "transitions/whoosh_short_v1.wav",
+          "localPath": "local-imports/sfx-pack/transitions/whoosh_short_v1.wav",
+          "sha256": "b2a0694fb8d1ab224b3b2f55d9b153f3d206944f64feb5f2e92624dcfffd6208",
+          "bytes": 28920,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.3007916666666667
+          }
+        },
+        {
+          "sourcePath": "transitions/swoosh_v1.wav",
+          "localPath": "local-imports/sfx-pack/transitions/swoosh_v1.wav",
+          "sha256": "59816818a794b7d61ccaf435cb074de035c7ee9515707a727d1ee5b5199ded39",
+          "bytes": 37944,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.39479166666666665
+          }
+        },
+        {
+          "sourcePath": "transitions/whoosh_long_v1.wav",
+          "localPath": "local-imports/sfx-pack/transitions/whoosh_long_v1.wav",
+          "sha256": "848b68f0dba0c6ae6678a601388df071efdf047a5b404a207e0f8f079c34fb05",
+          "bytes": 81260,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.846
+          }
+        },
+        {
+          "sourcePath": "transitions/whoosh_short_v2.wav",
+          "localPath": "local-imports/sfx-pack/transitions/whoosh_short_v2.wav",
+          "sha256": "d3a553afe18f7a853ddde4f2ee0fd41cd2af126b6b5f4f7ed8b5996c3aea8609",
+          "bytes": 30764,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.32
+          }
+        },
+        {
+          "sourcePath": "transitions/swoosh_v2.wav",
+          "localPath": "local-imports/sfx-pack/transitions/swoosh_v2.wav",
+          "sha256": "ee3e2308a5a1de862c647fba4b973a4524b7abb4d548494f5b2d87167f8d525c",
+          "bytes": 40364,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.42
+          }
+        },
+        {
+          "sourcePath": "transitions/whoosh_long_v2.wav",
+          "localPath": "local-imports/sfx-pack/transitions/whoosh_long_v2.wav",
+          "sha256": "a4b1d84fb17bc5066a4983ae648aaf9e9b3eae89e4c6f869bb167c5e9788b008",
+          "bytes": 86444,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.9
+          }
+        },
+        {
+          "sourcePath": "transitions/whoosh_long_v3.wav",
+          "localPath": "local-imports/sfx-pack/transitions/whoosh_long_v3.wav",
+          "sha256": "fd89b053e71cf1da3627357e5b381f95d72f2fa810d599ed3e4c758d592ecbc2",
+          "bytes": 91628,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.954
+          }
+        },
+        {
+          "sourcePath": "transitions/swoosh_v3.wav",
+          "localPath": "local-imports/sfx-pack/transitions/swoosh_v3.wav",
+          "sha256": "5e36aa4011e4768e88fccdfed465376b20ba40609cb4a36a61a8234f65281849",
+          "bytes": 42782,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.4451875
+          }
+        },
+        {
+          "sourcePath": "transitions/whoosh_short_v3.wav",
+          "localPath": "local-imports/sfx-pack/transitions/whoosh_short_v3.wav",
+          "sha256": "88f2a97a5385da40b3cd440189ffc4e3f21f2d5b46b77eb33abbccc0f218096d",
+          "bytes": 32606,
+          "audio": {
+            "sampleRate": 48000,
+            "channels": 1,
+            "sampleWidthBytes": 2,
+            "durationSeconds": 0.3391875
+          }
+        },
+        {
+          "sourcePath": "index.json",
+          "localPath": "local-imports/sfx-pack/index.json",
+          "sha256": "47c6a5441fae335fd2543595ce8f6ecc0364cbe127399fc6a3746571705444c3",
+          "bytes": 28308
+        }
+      ],
+      "license": "README permits use in your own videos; redistribution and hosted product licensing not specified"
+    }
+  ],
+  "publication": "User explicitly authorized committing and pushing the supplied non-secret files; original source notices retained."
+}
