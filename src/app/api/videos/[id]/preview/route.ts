@@ -8,7 +8,7 @@ export async function GET(_request: Request, ctx: { params: Promise<{ id: string
   if ("error" in auth && auth.error) return auth.error;
   const { id } = await ctx.params;
   if (!mongoose.isValidObjectId(id)) return apiError(404, "NOT_FOUND", "NOT_FOUND", "That video is not here.");
-  const video = await Video.findOne({ _id: id, ownerId: auth.user!._id, state: "ready" });
+  const video = await Video.findOne({ _id: id, ownerId: auth.user!._id, state: { $in: ["preview", "ready"] } });
   if (!video?.previewHtml) return apiError(404, "NOT_FOUND", "NOT_FOUND", "That video is not here.");
   return new Response(video.previewHtml, {
     headers: {

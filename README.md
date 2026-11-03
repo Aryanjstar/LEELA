@@ -16,7 +16,7 @@ npm test
 npm run typecheck
 ```
 
-Create `.env.local` from `.env.example` only if it does not already exist. Supply your own Mongo URI/database and auth configuration, then `npm run dev`. Do not overwrite existing credentials. The planned doctor command will report presence only. Portable CLI commands are not implemented yet.
+Create `.env.local` from `.env.example` only if it does not already exist. Supply your own Mongo URI/database and auth configuration, then `npm run dev`. Do not overwrite existing credentials. `npm run studio -- doctor` checks the local Node version and media executables without printing credentials; it does not connect to MongoDB or providers.
 
 ## Use any AI assistant or IDE
 

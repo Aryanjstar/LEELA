@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { Brand } from "../brand";
-import { traceProgram } from "../../trace/interpret";
+import { runBrowserTrace } from "../../trace/browser-client";
 
 type Idea = { topic?: string; audience?: string; notes?: string };
 type Scene = { id: string; purpose: string; lines: { id: string; text: string }[]; layers: { component: string }[] };
@@ -104,15 +104,17 @@ export function Workspace() {
     const body = await response.json();
     if (!response.ok) {
       setError(body?.error?.message || "Could not save.");
-      return;
+      setStatus("");
+      return false;
     }
     setRevision(body.revision);
     setStatus("Saved");
+    return true;
   }
 
   async function brainstorm() {
     setError("");
-    await saveIdea();
+    if (!(await saveIdea())) return;
     const response = await fetch(`/api/projects/${params.id}/brainstorm`, { method: "POST", headers: { "content-type": "application/json" }, body: "{}" });
     const body = await response.json();
     if (!response.ok) {
@@ -125,7 +127,7 @@ export function Workspace() {
   async function planStory() {
     setError("");
     setStatus("Planning");
-    await saveIdea();
+    if (!(await saveIdea())) return;
     const response = await fetch(`/api/projects/${params.id}/plan`, { method: "POST", headers: { "content-type": "application/json" }, body: "{}" });
     const body = await response.json();
     if (!response.ok) {
@@ -142,7 +144,7 @@ export function Workspace() {
     setTraceError("");
     try {
       const input = entry === "fib" ? [4] : [[4, 9, 15, 21, 28, 33], 21];
-      const traced = traceProgram(code, entry, input);
+      const traced = await runBrowserTrace(code, entry, input);
       setTraceSummary(`${traced.summary.callCount} calls, depth ${traced.summary.maxDepth}, returned ${traced.returned}`);
       const response = await fetch(`/api/projects/${params.id}/traces`, {
         method: "POST",
@@ -158,9 +160,10 @@ export function Workspace() {
 
   function editLine(sceneId: string, text: string) {
     if (!plan) return;
+    setPlanHash("");
     setPlan({
       ...plan,
-      scenes: plan.scenes.map((scene) => scene.id === sceneId ? { ...scene, lines: [{ ...scene.lines[0], text }] } : scene),
+      scenes: plan.scenes.map((scene) => scene.id === sceneId ? { ...scene, lines: scene.lines.map((line, index) => index === 0 ? { ...line, text } : line) } : scene),
     });
   }
 
@@ -176,13 +179,13 @@ export function Workspace() {
       return;
     }
     setRevision(body.revision);
-    if (body.planHash) setPlanHash(body.planHash);
+    setPlanHash(body.planHash || "");
     setStatus(body.planValid ? "Storyboard saved" : "Saved, but the storyboard is not valid yet");
   }
 
   async function approve() {
     setError("");
-    setStatus("Rendering");
+    setStatus("Preparing preview");
     const response = await fetch(`/api/projects/${params.id}/approve`, {
       method: "POST",
       headers: { "content-type": "application/json" },
@@ -315,8 +318,8 @@ export function Workspace() {
           ) : null}
           {step === "share" ? (
             <div className="glass panel">
-              <p>Share the latest preview. The link shows the film and a Made with Leela line.</p>
-              <button className="btn" type="button" onClick={() => void share()} disabled={!videoId}>Copy a share link</button>
+              <p>Sharing will be available after a verified video export is ready.</p>
+              <button className="btn" type="button" onClick={() => void share()} disabled>Copy a share link</button>
               {shareUrl ? <p><a href={shareUrl}>{shareUrl}</a></p> : null}
             </div>
           ) : null}

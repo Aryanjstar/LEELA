@@ -8,11 +8,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "tsx --test test/*.test.ts",
+    "test": "node --import tsx --test test/*.test.ts",
     "typecheck": "tsc --noEmit",
     "check-providers": "tsx scripts/check-providers.ts",
     "make-video": "tsx scripts/make-video.ts",
-    "create-owner": "tsx scripts/create-owner.ts"
+    "create-owner": "tsx scripts/create-owner.ts",
+    "studio": "node --import tsx scripts/studio.ts"
   },
   "keywords": [],
   "author": "",

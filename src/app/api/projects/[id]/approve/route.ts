@@ -44,9 +44,7 @@ export async function POST(request: Request, ctx: { params: Promise<{ id: string
       type: "render",
       input: { storyboardId: storyboard._id, draftRevision: draft.revision },
       stages: [
-        { name: "narrate", state: "done" },
-        { name: "compile", state: "done" },
-        { name: "render", state: "done" },
+        { name: "preview", state: "running" },
       ],
     });
     return json({ jobId: String(job?._id), storyboardId: String(storyboard._id), videoId: job?.result?.videoId ? String(job.result.videoId) : undefined }, 202);

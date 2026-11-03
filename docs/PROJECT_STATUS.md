@@ -4,6 +4,14 @@
 
 ## Current position
 
+**2026-11-03 workspace changes.** Code Lab now runs the existing bounded interpreter in a dedicated browser worker with a five-second timeout. Editing the first narration line preserves the other lines. A failed idea save stops downstream planning. Unit tests (17), typechecking and production compilation passed. Browser acceptance remains open.
+
+**Preview integrity and CLI follow-up 2026-11-03:** Newly generated HTML is stored as a silent, estimated `preview`, never a ready MP4; legacy HTML-only ready records are presented as previews. Public sharing is disabled until verified MP4 serving and QA exist. The preview no longer calls a speech provider outside the quota router. The offline doctor checks Node, Python, FFmpeg and ffprobe availability. Checked with 17 unit tests, typechecking and isolated MongoDB HTTP regression tests, including legacy-preview share denial. Approval/job creation is still non-atomic and the durable worker, real export and browser journey remain open.
+
+**Foundation follow-up 2026-11-03:** Draft validation issues now persist across reads and idea-only edits, clear when a valid plan is accepted, and are available from the draft GET endpoint. Legacy drafts without stored issues are validated on read. Provider environment variables now take precedence over `.env.local`. Verified with 16 unit tests, TypeScript checking, and an isolated local MongoDB replica-set HTTP regression covering draft races, persisted issues and candidate acceptance. This remains a partial foundation: the browser journeys, durable MP4 rendering and subsequent slices are not complete.
+
+**Implementation started 2026-11-03:** The offline `studio` CLI now exposes doctor, capabilities, the v1 schema, plan validation and timed-word caption grouping. This is a partial slice 0b, not a completed product or render pipeline. In the implementation checkout, 13 unit tests and TypeScript checking passed; draft/candidate concurrency was exercised through HTTP against an isolated local MongoDB replica set, including simultaneous saves, keep/discard contention and stale candidates. Planning now checks its source revision before saving, and targeted slow-hold revisions preserve other scenes. The unit suite passed 15 tests and TypeScript checking passed. Live planner concurrency, full browser journeys and other end-to-end workflows remain open.
+
 The Reel Studio parity checklist was added 2026-11-03; it expands the release gate but does not make any of those application flows complete.
 
 Complete — docs only: SceneSpindle product/PRD/system/database/API/design revisions, delivery plan, Brief Builder specification and on-demand toolbox. All 24 new resources are indexed at pinned commits, with selected documentation/license snapshots; Kapso and doc-coauthoring are links only pending license verification. Two small repository skills support briefing and toolbox selection, without global installation or automatic loading.

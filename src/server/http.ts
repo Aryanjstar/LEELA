@@ -17,11 +17,7 @@ export function originOk(request: Request): boolean {
   const origin = request.headers.get("origin");
   if (!origin) return false;
   const expected = process.env.APP_ORIGIN || "http://localhost:3000";
-  if (origin === expected) return true;
-  const host = request.headers.get("x-forwarded-host") || request.headers.get("host");
-  try {
-    return Boolean(host) && new URL(origin).host === host;
-  } catch {
-    return false;
-  }
+  // The configured origin is authoritative. Forwarded host headers are client-controlled
+  // unless a trusted proxy has explicitly sanitized them.
+  return origin === expected;
 }

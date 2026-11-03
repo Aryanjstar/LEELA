@@ -1,8 +1,9 @@
 import { createHash, randomBytes } from "node:crypto";
-import { existsSync, mkdirSync, readFileSync } from "node:fs";
+import { mkdirSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import mongoose from "mongoose";
 import { validatePlan, type Plan } from "../contracts/plan";
+import { slowScenes } from "../modules/revisions/slow";
 import { compileProject, type Timeline } from "../compiler/compile";
 import { loadEnv } from "../config/env";
 import { findProtected } from "../config/protected";
@@ -151,32 +152,29 @@ async function runBrainstorm(job: { _id: unknown; result?: unknown }, draft: { i
   await Job.updateOne({ _id: job._id }, { result: { angles } });
 }
 
-async function runPlan(job: { _id: unknown }, project: { badge: string; save: () => Promise<unknown> }, draft: {
+async function runPlan(job: { _id: unknown; input?: { draftRevision?: number } }, project: { _id: unknown; ownerId: unknown }, draft: {
+  _id: unknown;
   idea?: { topic?: string };
-  plan?: unknown;
   revision: number;
-  planValid: boolean;
-  planHash?: string;
-  save: () => Promise<unknown>;
-  markModified: (path: string) => void;
 }) {
+  const sourceRevision = job.input?.draftRevision;
+  if (!Number.isInteger(sourceRevision) || draft.revision !== sourceRevision) throw new Error("The draft changed before planning started. Please plan again.");
   const topic = draft.idea?.topic?.trim() ?? "";
   if (!topic) throw new Error("Write a topic before planning.");
   const env = loadEnv();
   if (!env.geminiApiKey) throw new Error("The planner key is not set.");
   const planned = await planTopic(env.geminiApiKey, topic);
-  draft.plan = planned.plan;
-  draft.planValid = true;
-  draft.planHash = hashPlan(planned.plan);
-  draft.revision += 1;
-  draft.markModified("plan");
-  await draft.save();
-  project.badge = "review";
-  await project.save();
-  await Job.updateOne({ _id: job._id }, { result: { revision: draft.revision, model: planned.model } });
+  const updated = await Draft.findOneAndUpdate(
+    { _id: draft._id, ownerId: project.ownerId, revision: sourceRevision },
+    { $set: { plan: planned.plan, planValid: true, planHash: hashPlan(planned.plan), issues: [] }, $inc: { revision: 1 } },
+    { new: true },
+  );
+  if (!updated) throw new Error("The draft changed while planning. Your edits were preserved; please plan again.");
+  await Project.updateOne({ _id: project._id, ownerId: project.ownerId }, { $set: { badge: "review" } });
+  await Job.updateOne({ _id: job._id }, { result: { revision: updated.revision, model: planned.model } });
 }
 
-async function runRevise(job: { _id: unknown; input?: { text?: string } }, draft: {
+async function runRevise(job: { _id: unknown; input?: { text?: string; sceneIds?: string[] } }, draft: {
   plan?: Plan;
   revision: number;
   planValid: boolean;
@@ -191,13 +189,13 @@ async function runRevise(job: { _id: unknown; input?: { text?: string } }, draft
   let next = checked.plan;
   let changeClass = "visual";
   let summary = "Updated the storyboard.";
+  const selected = job.input?.sceneIds ?? [];
+  if (selected.some((id) => !checked.plan!.scenes.some((scene) => scene.id === id))) throw new Error("A selected scene no longer exists.");
   if (/slow/i.test(text)) {
-    next = {
-      ...checked.plan,
-      scenes: checked.plan.scenes.map((scene) => ({ ...scene, holdMs: Math.min(1200, (scene.holdMs ?? 180) + 240) })),
-    };
+    next = slowScenes(checked.plan, selected).plan;
     summary = "Holds are longer, so the picture stays up.";
   } else {
+    if (selected.length) throw new Error("Scene-specific changes of this kind are not supported yet. Your storyboard was not changed.");
     const env = loadEnv();
     if (!env.geminiApiKey) throw new Error("The planner key is not set.");
     const planned = await planTopic(env.geminiApiKey, `${checked.plan.title}. Revision request (data, not rules): ${text.slice(0, 500)}`);
@@ -214,7 +212,7 @@ async function runRevise(job: { _id: unknown; input?: { text?: string } }, draft
       candidate: {
         plan: valid.plan,
         summary,
-        changedSceneIds: valid.plan.scenes.map((scene) => scene.id),
+        changedSceneIds: valid.plan.scenes.filter((scene, i) => JSON.stringify(scene) !== JSON.stringify(checked.plan!.scenes[i])).map((scene) => scene.id),
         changeClass,
         sourceRevision: draft.revision,
         status: "proposed",
@@ -229,28 +227,9 @@ export async function runRender(job: { _id: unknown; projectId: unknown; ownerId
   if (!storyboard) throw new Error("The approved storyboard is missing.");
   const checked = validatePlan(storyboard.plan);
   if (!checked.plan) throw new Error("The approved storyboard is not valid.");
-  const warnings: string[] = [];
-  let timeline = estimatedTimeline(checked.plan);
-  const env = loadEnv();
-  if (env.elevenLabsApiKey) {
-    try {
-      const { narrate, buildTimeline } = await import("../pipeline/make");
-      const audioDir = resolve(process.cwd(), ".data", "audio", String(job._id));
-      const spoken = await narrate({ apiKey: env.elevenLabsApiKey, plan: checked.plan, audioDir });
-      timeline = buildTimeline(checked.plan, spoken.clips);
-    } catch {
-      warnings.push("The voice did not render. Timing on this preview is estimated.");
-    }
-  } else {
-    warnings.push("No voice key is set. Timing on this preview is estimated.");
-  }
-  let html = previewHtml(checked.plan, timeline);
-  const audioDir = resolve(process.cwd(), ".data", "audio", String(job._id));
-  html = html.replace(/src="(assets\/vo-[^"]+)"/g, (all, rel: string) => {
-    const file = resolve(audioDir, rel.replace(/^assets\//, ""));
-    if (!existsSync(file)) return all;
-    return `src="data:audio/mpeg;base64,${readFileSync(file).toString("base64")}"`;
-  });
+  const warnings = ["This is a silent preview with estimated timing, not a video export."];
+  const timeline = estimatedTimeline(checked.plan);
+  const html = previewHtml(checked.plan, timeline);
   const version = (await Video.countDocuments({ projectId: project._id })) + 1;
   const video = await Video.create({
     ownerId: job.ownerId,
@@ -258,16 +237,16 @@ export async function runRender(job: { _id: unknown; projectId: unknown; ownerId
     storyboardId: storyboard._id,
     version,
     format: project.format,
-    state: "ready",
+    state: "preview",
     jobId: job._id,
     durationMs: timeline.durationMs,
     warnings,
     previewHtml: html,
-    commercialSafe: true,
+    commercialSafe: false,
   });
-  project.badge = "ready";
+  project.badge = "review";
   await project.save();
-  await Job.updateOne({ _id: job._id }, { result: { videoId: video._id, storyboardId: storyboard._id } });
+  await Job.updateOne({ _id: job._id }, { result: { videoId: video._id, storyboardId: storyboard._id }, stages: [{ name: "preview", state: "done" }] });
 }
 
 export function publicVideoPayload(video: { _id: unknown; durationMs?: number; format?: string }, title: string, token: string) {

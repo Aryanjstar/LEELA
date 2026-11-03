@@ -22,7 +22,7 @@ function parseFile(path: string): Map<string, string> {
 
 export function loadEnv(root = process.cwd()): Env {
   const map = parseFile(resolve(root, ".env.local"));
-  const pick = (key: string) => map.get(key) || process.env[key] || "";
+  const pick = (key: string) => process.env[key] ?? map.get(key) ?? "";
   return {
     geminiApiKey: pick("GEMINI_API_KEY"),
     sarvamApiKey: pick("SARVAM_API_KEY"),

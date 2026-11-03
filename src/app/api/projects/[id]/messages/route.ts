@@ -35,9 +35,9 @@ export async function POST(request: Request, ctx: { params: Promise<{ id: string
   if (!text) return apiError(400, "VALIDATION", "VALIDATION", "Write a note for the copilot.");
   const draft = await Draft.findOne({ projectId: project._id, ownerId: auth.user!._id });
   if (!draft) return apiError(404, "NOT_FOUND", "NOT_FOUND", "That project is not here.");
-  draft.messageSeq += 1;
-  const seq = draft.messageSeq;
-  await draft.save();
+  const updated = await Draft.findOneAndUpdate({ _id: draft._id, ownerId: auth.user!._id }, { $inc: { messageSeq: 1 } }, { new: true });
+  if (!updated) return apiError(404, "NOT_FOUND", "NOT_FOUND", "That project is not here.");
+  const seq = updated.messageSeq;
   const userMessage = await Message.create({
     ownerId: auth.user!._id,
     projectId: project._id,
@@ -51,16 +51,16 @@ export async function POST(request: Request, ctx: { params: Promise<{ id: string
       ownerId: auth.user!._id,
       projectId: project._id,
       type: "revise",
-      input: { text, messageId: userMessage._id },
+      input: { text, messageId: userMessage._id, sceneIds: Array.isArray(body?.sceneIds) ? body.sceneIds.filter((id): id is string => typeof id === "string").slice(0, 40) : [] },
       stages: [{ name: "revise", state: "running" }],
     });
     const candidate = job?.result?.candidate;
-    draft.messageSeq += 1;
-    await draft.save();
+    const after = await Draft.findOneAndUpdate({ _id: draft._id, ownerId: auth.user!._id }, { $inc: { messageSeq: 1 } }, { new: true });
+    if (!after) return apiError(404, "NOT_FOUND", "NOT_FOUND", "That project is not here.");
     const assistant = await Message.create({
       ownerId: auth.user!._id,
       projectId: project._id,
-      seq: draft.messageSeq,
+      seq: after.messageSeq,
       role: "assistant",
       text: candidate?.summary || job?.error?.message || "I could not make that change.",
       jobId: job?._id,

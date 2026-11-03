@@ -5,7 +5,7 @@ Updated 2026-11-03. Documentation precedes implementation. **This plan is finali
 | Slice | Requirements | Deliverable / release gate | Status |
 |---|---|---|---|
 | 0. Research and specification | SS-01,20,21 | Updated contracts, brief workflow, pinned on-demand toolbox and acceptance matrix | Complete — docs only |
-| 0b. Portable foundation | SS-01,03,08 | Portable CLI, caption grouping and draft/candidate concurrency regressions | Planned; not implemented |
+| 0b. Portable foundation | SS-01,03,08 | Portable CLI, caption grouping and draft/candidate concurrency regressions | In progress; offline CLI and database race checks implemented; browser journeys remain |
 | 1. Identity, storage and job integrity | SS-02,04,05,14 | Two-creator browser journey; invites/reset; private storage; atomic approval and durable worker; actual MP4 | Planned |
 | B. Brief Builder (after slice 1, before slice 2) | SS-20,21 | Shared brief state, contextual research, revision-bound questions, prompt bundles and UI/CLI/IDE parity | Planned |
 | 2. Reference parity and providers | SS-06,07 | Reference examples, configurable planner, voices/alignment, revisions, formats and cache recovery | Planned |
@@ -19,10 +19,10 @@ Full Reel Studio feature inventory and evidence gates: [REEL_STUDIO_PARITY.md](R
 
 ## Audit backlog
 
-- HTML previews currently stored as ready videos; no durable hosted render worker.
+- New HTML previews are labeled preview; legacy HTML-only ready records are treated as preview on read. Public sharing is disabled pending verified MP4 serving. No durable render worker exists.
 - Catalog overstates mode/language/format coverage; usage is a placeholder.
 - Planner ignores portions of project settings; revision requests can affect all scenes.
-- Draft/candidate writes are check-then-save; stale candidate source revision not enforced.
+- Draft/candidate writes now use revision-conditional updates and transactional keep; the broader planning and approval paths still need concurrency protection.
 - Storyboard/video versions use counts; job creation is non-atomic.
 - Project deletion leaves related records; uploads use local disk and an 8MB in-memory limit.
 - Code Lab interpreter runs on the UI thread; Python/JavaScript worker sandbox is unfinished.

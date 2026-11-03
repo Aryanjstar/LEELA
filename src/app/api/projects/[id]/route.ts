@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import { connectDb, Draft, Project, Video } from "../../../../server/db";
 import { apiError, originOk } from "../../../../server/http";
 import { currentUser } from "../../../../server/session";
+import { validatePlan } from "../../../../contracts/plan";
 
 type Ctx = { params: Promise<{ id: string }> };
 
@@ -24,7 +25,7 @@ export async function GET(_request: Request, ctx: Ctx) {
     const project = await Project.findOne({ _id: id, ownerId: user._id }).maxTimeMS(8_000);
     if (!project) return missing();
     const draft = await Draft.findOne({ projectId: project._id, ownerId: user._id }).maxTimeMS(8_000);
-    const video = await Video.findOne({ projectId: project._id, ownerId: user._id, state: "ready" }).sort({ createdAt: -1 });
+    const video = await Video.findOne({ projectId: project._id, ownerId: user._id, state: { $in: ["preview", "ready"] } }).sort({ createdAt: -1 });
     return NextResponse.json({
       project: {
         id: String(project._id),
@@ -46,11 +47,12 @@ export async function GET(_request: Request, ctx: Ctx) {
             plan: draft.plan,
             planHash: draft.planHash,
             planValid: draft.planValid,
+            issues: draft.issues ?? (draft.plan != null ? validatePlan(draft.plan).issues : []),
             traceId: draft.traceId ? String(draft.traceId) : undefined,
           }
         : null,
       video: video
-        ? { id: String(video._id), state: video.state, durationMs: video.durationMs, warnings: video.warnings, version: video.version }
+        ? { id: String(video._id), state: video.state === "ready" && !video.mp4Path ? "preview" : video.state, durationMs: video.durationMs, warnings: video.warnings, version: video.version }
         : null,
     });
   } catch {
