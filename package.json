@@ -13,7 +13,8 @@
     "check-providers": "tsx scripts/check-providers.ts",
     "make-video": "tsx scripts/make-video.ts",
     "create-owner": "tsx scripts/create-owner.ts",
-    "studio": "node --import tsx scripts/studio.ts"
+    "studio": "node --import tsx scripts/studio.ts",
+    "e2e": "npm run build && node test/integration/browser.mjs"
   },
   "keywords": [],
   "author": "",
@@ -33,6 +34,7 @@
     "zod": "^4.6.7"
   },
   "devDependencies": {
+    "@playwright/test": "1.56.1",
     "@types/bcryptjs": "^2.4.6",
     "@types/node": "^26.6.5",
     "@types/react": "^19.3.0",

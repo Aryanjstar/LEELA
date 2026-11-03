@@ -18,6 +18,8 @@ npm run typecheck
 
 Create `.env.local` from `.env.example` only if it does not already exist. Supply your own Mongo URI/database and auth configuration, then `npm run dev`. Do not overwrite existing credentials. `npm run studio -- doctor` checks the local Node version and media executables without printing credentials; it does not connect to MongoDB or providers.
 
+Run `npm run e2e` with Chrome and `mongod` installed to build the app and exercise the studio as two creators at desktop and 390 px. The suite starts a disposable replica set and a production server on loopback ports 27932 and 3221.
+
 ## Use any AI assistant or IDE
 
 Read [AGENTS.md](AGENTS.md) and [the editing workflow](docs/AGENT_WORKFLOW.md). No Claude, Cursor, Codex or other assistant subscription is required to run the repository.
@@ -29,7 +31,7 @@ npm run studio -- validate-plan path/to/plan.json
 npm run studio -- captions path/to/words.json --max-words 3
 ```
 
-The commands above are the **planned interface and are not runnable yet**. They will return JSON and fail with nonzero exit status when inputs are invalid. Capabilities reflect the implemented v1 explainer contract, not the whole roadmap. Caption grouping consumes measured word times; it does not create timestamps from a prompt.
+These commands run locally. Schema export, validation and caption grouping emit JSON. Invalid inputs produce a nonzero exit status. Capabilities reflect the implemented v1 explainer contract, not the whole roadmap. Caption grouping consumes measured word times; it does not create timestamps from a prompt.
 
 ## Architecture and contribution
 

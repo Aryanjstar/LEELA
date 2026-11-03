@@ -1,3 +1,5 @@
+import mongoose from "mongoose";
+import { z } from "zod";
 import { NextResponse } from "next/server";
 import { connectDb, Draft, Project } from "../../../server/db";
 import { apiError, originOk } from "../../../server/http";
@@ -41,27 +43,35 @@ export async function POST(request: Request) {
   }
   const user = await currentUser();
   if (!user) return apiError(401, "UNAUTHENTICATED", "NO_SESSION", "Sign in to open the studio.");
-  const body = (await request.json().catch(() => ({}))) as { mode?: string; title?: string; topic?: string };
+  const parsed = z.object({
+    mode: z.string().optional(),
+    title: z.string().max(120).optional(),
+    topic: z.string().max(2000).optional(),
+  }).strict().safeParse(await request.json().catch(() => null));
+  if (!parsed.success) return apiError(400, "VALIDATION", "INVALID_PROJECT", "Check the project fields.");
+  const body = parsed.data;
   const mode = body.mode || user.prefs?.defaultMode || "explainer";
   if (!MODES.has(mode)) return apiError(400, "VALIDATION", "UNKNOWN_FIELD", "That mode is not known.");
   if (!OPEN.has(mode)) return apiError(422, "VALIDATION", "MODE_UNAVAILABLE", "That mode is not open yet.");
   const title = (body.title || body.topic || "Untitled").slice(0, 120);
-  const project = await Project.create({
-    ownerId: user._id,
-    title,
-    mode,
-    format: user.prefs?.defaultFormat || "9x16",
-    targetMs: user.prefs?.defaultTargetMs || 45000,
-    language: user.prefs?.defaultLanguage || "en",
-    voiceId: user.prefs?.defaultVoiceId || "elevenlabs:alice",
-    styleId: user.prefs?.defaultStyleId || "chalk-and-chai@1",
-    keepPrivate: false,
-    badge: "draft",
+  return mongoose.connection.transaction(async session => {
+    const [project] = await Project.create([{
+      ownerId: user._id,
+      title,
+      mode,
+      format: user.prefs?.defaultFormat || "9x16",
+      targetMs: user.prefs?.defaultTargetMs || 45000,
+      language: user.prefs?.defaultLanguage || "en",
+      voiceId: user.prefs?.defaultVoiceId || "elevenlabs:alice",
+      styleId: user.prefs?.defaultStyleId || "chalk-and-chai@1",
+      keepPrivate: false,
+      badge: "draft",
+    }], { session });
+    const [draft] = await Draft.create([{
+      ownerId: user._id,
+      projectId: project._id,
+      idea: { topic: (body.topic || "").slice(0, 2000), mustInclude: [] },
+    }], { session });
+    return NextResponse.json({ project: { id: String(project._id), title }, draft: { id: String(draft._id) } }, { status: 201 });
   });
-  const draft = await Draft.create({
-    ownerId: user._id,
-    projectId: project._id,
-    idea: { topic: (body.topic || "").slice(0, 2000), mustInclude: [] },
-  });
-  return NextResponse.json({ project: { id: String(project._id), title }, draft: { id: String(draft._id) } }, { status: 201 });
 }

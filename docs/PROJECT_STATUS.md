@@ -4,6 +4,8 @@
 
 ## Current position
 
+**2026-11-03 browser journey.** Two creators can sign in, create and rename separate projects, save an audience, reload the changes, import a v1 storyboard, approve it and open its private HTML preview in Chrome at 1280 px and 390 px. Both receive 404 for the other project. The production build and 17 unit tests pass. The studio navigation is accessible on phone layouts and project creation writes the initial draft in the same transaction. Durable export, invite redemption and the other release gates remain open.
+
 **2026-11-03 workspace changes.** Code Lab now runs the existing bounded interpreter in a dedicated browser worker with a five-second timeout. Editing the first narration line preserves the other lines. A failed idea save stops downstream planning. Unit tests (17), typechecking and production compilation passed. Browser acceptance remains open.
 
 **Preview integrity and CLI follow-up 2026-11-03:** Newly generated HTML is stored as a silent, estimated `preview`, never a ready MP4; legacy HTML-only ready records are presented as previews. Public sharing is disabled until verified MP4 serving and QA exist. The preview no longer calls a speech provider outside the quota router. The offline doctor checks Node, Python, FFmpeg and ffprobe availability. Checked with 17 unit tests, typechecking and isolated MongoDB HTTP regression tests, including legacy-preview share denial. Approval/job creation is still non-atomic and the durable worker, real export and browser journey remain open.

@@ -95,6 +95,23 @@ export function Workspace() {
     return () => clearInterval(timer);
   }, [mode]);
 
+  async function renameProject(event: React.FormEvent) {
+    event.preventDefault();
+    setError("");
+    const response = await fetch(`/api/projects/${params.id}`, {
+      method: "PATCH",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ title }),
+    });
+    const body = await response.json();
+    if (!response.ok) {
+      setError(body?.error?.message || "Could not rename the project.");
+      return;
+    }
+    setTitle(body.project.title);
+    setStatus("Project renamed");
+  }
+
   async function saveIdea() {
     setStatus("Saving");
     const response = await fetch(`/api/projects/${params.id}/draft`, {
@@ -283,7 +300,10 @@ export function Workspace() {
           {step === "idea" ? (
             <div className="glass panel">
               <p className="kicker">{mode || "project"}</p>
-              <input className="field" value={title} onChange={(event) => setTitle(event.target.value)} aria-label="Title" />
+              <form className="row-actions" onSubmit={renameProject}>
+                <input className="field" value={title} maxLength={120} required onChange={(event) => setTitle(event.target.value)} aria-label="Title" />
+                <button className="btn ghost" type="submit" disabled={!title.trim()}>Rename</button>
+              </form>
               <textarea className="field" value={idea.topic || ""} onChange={(event) => setIdea({ ...idea, topic: event.target.value })} placeholder="Topic" />
               <input className="field" value={idea.audience || ""} onChange={(event) => setIdea({ ...idea, audience: event.target.value })} placeholder="Audience" />
               <div className="row-actions">
