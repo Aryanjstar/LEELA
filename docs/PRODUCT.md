@@ -49,3 +49,7 @@ Optional additions approved 2026-11-02: editable timeline interchange and subjec
 ## Brief before production
 
 All clients share a [Brief Builder](BRIEFING_WORKFLOW.md): rough request → scoped context/research → useful choices → approved creative brief → storyboard/preview → render. It supports new videos, episodes, series and targeted shot edits. The creator can delegate optional choices; explicit requirements and exact scripts remain authoritative. The [toolbox](toolbox/README.md) is an on-demand reference library, not additional navigation or a default dependency stack.
+
+## Unified Reel Studio scope
+
+The [parity checklist](REEL_STUDIO_PARITY.md) covers all tracked Reel Studio workflows, including optional static banners and profile copy. The video modes above remain the main navigation. Static creator utilities can live in a compact Tools area after the core video flows work. Named styles/effects enter the selectable catalog only after they have rendered and passed visual review. The Reel Studio source repository is separate; its scripts and templates have not yet been integrated into this application.

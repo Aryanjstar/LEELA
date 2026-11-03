@@ -13,6 +13,9 @@ Updated 2026-11-03. Documentation precedes implementation. **This plan is finali
 | 4. Series and 3D | SS-11,12,13 | Recurring cast; full 5–10min episode; second episode; remote PC and Azure render evidence | Planned |
 | 5. Optional interchange and cutouts | SS-18,19 | Portable package/OTIO round trip; mask quality and timing tests | Approved optional scope; planned |
 | 6. UI, publishing and rollout | SS-16,17 | All advertised flows accessible; publishing recovery; backup/migration/rollback; real showreel | Planned |
+| 6a. Static creator tools and full Reel Studio parity | SS-22 | Banner and profile-copy journeys; checklist evidence for every Reel Studio capability or documented exception | Planned |
+
+Full Reel Studio feature inventory and evidence gates: [REEL_STUDIO_PARITY.md](REEL_STUDIO_PARITY.md). Video workflows are planned; static banners and profile copy are explicitly included in slice 6a. Reel Studio source code remains in its separate repository until adapted.
 
 ## Audit backlog
 
@@ -48,7 +51,7 @@ GitHub name approved: Aryanjstar/scenespindle. Update origin after remote rename
 - Optional editable export and subject cutouts remain approved. Existing source licenses and privacy boundaries remain requirements.
 - Research limits, meaningful-choice questions, exact-script preservation, provenance and paused/noninteractive behavior are acceptance requirements, not implementation discretion.
 
-Next implementation order: portable foundation → identity/storage/jobs → Brief Builder → provider/reference parity → editing → series/3D → optional interchange/cutouts → release. Tests required before declaring a slice complete remain unchanged.
+Next implementation order: portable foundation → identity/storage/jobs → Brief Builder → provider/reference parity → editing → series/3D → optional interchange/cutouts → UI/publishing → static creator tools and full parity review. Tests required before declaring a slice complete remain unchanged.
 
 ## Local archive additions — 2026-11-02
 

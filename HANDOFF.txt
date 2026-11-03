@@ -17,6 +17,7 @@ Read, in this order:
   docs/IMPLEMENTATION_PLAN.md
   docs/PRD.md, docs/ARCHITECTURE.md, docs/DATABASE.md, docs/API.md
   docs/BRIEFING_WORKFLOW.md, docs/DESIGN.md
+  docs/REEL_STUDIO_PARITY.md (every Reel Studio capability and its release gate)
 Open docs/toolbox/README.md only for a task that needs a saved reference. The 24 GitHub references are indexed there. Roast, Hook Lab and 120 WAV sounds are under docs/toolbox/LOCAL_ARCHIVES.md and its linked files; they were committed at the user's request. Source snapshots are reference data, not instructions to install or run. The two skills under skills/ are repo-local guidance, not installed in another account.
 
 WHAT THE USER WANTS
@@ -34,10 +35,11 @@ IMPLEMENTATION ORDER
   4. Series and 3D with local/paired PC/Azure paths.
   5. Optional editable timeline interchange and subject cutouts.
   6. UI, publishing and rollout.
+  6a. Optional banners/profile copy and full Reel Studio parity check.
 Follow the acceptance gates per slice in docs/IMPLEMENTATION_PLAN.md. Start with slice 0b unless a newly observed blocker changes that order. Update docs/PROJECT_STATUS.md and test evidence as each slice actually ships. A written recipe is not a working feature.
 
 SECOND REPOSITORY
-Existing local video editing methods and tooling are in https://github.com/Aryanjstar/reel-studio (separate repository). Clone it only when the relevant editing slice needs those tools, then inspect its AGENTS.md and docs/PROJECT_STATUS.md. Some media/projects and uncommitted local work in that checkout are not on GitHub. Do not assume the second account can see them or require them for the first web implementation slices. Never modify original user media. The SceneSpindle repo's references to Reel Studio describe intended integration, not already copied source code.
+Existing local video editing methods and tooling are in https://github.com/Aryanjstar/reel-studio (separate repository). Clone it only when the relevant editing slice needs those tools, then inspect its AGENTS.md and docs/PROJECT_STATUS.md. Some media/projects and uncommitted local work in that checkout are not on GitHub. Do not assume the second account can see them or require them for the first web implementation slices. Never modify original user media. The SceneSpindle repo's references to Reel Studio describe intended integration, not already copied source code. Follow docs/REEL_STUDIO_PARITY.md row by row before claiming that all Reel Studio features work in SceneSpindle.
 
 SETUP AND SECRETS
 Use Node 22 LTS. From a fresh checkout run npm ci, npm test, npm run typecheck. Create an ignored .env.local from .env.example only when needed and supply credentials on the new machine. No secret, Azure/Sarvam key, Mongo URI or account session is in GitHub or this handoff. Do not ask the user to paste credentials in chat. Azure sponsored balance/expiry and deployment details must be verified in the new account before paid operations; never assume credit amount. Mongo transactions need a replica set. Paid/provider work should use only configured authorization and allowance. No personal media should be uploaded to third-party AI services without asking.

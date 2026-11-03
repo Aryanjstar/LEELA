@@ -4,6 +4,8 @@
 
 ## Current position
 
+The Reel Studio parity checklist was added 2026-11-03; it expands the release gate but does not make any of those application flows complete.
+
 Complete — docs only: SceneSpindle product/PRD/system/database/API/design revisions, delivery plan, Brief Builder specification and on-demand toolbox. All 24 new resources are indexed at pinned commits, with selected documentation/license snapshots; Kapso and doc-coauthoring are links only pending license verification. Two small repository skills support briefing and toolbox selection, without global installation or automatic loading.
 
 No application code, new CLI, provider adapter, draft-race fix, runtime dependency, GitHub rename or deployment was performed in this planning work. The planning documents, reference library and user-supplied sound pack were later committed and pushed on branch `codex/scenespindle-plan-toolbox` (commit `c6a08fa`); the fresh-account handoff is in `HANDOFF.txt`. Prior documentation incorrectly described the planned `studio` CLI as available; README and AGENT_WORKFLOW now identify it as unimplemented. Baseline tests were run during the earlier audit, not rerun for this docs-only update.

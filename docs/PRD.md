@@ -55,3 +55,7 @@ SS-20: Every video/scene/series entry point supports the shared [Brief Builder](
 SS-21: Keep the supplied [toolbox](toolbox/README.md) available on demand. Save pinned provenance and selected local instructions without auto-installing or loading unrelated skills. No trading, resume, WhatsApp or general productivity capability is added to the product simply because its reference is stored.
 
 Approval/readiness, question limits, source handling, inference provenance and evaluation cases are defined in BRIEFING_WORKFLOW.md. Prompt quality is evaluated, not asserted from length or an upstream score. Implementation remains paused at the user's request.
+
+## Addendum — Reel Studio parity (2026-11-03)
+
+SS-22: The [Reel Studio parity checklist](REEL_STUDIO_PARITY.md) is a release gate for the unified studio. All tracked Reel Studio video workflows and editing utilities must be represented by a working, inspected SceneSpindle flow or an explicit documented exception. Include source ingest, inspiration analysis, beat cuts, cover vocals/lyrics, talking head, kinetic type, from-scratch motion, contact-sheet QA, versioned narrow revisions, styles/effects and SFX. Optional static creator utilities cover LinkedIn/X banners and factual headline/About/bio copy; they do not need to block the first video slice but do block a claim of **full Reel Studio parity**. Features available only as Reel Studio recipes remain unproven until a real end-to-end artifact exists. Source code is in a separate repository until ported; no current parity is implied by this requirement.
