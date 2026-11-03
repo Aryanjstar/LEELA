@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
+import { validatePlan } from "../../contracts/plan";
 import { Brand } from "../brand";
 import { runBrowserTrace } from "../../trace/browser-client";
 
@@ -71,7 +72,7 @@ export function Workspace() {
     setTitle(body.project.title);
     setIdea(body.draft?.idea || {});
     setRevision(body.draft?.revision || 1);
-    setPlan(body.draft?.plan || null);
+    setPlan(body.draft?.planValid ? body.draft.plan : null);
     setPlanHash(body.draft?.planHash || "");
     if (body.video?.id) {
       setVideoId(body.video.id);
@@ -165,6 +166,27 @@ export function Workspace() {
       ...plan,
       scenes: plan.scenes.map((scene) => scene.id === sceneId ? { ...scene, lines: scene.lines.map((line, index) => index === 0 ? { ...line, text } : line) } : scene),
     });
+  }
+
+  async function importStoryboard(file: File | undefined) {
+    if (!file) return;
+    setError("");
+    if (file.size > 1024 * 1024) {
+      setError("Choose a storyboard JSON file smaller than 1 MB.");
+      return;
+    }
+    try {
+      const checked = validatePlan(JSON.parse(await file.text()));
+      if (!checked.plan) {
+        setError(checked.issues.slice(0, 3).map(issue => issue.path + " " + issue.message).join(". "));
+        return;
+      }
+      setPlan(checked.plan);
+      setPlanHash("");
+      setStatus("Storyboard imported. Save edits to approve it.");
+    } catch {
+      setError("Could not read that storyboard JSON file.");
+    }
   }
 
   async function savePlan() {
@@ -297,6 +319,13 @@ export function Workspace() {
           ) : null}
           {step === "storyboard" ? (
             <div className="panel">
+              <label className="fine">Import a storyboard JSON file
+                <input type="file" accept=".json,application/json" onChange={event => {
+                  const file = event.currentTarget.files?.[0];
+                  event.currentTarget.value = "";
+                  void importStoryboard(file);
+                }} />
+              </label>
               {plan?.scenes?.length ? plan.scenes.map((scene) => (
                 <article key={scene.id} className="glass" style={{ padding: 14, marginBottom: 12 }}>
                   <p className="kicker">{scene.id} · {scene.purpose}</p>
@@ -305,7 +334,7 @@ export function Workspace() {
                 </article>
               )) : <p className="muted">Plan a storyboard from the idea step.</p>}
               <div className="row-actions">
-                <button className="btn ghost" type="button" onClick={() => void savePlan()}>Save edits</button>
+                <button className="btn ghost" type="button" onClick={() => void savePlan()} disabled={!plan}>Save edits</button>
                 <button className="btn" type="button" onClick={() => void approve()} disabled={!planHash}>Approve and preview</button>
               </div>
             </div>
