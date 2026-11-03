@@ -54,7 +54,7 @@ SS-20: Every video/scene/series entry point supports the shared [Brief Builder](
 
 SS-21: Keep the supplied [toolbox](toolbox/README.md) available on demand. Save pinned provenance and selected local instructions without auto-installing or loading unrelated skills. No trading, resume, WhatsApp or general productivity capability is added to the product simply because its reference is stored.
 
-Approval/readiness, question limits, source handling, inference provenance and evaluation cases are defined in BRIEFING_WORKFLOW.md. Prompt quality is evaluated, not asserted from length or an upstream score. Implementation remains paused at the user's request.
+Approval/readiness, question limits, source handling, inference provenance and evaluation cases are defined in BRIEFING_WORKFLOW.md. Prompt quality is evaluated, not asserted from length or an upstream score. Implementation is ready to resume in the new account; see HANDOFF.txt.
 
 ## Addendum — Reel Studio parity (2026-11-03)
 
