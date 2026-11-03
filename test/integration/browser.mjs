@@ -68,6 +68,35 @@ try {
     await page.reload();
     await expect(page.getByPlaceholder('Audience')).toHaveValue('New readers');
     await expect(page.getByLabel('Title', { exact: true })).toHaveValue('Renamed ' + width);
+    await page.getByRole('textbox', { name: 'What should this video do?' }).fill('Explain a useful idea clearly for new readers');
+    await page.getByRole('textbox', { name: 'Exact script, if you have one' }).fill('Use this exact sentence.');
+    await page.getByRole('button', { name: 'Refine brief' }).click();
+    await expect(page.getByRole('button', { name: /Story led/ })).toBeVisible();
+    await page.getByRole('button', { name: /Story led/ }).click();
+    await expect(page.getByText('Direction saved.', { exact: true })).toBeVisible();
+    await page.getByRole('button', { name: 'Approve brief' }).click();
+    await expect(page.getByText('Brief approved and saved as version 1.', { exact: true })).toBeVisible();
+    await page.reload();
+    await expect(page.getByText('Status: Approved', { exact: false })).toBeVisible();
+    const approved = await mongoose.connection.db.collection('briefversions').findOne({ projectId: new mongoose.Types.ObjectId(new URL(page.url()).pathname.split('/').pop()) });
+    assert.equal(approved.version, 1);
+    assert.equal(approved.snapshot.selectedDirectionId, 'story');
+    assert.equal(approved.snapshot.exactScript, 'Use this exact sentence.');
+    assert.equal(approved.promptBundle.script.exactScript, 'Use this exact sentence.');
+    assert.equal(approved.promptBundle.briefHash, approved.contentHash);
+    const replay = await page.evaluate(async ({ projectId, hash }) => {
+      const response = await fetch('/api/projects/' + projectId + '/brief/approve', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ expectedRevision: 2, contentHash: hash }) });
+      return { status: response.status, body: await response.json() };
+    }, { projectId: new URL(page.url()).pathname.split('/').pop(), hash: approved.contentHash });
+    assert.equal(replay.status, 200);
+    assert.equal(replay.body.briefVersionId, String(approved._id));
+    const race = await page.evaluate(async projectId => {
+      const route = '/api/projects/' + projectId + '/brief/refine';
+      const body = { expectedRevision: 2, input: { rawRequest: 'Revise the opening of this example', directionId: 'clear' } };
+      return Promise.all([fetch(route, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) }), fetch(route, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) })]).then(results => results.map(item => item.status).sort());
+    }, new URL(page.url()).pathname.split('/').pop());
+    assert.deepEqual(race, [200, 409]);
+    assert.equal(await mongoose.connection.db.collection('briefversions').countDocuments({ projectId: approved.projectId }), 1);
     const scenes = Array.from({ length: 4 }, (_, index) => ({
       id: 's' + (index + 1), purpose: index === 0 ? 'hook' : 'explain',
       lines: [{ id: 'l1', text: 'A simple example line.' }], background: { kind: 'style' },
@@ -109,6 +138,8 @@ try {
     const usage = await page.evaluate(async () => (await fetch('/api/usage')).json());
     assert.equal(usage.measured, false);
     assert.ok(usage.providers.every(provider => provider.used === null && provider.limit === null));
+    assert.equal(await page.evaluate(async id => (await fetch('/api/projects/' + id + '/brief')).status, foreign), 404);
+
   }
   assert.equal(await projects[1].page.evaluate(async () => (await fetch('/api/invites')).status), 403);
   const invite = await projects[0].page.evaluate(async () => {

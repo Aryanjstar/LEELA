@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { validatePlan } from "../../contracts/plan";
 import { Brand } from "../brand";
+import { BriefPanel } from "./brief-panel";
 import { runBrowserTrace } from "../../trace/browser-client";
 
 type Idea = { topic?: string; audience?: string; notes?: string };
@@ -361,6 +362,7 @@ export function Workspace() {
                   ))}
                 </div>
               ) : null}
+              <BriefPanel projectId={params.id} suggestedRequest={idea.topic || ""} audience={idea.audience} />
               {mode === "code_lab" ? (
                 <div className="panel">
                   <p className="kicker">Code Lab</p>

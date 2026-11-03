@@ -263,6 +263,29 @@ const connectionSchema = new Schema(
   { timestamps: true },
 );
 
+const briefSchema = new Schema({
+  ownerId: { type: Schema.Types.ObjectId, required: true, index: true },
+  projectId: { type: Schema.Types.ObjectId, required: true, unique: true },
+  revision: { type: Number, required: true, default: 1 },
+  version: { type: Number, required: true, default: 0 },
+  input: { type: Schema.Types.Mixed, required: true },
+  result: { type: Schema.Types.Mixed, required: true },
+  state: { type: String, required: true, enum: ['needs_input', 'ready_for_review', 'approved'] },
+  approvedAt: Date,
+}, { timestamps: true });
+
+const briefVersionSchema = new Schema({
+  ownerId: { type: Schema.Types.ObjectId, required: true, index: true },
+  projectId: { type: Schema.Types.ObjectId, required: true, index: true },
+  briefId: { type: Schema.Types.ObjectId, required: true },
+  version: { type: Number, required: true },
+  contentHash: { type: String, required: true },
+  snapshot: { type: Schema.Types.Mixed, required: true },
+  promptBundle: { type: Schema.Types.Mixed, required: true },
+  approvedAt: { type: Date, required: true },
+}, { timestamps: true });
+briefVersionSchema.index({ briefId: 1, version: 1 }, { unique: true });
+
 export const User = mongoose.models.User || mongoose.model("User", userSchema);
 export const Session = mongoose.models.Session || mongoose.model("Session", sessionSchema);
 export const Invite = mongoose.models.Invite || mongoose.model("Invite", inviteSchema);
@@ -277,5 +300,7 @@ export const Trace = mongoose.models.Trace || mongoose.model("Trace", traceSchem
 export const Character = mongoose.models.Character || mongoose.model("Character", characterSchema);
 export const Asset = mongoose.models.Asset || mongoose.model("Asset", assetSchema);
 export const Connection = mongoose.models.Connection || mongoose.model("Connection", connectionSchema);
+export const Brief = mongoose.models.Brief || mongoose.model("Brief", briefSchema);
+export const BriefVersion = mongoose.models.BriefVersion || mongoose.model("BriefVersion", briefVersionSchema);
 
 export type UserDoc = InferSchemaType<typeof userSchema> & { _id: mongoose.Types.ObjectId };

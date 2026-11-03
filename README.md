@@ -33,6 +33,8 @@ npm run studio -- captions path/to/words.json --max-words 3
 
 These commands run locally. Schema export, validation and caption grouping emit JSON. Invalid inputs produce a nonzero exit status. Capabilities reflect the implemented v1 explainer contract, not the whole roadmap. Caption grouping consumes measured word times; it does not create timestamps from a prompt.
 
+The project Brief panel and offline CLI can now refine and approve a basic brief. For a machine-readable CLI response, use npm run --silent studio -- brief refine --input brief.json. The JSON file needs project (projectId, mode, format, language, targetMs) and input (rawRequest, optional audience, exactScript, directionId). The web workflow stores an owner-scoped version. Research, series briefs and the production planning gate are still upcoming; see [status](docs/PROJECT_STATUS.md).
+
 ## Architecture and contribution
 
 Next.js/TypeScript, MongoDB, provider adapters, HyperFrames and FFmpeg. Planned heavy Blender rendering runs on a paired PC or Azure worker. Private media stays local unless explicitly opted into hosted processing. Third-party paid services remain disabled without configured authorization; Azure sponsorship balance is not yet verified.
@@ -41,4 +43,4 @@ Source of truth: [PRD](docs/PRD.md), [system design](docs/ARCHITECTURE.md), [dat
 
 Inspired by [NamasteVideo.ai](https://github.com/akshaymarch7/namaste-video-ai); reused third-party code/assets must retain their own license notices. Screenshots and reference links are inspiration, not redistribution permission. Never commit credentials, personal media, generated large artifacts or local environments.
 
-Planning references: [Brief Builder](docs/BRIEFING_WORKFLOW.md) and [on-demand toolbox](docs/toolbox/README.md). No plugins or models are required for the preview worker.
+Planning references: [Brief Builder](docs/BRIEFING_WORKFLOW.md) and [on-demand toolbox](docs/toolbox/README.md). Implementation is in progress; the brief workflow is partial and the preview worker does not require plugins or models.

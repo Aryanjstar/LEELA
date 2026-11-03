@@ -7,7 +7,7 @@ Updated 2026-11-03. Documentation precedes implementation. **This plan is finali
 | 0. Research and specification | SS-01,20,21 | Updated contracts, brief workflow, pinned on-demand toolbox and acceptance matrix | Complete — docs only |
 | 0b. Portable foundation | SS-01,03,08 | Portable CLI, caption grouping and draft/candidate concurrency regressions | In progress; offline CLI and database race checks implemented; browser journeys remain |
 | 1. Identity, storage and job integrity | SS-02,04,05,14 | Two-creator browser journey; invites/reset; private storage; atomic approval and durable worker; actual MP4 | Planned |
-| B. Brief Builder (after slice 1, before slice 2) | SS-20,21 | Shared brief state, contextual research, revision-bound questions, prompt bundles and UI/CLI/IDE parity | Planned |
+| B. Brief Builder (after slice 1, before slice 2) | SS-20,21 | Shared brief state, contextual research, revision-bound questions, prompt bundles and UI/CLI/IDE parity | In progress on separate branch; project brief/approval and offline CLI implemented; research, series and production gate open |
 | 2. Reference parity and providers | SS-06,07 | Reference examples, configurable planner, voices/alignment, revisions, formats and cache recovery | Planned |
 | 3. Editing and illustrated stories | SS-08,09,10,15 | Montage/cover/talking-head/kinetic/story/launch artifacts with inspected frames and audio | Planned |
 | 4. Series and 3D | SS-11,12,13 | Recurring cast; full 5–10min episode; second episode; remote PC and Azure render evidence | Planned |
