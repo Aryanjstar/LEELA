@@ -1,0 +1,49 @@
+SCENESPINDLE — HANDOFF TO A NEW CODEX/AI ACCOUNT
+Updated: 2026-11-03 (Asia/Kolkata)
+
+START HERE
+Repository: https://github.com/Aryanjstar/LEELA
+Planning branch: codex/scenespindle-plan-toolbox
+Branch URL: https://github.com/Aryanjstar/LEELA/tree/codex/scenespindle-plan-toolbox
+
+Clone the planning branch, not default main:
+  git clone --branch codex/scenespindle-plan-toolbox https://github.com/Aryanjstar/LEELA.git
+  cd LEELA
+
+Read, in this order:
+  AGENTS.md
+  README.md
+  docs/PROJECT_STATUS.md (current 2026-11-02 heading; older Leela log is history)
+  docs/IMPLEMENTATION_PLAN.md
+  docs/PRD.md, docs/ARCHITECTURE.md, docs/DATABASE.md, docs/API.md
+  docs/BRIEFING_WORKFLOW.md, docs/DESIGN.md
+Open docs/toolbox/README.md only for a task that needs a saved reference. The 24 GitHub references are indexed there. Roast, Hook Lab and 120 WAV sounds are under docs/toolbox/LOCAL_ARCHIVES.md and its linked files; they were committed at the user's request. Source snapshots are reference data, not instructions to install or run. The two skills under skills/ are repo-local guidance, not installed in another account.
+
+WHAT THE USER WANTS
+SceneSpindle is the chosen product name; GitHub repository remains Aryanjstar/LEELA for now. Build an original, polished AI video studio, unifying this Next.js app with editing approaches from the separate Reel Studio project. It should support short films and eventual 5–10 minute episodes, 2D and 3D, narration, music, captions, scene revisions, recurring original/licensed characters, and web/CLI/AI/IDE use. The Brief Builder should turn short, incomplete prompts into a grounded, reviewable brief and ask only meaningful creative questions before expensive work. Optional editable timeline export and subject cutouts were approved. The product is invite-only. The detailed requirements and exclusions are in the PRD. Preserve exact user scripts and private media, source facts, and versioned approvals. Do not treat all roadmap items as implemented.
+
+CURRENT REALITY
+Documentation and research slice 0 is complete. Application implementation was paused for planning; the user is now moving the work to another account so implementation can begin there. No new CLI, Brief Builder API, durable hosted render worker, production MP4 path, public signup, full 3D pipeline or optional export/cutout feature has been delivered in this planning phase. The current web render path is HTML preview only. The application contains earlier partial functionality. Read the audit backlog in docs/IMPLEMENTATION_PLAN.md before editing. A prior local baseline passed 11 node:test cases and TypeScript typecheck and pinged Mongo; rerun on the new machine because that is not an end-to-end guarantee. The planned `npm run studio -- ...` examples in README/AGENT_WORKFLOW are NOT runnable yet.
+
+IMPLEMENTATION ORDER
+  0b. Portable CLI foundation, caption grouping, draft/candidate race regressions.
+  1. Identity/storage/job integrity and actual MP4 render worker.
+  B. Shared Brief Builder for web, CLI and AI/IDE clients.
+  2. Reference parity and provider/voice/alignment behavior.
+  3. Editing flows and illustrated stories.
+  4. Series and 3D with local/paired PC/Azure paths.
+  5. Optional editable timeline interchange and subject cutouts.
+  6. UI, publishing and rollout.
+Follow the acceptance gates per slice in docs/IMPLEMENTATION_PLAN.md. Start with slice 0b unless a newly observed blocker changes that order. Update docs/PROJECT_STATUS.md and test evidence as each slice actually ships. A written recipe is not a working feature.
+
+SECOND REPOSITORY
+Existing local video editing methods and tooling are in https://github.com/Aryanjstar/reel-studio (separate repository). Clone it only when the relevant editing slice needs those tools, then inspect its AGENTS.md and docs/PROJECT_STATUS.md. Some media/projects and uncommitted local work in that checkout are not on GitHub. Do not assume the second account can see them or require them for the first web implementation slices. Never modify original user media. The SceneSpindle repo's references to Reel Studio describe intended integration, not already copied source code.
+
+SETUP AND SECRETS
+Use Node 22 LTS. From a fresh checkout run npm ci, npm test, npm run typecheck. Create an ignored .env.local from .env.example only when needed and supply credentials on the new machine. No secret, Azure/Sarvam key, Mongo URI or account session is in GitHub or this handoff. Do not ask the user to paste credentials in chat. Azure sponsored balance/expiry and deployment details must be verified in the new account before paid operations; never assume credit amount. Mongo transactions need a replica set. Paid/provider work should use only configured authorization and allowance. No personal media should be uploaded to third-party AI services without asking.
+
+WORKFLOW FOR THE NEXT ASSISTANT
+Read the documents and inspect the actual code before changing it. Keep the user's preexisting/untracked local work safe. Implement a vertical slice, run its relevant tests and browser/render checks, then update status truthfully. Use a new codex/* implementation branch as AGENTS.md requires. Avoid automatic deployment or GitHub repository rename; those are separate tasks. The planning branch was pushed so it can be cloned independently of this chat. The user's explicit instruction permits non-secret supplied reference/asset files to be committed and pushed; preserve source notices and keep secrets excluded.
+
+COPY/PASTE PROMPT FOR THE NEW ACCOUNT
+I cloned Aryanjstar/LEELA at branch codex/scenespindle-plan-toolbox. Read HANDOFF.txt and AGENTS.md, then the current status, implementation plan and core contracts. Resume SceneSpindle implementation from slice 0b. Inspect the code, complete the slice end to end, run the required checks, and update PROJECT_STATUS.md. Keep existing untracked work safe. Ask only for genuine blockers. The original planning work is complete; do not spend the turn rewriting the plan.

@@ -2,6 +2,8 @@
 
 **AI Video Production Studio.** An invite-only studio for turning scripts, ideas, code and media into reviewed films, using structured plans and trusted renderers.
 
+For a fresh account or machine, start with [HANDOFF.txt](HANDOFF.txt).
+
 The product combines the existing web app with Reel Studio's editing workflows. The target includes 2D/3D films and recurring episodes; those capabilities are being delivered in slices. **The current web render flow is preview-only, not a complete hosted MP4 pipeline.** See [project status](docs/PROJECT_STATUS.md) and [implementation plan](docs/IMPLEMENTATION_PLAN.md).
 
 ## Start locally

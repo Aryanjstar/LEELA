@@ -1,6 +1,6 @@
 # SceneSpindle — implementation and verification plan
 
-Updated 2026-11-02. Documentation precedes implementation. **Implementation is paused; this plan is finalized for later execution.** No milestone is complete merely because its plan exists.
+Updated 2026-11-03. Documentation precedes implementation. **This plan is finalized and ready for execution in the new account.** No milestone is complete merely because its plan exists.
 
 | Slice | Requirements | Deliverable / release gate | Status |
 |---|---|---|---|
@@ -52,4 +52,4 @@ Next implementation order: portable foundation → identity/storage/jobs → Bri
 
 ## Local archive additions — 2026-11-02
 
-[Archive review](toolbox/LOCAL_ARCHIVES.md): optional Hook Lab exploration in slice B; optional Roast copy critique in slice 6; a 120-WAV local SFX candidate in slice 3. Simulations are labeled, supplied facts preserved, and single-pass use is the default. Reference storage is complete; the user approved committing and pushing the supplied non-secret files with their source notices. No product feature, sound integration or installation is complete. Implementation remains paused.
+[Archive review](toolbox/LOCAL_ARCHIVES.md): optional Hook Lab exploration in slice B; optional Roast copy critique in slice 6; a 120-WAV local SFX candidate in slice 3. Simulations are labeled, supplied facts preserved, and single-pass use is the default. Reference storage is complete; the user approved committing and pushing the supplied non-secret files with their source notices. No product feature, sound integration or installation is complete. Implementation is ready to resume in the new account.
