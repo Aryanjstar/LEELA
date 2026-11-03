@@ -16,7 +16,7 @@ npm test
 npm run typecheck
 ```
 
-Create `.env.local` from `.env.example` only if it does not already exist. Supply your own Mongo URI/database and auth configuration, then `npm run dev`. Do not overwrite existing credentials. `npm run studio -- doctor` checks the local Node version and media executables without printing credentials; it does not connect to MongoDB or providers.
+Create `.env.local` from `.env.example` only if it does not already exist. Supply your own Mongo URI/database and auth configuration, then run `npm run dev` and, in another terminal, `npm run worker` to process preview jobs. Do not overwrite existing credentials. `npm run studio -- doctor` checks the local Node version and media executables without printing credentials; it does not connect to MongoDB or providers.
 
 Run `npm run e2e` with Chrome and `mongod` installed to build the app and exercise the studio as two creators at desktop and 390 px. The suite starts a disposable replica set and a production server on loopback ports 27932 and 3221.
 
@@ -41,4 +41,4 @@ Source of truth: [PRD](docs/PRD.md), [system design](docs/ARCHITECTURE.md), [dat
 
 Inspired by [NamasteVideo.ai](https://github.com/akshaymarch7/namaste-video-ai); reused third-party code/assets must retain their own license notices. Screenshots and reference links are inspiration, not redistribution permission. Never commit credentials, personal media, generated large artifacts or local environments.
 
-Planning references: [Brief Builder](docs/BRIEFING_WORKFLOW.md) and [on-demand toolbox](docs/toolbox/README.md). Product implementation is paused; no plugins or models were installed.
+Planning references: [Brief Builder](docs/BRIEFING_WORKFLOW.md) and [on-demand toolbox](docs/toolbox/README.md). No plugins or models are required for the preview worker.

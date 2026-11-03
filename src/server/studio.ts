@@ -92,11 +92,16 @@ export async function startJob(opts: {
     attempts: 1,
     runAfter: new Date(),
   });
+  await executeJob(String(job._id));
+  return Job.findById(job._id);
+}
+
+export async function executeJob(id: string) {
   try {
-    await runJob(String(job._id));
+    await runJob(id);
   } catch (error) {
     await Job.updateOne(
-      { _id: job._id },
+      { _id: id },
       {
         $set: {
           state: "failed",
@@ -107,7 +112,6 @@ export async function startJob(opts: {
       },
     );
   }
-  return Job.findById(job._id);
 }
 
 async function runJob(id: string) {
@@ -174,7 +178,7 @@ async function runPlan(job: { _id: unknown; input?: { draftRevision?: number } }
   await Job.updateOne({ _id: job._id }, { result: { revision: updated.revision, model: planned.model } });
 }
 
-async function runRevise(job: { _id: unknown; input?: { text?: string; sceneIds?: string[] } }, draft: {
+async function runRevise(job: { _id: unknown; input?: { text?: string; sceneIds?: string[]; draftRevision?: number } }, draft: {
   plan?: Plan;
   revision: number;
   planValid: boolean;
@@ -182,6 +186,9 @@ async function runRevise(job: { _id: unknown; input?: { text?: string; sceneIds?
   save: () => Promise<unknown>;
   markModified: (path: string) => void;
 }) {
+  if (!Number.isInteger(job.input?.draftRevision) || job.input?.draftRevision !== draft.revision) {
+    throw new Error("The draft changed before the revision started. Please try again.");
+  }
   const current = draft.plan;
   const checked = validatePlan(current);
   if (!checked.plan) throw new Error("There is no valid storyboard to revise.");

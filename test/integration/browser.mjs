@@ -33,7 +33,10 @@ try {
   await mongoose.connect(uri + '?replicaSet=journey');
   const app = launch(process.execPath, ['node_modules/next/dist/bin/next', 'start', '-H', '127.0.0.1', '-p', '3221'], {
     ...process.env, MONGODB_URI: uri + '?replicaSet=journey', MONGODB_DB: dbName, APP_ORIGIN: origin,
-    AUTH_TOKEN_PEPPER: randomUUID(), GEMINI_API_KEY: '', ELEVENLABS_API_KEY: '', SARVAM_API_KEY: ''
+    AUTH_TOKEN_PEPPER: randomUUID(), OWNER_EMAIL: '1280@example.invalid', GEMINI_API_KEY: '', ELEVENLABS_API_KEY: '', SARVAM_API_KEY: ''
+  });
+  launch(process.execPath, ['--import', 'tsx', 'worker/index.ts'], {
+    ...process.env, MONGODB_URI: uri + '?replicaSet=journey', MONGODB_DB: dbName,
   });
   for (let i = 0; i < 100; i++) {
     assert.equal(app.exitCode, null, 'Test app failed to start');
@@ -78,6 +81,19 @@ try {
     });
     await page.getByRole('button', { name: 'Save edits' }).click();
     await expect(page.getByText('Storyboard saved', { exact: true })).toBeVisible();
+    const projectId = new URL(page.url()).pathname.split('/').pop();
+    const approvals = await page.evaluate(async id => {
+      const draft = await (await fetch(`/api/projects/${id}/draft`)).json();
+      const approve = () => fetch(`/api/projects/${id}/approve`, {
+        method: 'POST', headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ draftRevision: draft.revision, planHash: draft.planHash }),
+      }).then(async response => ({ status: response.status, body: await response.json() }));
+      return Promise.all([approve(), approve()]);
+    }, projectId);
+    assert.deepEqual(approvals.map(item => item.status), [202, 202]);
+    assert.equal(approvals[0].body.jobId, approvals[1].body.jobId);
+    assert.equal(await mongoose.connection.db.collection('storyboards').countDocuments({ projectId: new mongoose.Types.ObjectId(projectId) }), 1);
+    assert.equal(await mongoose.connection.db.collection('jobs').countDocuments({ projectId: new mongoose.Types.ObjectId(projectId), type: 'render' }), 1);
     await page.getByRole('button', { name: 'Approve and preview' }).click();
     await expect(page.getByText('Preview ready', { exact: true })).toBeVisible();
     const frame = page.locator('iframe[title="Preview"]');
@@ -90,7 +106,77 @@ try {
     const status = id => page.evaluate(async projectId => (await fetch('/api/projects/' + projectId)).status, id);
     assert.equal(await status(projects[index].id), 200);
     assert.equal(await status(foreign), 404);
+    const usage = await page.evaluate(async () => (await fetch('/api/usage')).json());
+    assert.equal(usage.measured, false);
+    assert.ok(usage.providers.every(provider => provider.used === null && provider.limit === null));
   }
+  assert.equal(await projects[1].page.evaluate(async () => (await fetch('/api/invites')).status), 403);
+  const invite = await projects[0].page.evaluate(async () => {
+    const response = await fetch('/api/invites', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ email: 'invited@example.invalid' }) });
+    return { status: response.status, body: await response.json() };
+  });
+  assert.equal(invite.status, 201);
+  const invited = await browser.newPage({ viewport: { width: 390, height: 900 } });
+  await invited.goto(invite.body.url);
+  await invited.getByLabel('Name').fill('Invited Creator');
+  await invited.getByLabel('Password').fill('unique-test-password-345');
+  await invited.getByRole('button', { name: 'Join the studio' }).click();
+  await invited.waitForURL('**/studio');
+  assert.equal((await invited.evaluate(async () => (await (await fetch('/api/auth/session')).json()).user.email)), 'invited@example.invalid');
+  const replay = await invited.evaluate(async token => (await fetch('/api/auth/join', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ token, name: 'Replay', password: 'another-test-password-123' }) })).status, invite.body.url.split('#')[1]);
+  assert.equal(replay, 400);
+  const secondInvite = await projects[0].page.evaluate(async () => {
+    const response = await fetch('/api/invites', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ email: 'revoked@example.invalid' }) });
+    return response.json();
+  });
+  assert.equal(await projects[0].page.evaluate(async id => (await fetch(`/api/invites/${id}/revoke`, { method: 'POST' })).status, secondInvite.id), 200);
+  assert.equal(await invited.evaluate(async token => (await fetch('/api/auth/join', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ token, name: 'Revoked', password: 'another-test-password-123' }) })).status, secondInvite.url.split('#')[1]), 400);
+  const raceInvite = await projects[0].page.evaluate(async () => {
+    const response = await fetch('/api/invites', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ email: 'race@example.invalid' }) });
+    return response.json();
+  });
+  const race = await invited.evaluate(async token => Promise.all([0, 1].map(() => fetch('/api/auth/join', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ token, name: 'Race', password: 'another-test-password-123' }) }).then(response => response.status))), raceInvite.url.split('#')[1]);
+  assert.deepEqual(race.sort(), [201, 400].sort());
+  const projectId = new mongoose.Types.ObjectId(projects[0].id);
+  const storyboard = await mongoose.connection.db.collection('storyboards').findOne({ projectId });
+  const abandonedId = new mongoose.Types.ObjectId();
+  await mongoose.connection.db.collection('jobs').insertOne({ _id: abandonedId, ownerId: storyboard.ownerId, projectId,
+    type: 'render', state: 'running', activeSlot: true, attempts: 1, maxAttempts: 3,
+    runAfter: new Date(), leaseToken: 'expired-worker', leaseExpiresAt: new Date(Date.now() - 1000),
+    input: { storyboardId: storyboard._id, format: '9x16' }, stages: [] });
+  let recovered;
+  for (let attempt = 0; attempt < 100; attempt++) {
+    recovered = await mongoose.connection.db.collection('jobs').findOne({ _id: abandonedId });
+    if (recovered.state === 'succeeded') break;
+    await sleep(100);
+  }
+  assert.equal(recovered.state, 'succeeded', 'Expired worker lease should be reclaimed');
+  assert.equal(recovered.attempts, 2);
+  assert.equal(await mongoose.connection.db.collection('videos').countDocuments({ jobId: abandonedId }), 1);
+  const cancelledId = new mongoose.Types.ObjectId();
+  await mongoose.connection.db.collection('jobs').insertOne({ _id: cancelledId, ownerId: storyboard.ownerId, projectId,
+    type: 'render', state: 'running', activeSlot: true, attempts: 1, maxAttempts: 3,
+    runAfter: new Date(), leaseToken: 'old-worker', leaseExpiresAt: new Date(Date.now() + 60_000),
+    input: { storyboardId: storyboard._id, format: '9x16' }, stages: [] });
+  const changeJob = (page, action) => page.evaluate(async ({ id, action }) => {
+    const response = await fetch(`/api/jobs/${id}/${action}`, { method: 'POST' });
+    return response.status;
+  }, { id: String(cancelledId), action });
+  assert.equal(await changeJob(projects[1].page, 'cancel'), 404);
+  assert.equal(await changeJob(projects[0].page, 'cancel'), 200);
+  const cancelled = await mongoose.connection.db.collection('jobs').findOne({ _id: cancelledId });
+  assert.equal(cancelled.state, 'cancelled');
+  assert.equal(cancelled.leaseToken, undefined);
+  assert.equal(await changeJob(projects[1].page, 'retry'), 404);
+  assert.equal(await changeJob(projects[0].page, 'retry'), 202);
+  let retried;
+  for (let attempt = 0; attempt < 100; attempt++) {
+    retried = await mongoose.connection.db.collection('jobs').findOne({ _id: cancelledId });
+    if (retried.state === 'succeeded') break;
+    await sleep(100);
+  }
+  assert.equal(retried.state, 'succeeded');
+  assert.equal(await mongoose.connection.db.collection('videos').countDocuments({ jobId: cancelledId }), 1);
   assert.deepEqual(errors, []);
   console.log('PASS: two creator sign-ins, desktop and phone create/save/reload, foreign project denial');
 } finally {

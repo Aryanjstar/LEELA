@@ -82,6 +82,15 @@ const sessionSchema = new Schema({
   userAgent: { type: String, maxlength: 200 },
 });
 
+const inviteSchema = new Schema({
+  email: { type: String, required: true, lowercase: true },
+  tokenHash: { type: String, required: true, unique: true },
+  createdBy: { type: Schema.Types.ObjectId, required: true },
+  expiresAt: { type: Date, required: true },
+  usedAt: Date,
+  revokedAt: Date,
+}, { timestamps: true });
+
 const projectSchema = new Schema(
   {
     ownerId: { type: Schema.Types.ObjectId, required: true, index: true },
@@ -94,6 +103,7 @@ const projectSchema = new Schema(
     styleId: { type: String, required: true },
     keepPrivate: { type: Boolean, required: true, default: false },
     badge: { type: String, required: true, enum: ["draft", "planning", "review", "rendering", "ready", "failed"], default: "draft" },
+    storyboardVersion: { type: Number, default: 0 },
   },
   { timestamps: true },
 );
@@ -115,6 +125,7 @@ const draftSchema = new Schema(
     issues: { type: [Schema.Types.Mixed], default: undefined },
     traceId: { type: Schema.Types.ObjectId },
     messageSeq: { type: Number, required: true, default: 0 },
+    approvalFence: { type: String },
   },
   { timestamps: true },
 );
@@ -132,6 +143,8 @@ const jobSchema = new Schema(
     attempts: { type: Number, required: true, default: 0 },
     maxAttempts: { type: Number, required: true, default: 3 },
     runAfter: { type: Date, required: true },
+    leaseToken: String,
+    leaseExpiresAt: Date,
     error: { type: Schema.Types.Mixed },
     result: { type: Schema.Types.Mixed },
     finishedAt: Date,
@@ -252,6 +265,7 @@ const connectionSchema = new Schema(
 
 export const User = mongoose.models.User || mongoose.model("User", userSchema);
 export const Session = mongoose.models.Session || mongoose.model("Session", sessionSchema);
+export const Invite = mongoose.models.Invite || mongoose.model("Invite", inviteSchema);
 export const Project = mongoose.models.Project || mongoose.model("Project", projectSchema);
 export const Draft = mongoose.models.Draft || mongoose.model("Draft", draftSchema);
 export const Job = mongoose.models.Job || mongoose.model("Job", jobSchema);

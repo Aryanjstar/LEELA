@@ -55,6 +55,8 @@ export function Workspace() {
   const [traceSummary, setTraceSummary] = useState("");
   const [status, setStatus] = useState("");
   const [error, setError] = useState("");
+  const [previewJobId, setPreviewJobId] = useState("");
+  const [previewPending, setPreviewPending] = useState(false);
   const [mouth, setMouth] = useState(0);
 
   async function load() {
@@ -236,10 +238,48 @@ export function Workspace() {
       setStatus("");
       return;
     }
-    if (body.videoId) setVideoId(body.videoId);
+    setPreviewJobId(body.jobId);
+    await waitForPreview(body.jobId, body.videoId);
+  }
+
+  async function waitForPreview(jobId: string, existingVideo?: string) {
+    setPreviewPending(true);
+    let video = existingVideo;
+    for (let attempt = 0; !video && attempt < 120; attempt++) {
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const jobResponse = await fetch(`/api/jobs/${jobId}`);
+      const job = await jobResponse.json();
+      if (!jobResponse.ok || job.state === "failed" || job.state === "cancelled") {
+        setError(job.state === "cancelled" ? "Preview cancelled." : job?.error?.message || "Could not prepare the preview.");
+        setStatus("");
+        setPreviewPending(false);
+        return;
+      }
+      video = job.result?.videoId;
+    }
+    if (!video) {
+      setError("The preview is still queued. Check that the worker is running, then try again.");
+      setStatus("");
+      setPreviewPending(false);
+      return;
+    }
+    setPreviewPending(false);
+    setPreviewJobId("");
+    setVideoId(video);
     await load();
     setStep("video");
     setStatus("Preview ready");
+  }
+
+  async function changePreviewJob(action: "cancel" | "retry") {
+    const response = await fetch(`/api/jobs/${previewJobId}/${action}`, { method: "POST" });
+    const body = await response.json();
+    if (!response.ok) { setError(body?.error?.message || "Could not update the preview job."); return; }
+    if (action === "retry") {
+      setError("");
+      setStatus("Preparing preview");
+      await waitForPreview(previewJobId);
+    }
   }
 
   async function share() {
@@ -355,7 +395,9 @@ export function Workspace() {
               )) : <p className="muted">Plan a storyboard from the idea step.</p>}
               <div className="row-actions">
                 <button className="btn ghost" type="button" onClick={() => void savePlan()} disabled={!plan}>Save edits</button>
-                <button className="btn" type="button" onClick={() => void approve()} disabled={!planHash}>Approve and preview</button>
+                <button className="btn" type="button" onClick={() => void approve()} disabled={!planHash || previewPending}>Approve and preview</button>
+                {previewJobId && previewPending ? <button className="btn" type="button" onClick={() => void changePreviewJob("cancel")}>Cancel preview</button> : null}
+                {previewJobId && !previewPending ? <button className="btn" type="button" onClick={() => void changePreviewJob("retry")}>Retry preview</button> : null}
               </div>
             </div>
           ) : null}

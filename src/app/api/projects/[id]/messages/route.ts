@@ -51,7 +51,7 @@ export async function POST(request: Request, ctx: { params: Promise<{ id: string
       ownerId: auth.user!._id,
       projectId: project._id,
       type: "revise",
-      input: { text, messageId: userMessage._id, sceneIds: Array.isArray(body?.sceneIds) ? body.sceneIds.filter((id): id is string => typeof id === "string").slice(0, 40) : [] },
+      input: { text, messageId: userMessage._id, draftRevision: draft.revision, sceneIds: Array.isArray(body?.sceneIds) ? body.sceneIds.filter((id): id is string => typeof id === "string").slice(0, 40) : [] },
       stages: [{ name: "revise", state: "running" }],
     });
     const candidate = job?.result?.candidate;
