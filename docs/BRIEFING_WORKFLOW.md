@@ -1,6 +1,6 @@
 # Brief Builder — from a rough request to an approved production brief
 
-Specification 1.0 · 2026-11-03 · Target behavior. The project brief panel, offline CLI refinement, revision-bound answers and immutable approval are implemented on the Brief Builder branch. Research, series scope, provider refinement and production-plan gating remain planned; PROJECT_STATUS.md records current evidence.
+Specification 1.0 · 2026-11-03 · Target behavior. The project brief panel, offline CLI refinement, revision-bound answers and immutable approval are implemented on the implementation branch. Research, series scope, provider refinement and production-plan gating remain planned; PROJECT_STATUS.md records current evidence.
 
 ## Purpose
 
